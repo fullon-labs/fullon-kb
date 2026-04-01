@@ -7,15 +7,26 @@ updated: 2026-04-01
 
 # DApps Index
 
-Use one page per DApp.
+## Purpose
+Store one page per DApp in the FullOn ecosystem.
 
-## Template
-- [[dapp-template]]
+## Current DApps
+- FullSwap
+- FullBridge
+- FullVest
+- RWAVerse
 
-## Suggested fields for each DApp
+## Pages
+- [[fullswap]]
+- [[fullbridge]]
+- [[fullvest]]
+- [[rwaverse]]
+
+## Standard page shape
 - summary
 - user value
 - features
-- usage steps
+- how to use
 - common issues
 - official links
+- related guides
