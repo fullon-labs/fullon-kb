@@ -1,38 +1,26 @@
-# FullOn Ecosystem Knowledge Base
+# FullOn Knowledge Base
 
-This repository stores the source-of-truth documentation for the FullOn ecosystem.
+A Markdown knowledge base for the FullOn ecosystem.
 
-## What it covers
-- protocol overview
-- account model
-- VM and interoperability
-- Web3 / AI / Social ecosystems
-- operators and developer workflows
-- DApp pages
-- user guides
-- FAQs
-- glossary
-- policies
-- release notes
-- archive
+## Structure
 
-## Directory map
-- `00_Overview/` - overview and navigation
-- `01_Core_Chain/` - protocol-level notes
-- `02_Ecosystems/` - ecosystem themes
-- `03_Operators/` - wallet, chain, contract, transaction, CLI
-- `04_FAQ/` - canonical answers
-- `05_Glossary/` - terms and definitions
-- `06_User_Guides/` - task-oriented user guides
-- `07_DApps/` - one page per DApp
-- `08_Policies/` - writing and response rules
-- `09_Release_Notes/` - content changelog
-- `99_Archive/` - deprecated content
-- `Assets/` - screenshots and diagrams
+- `00_Overview/` — entry point and navigation
+- `01_Core_Chain/` — core protocol documentation
+- `02_Ecosystems/` — ecosystem projects
+- `03_Operators/` — wallet, chain, contract, and CLI operations
+- `04_FAQ/` — canonical answers to common questions
+- `05_Glossary/` — terms and definitions
+- `06_User_Guides/` — step-by-step user flows
+- `07_DApps/` — one page per DApp
+- `08_Policies/` — writing and response rules
+- `09_Release_Notes/` — changelog
+- `10_Agent_Config/` — agent prompts and routing
+- `99_Archive/` — deprecated or historical content
+- `Assets/` — diagrams and screenshots
 
-## Writing rules
-- Use Markdown.
-- Add frontmatter to content pages.
-- Prefer official sources and clear update dates.
-- Keep one page focused on one topic.
-- Link related pages instead of duplicating content.
+## Focus
+
+- official references
+- concise pages
+- linked documentation
+- retrieval-friendly structure
