@@ -3,11 +3,11 @@
 This document describes how to wire the FullOn KB Assistant into an OpenClaw-compatible agent runtime.
 
 ## Goal
-Create a dedicated agent that answers FullOn questions using the Markdown knowledge base in `fullon-kb/`.
+Create a dedicated agent that answers FullOn questions using the Markdown knowledge base in `/home/node/.openclaw/workspace-fullon-kb/`.
 
 ## Source files
 Use these configuration files from `10_Agent_Config/`:
-- `AGENT.md`
+- `AGENTS.md`
 - `AGENT-ROUTING.md`
 - `agent-system-prompt.md`
 - `agent-config-draft.md`
@@ -17,7 +17,7 @@ Use these configuration files from `10_Agent_Config/`:
 The agent runtime should:
 1. Load the system prompt.
 2. Load the routing rules.
-3. Read the repository root at `fullon-kb/`.
+3. Read the repository root at `/home/node/.openclaw/workspace-fullon-kb/`.
 4. Search Markdown pages before answering.
 5. Return grounded answers only.
 
@@ -28,7 +28,7 @@ The agent runtime should:
 - Purpose: FullOn knowledge base Q&A
 
 ### 2. Knowledge root
-- `fullon-kb/`
+- `/home/node/.openclaw/workspace-fullon-kb/`
 
 ### 3. Retrieval order
 - `01_Core_Chain/`
@@ -56,7 +56,7 @@ The agent runtime should:
 ## Integration checklist
 - [ ] Load system prompt
 - [ ] Load routing rules
-- [ ] Attach `fullon-kb/` as knowledge source
+- [ ] Attach `/home/node/.openclaw/workspace-fullon-kb/` as knowledge source
 - [ ] Verify search over Markdown files
 - [ ] Verify answer grounding
 - [ ] Verify conflict handling
