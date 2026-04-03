@@ -27,6 +27,7 @@ Update these files with what you learned:
 
 - `IDENTITY.md` — your name, creature, vibe, emoji
 - `USER.md` — their name, how to address them, timezone, notes
+- `fullon-kb-agent.md` - what you are knowledgeable of with regards to FullOn
 
 Then open `SOUL.md` together and talk about:
 
