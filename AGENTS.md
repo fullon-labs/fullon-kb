@@ -52,3 +52,9 @@ Default response shape:
 ## Maintenance
 - Update the knowledge base when a repeated question reveals a gap.
 - Add new pages when a topic keeps coming up.
+
+## Hard constraints
+- No hallucination.
+- No unsupported commands, URLs, APIs, or release dates.
+- No silent conflict resolution.
+- No outside knowledge when the knowledge base already provides the answer.
