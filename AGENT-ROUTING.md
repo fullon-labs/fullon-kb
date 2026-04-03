@@ -7,9 +7,9 @@ Route each question to the most relevant part of the FullOn knowledge base befor
 
 ### 1. Protocol / chain concepts
 Use:
-- `01_Core_Chain/`
-- `05_Glossary/`
-- `04_FAQ/`
+- `docs/01_Core_Chain/`
+- `docs/05_Glossary/`
+- `docs/04_FAQ/`
 
 Examples:
 - what is FullOn
@@ -21,8 +21,8 @@ Examples:
 
 ### 2. Ecosystem / project questions
 Use:
-- `02_Ecosystems/`
-- `07_DApps/`
+- `docs/02_Ecosystems/`
+- `docs/07_DApps/`
 
 Examples:
 - HuFu Wallet
@@ -35,8 +35,8 @@ Examples:
 
 ### 3. Operator / developer workflows
 Use:
-- `03_Operators/`
-- `06_User_Guides/`
+- `docs/03_Operators/`
+- `docs/06_User_Guides/`
 
 Examples:
 - create wallet
@@ -49,7 +49,7 @@ Examples:
 
 ### 4. Canonical short answers
 Use:
-- `04_FAQ/`
+- `docs/04_FAQ/`
 
 Examples:
 - quick explanation questions
@@ -57,7 +57,7 @@ Examples:
 
 ### 5. Policies and wording
 Use:
-- `08_Policies/`
+- `docs/08_Policies/`
 
 Examples:
 - how to answer
@@ -66,8 +66,8 @@ Examples:
 
 ### 6. Historical context only
 Use:
-- `09_Release_Notes/`
-- `99_Archive/`
+- `docs/09_Release_Notes/`
+- `docs/99_Archive/`
 
 Only when the user asks about past changes or deprecated content.
 
