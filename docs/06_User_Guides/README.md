@@ -15,4 +15,4 @@ Use this section for task-based guidance.
 - first transaction
 - staking
 - minting
-- support escalation1111
+- support escalation
