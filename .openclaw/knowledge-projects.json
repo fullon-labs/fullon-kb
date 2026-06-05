@@ -34,6 +34,23 @@
           "transaction"
         ]
       }
+    },
+    {
+      "key": "fullon",
+      "name": "fullon",
+      "directory": "docs",
+      "syncAudience": "support",
+      "routing": {
+        "scopeAliases": [
+          "fullon",
+          "fullon-labs-fullon-kb",
+          "fullon labs fullon kb",
+          "fullonlabsfullonkb",
+          "fullon labs fullon",
+          "fullonlabsfullon",
+          "docs"
+        ]
+      }
     }
   ]
 }
