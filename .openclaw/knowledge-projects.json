@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "key": "cisumusic",
+      "name": "cisumusic",
+      "directory": "docs_CisuMusiC_App",
+      "category": "support_ops",
+      "syncAudience": "support",
+      "summary": "CisuMusiC 的使用方法、功能介绍、页面操作和常见问题",
+      "routing": {
+        "scopeAliases": [
+          "cisumusic",
+          "cisumusic app",
+          "docs cisumusic app",
+          "fullon-labs-fullon-kb",
+          "fullon labs fullon kb",
+          "fullonlabsfullonkb",
+          "fullon labs fullon",
+          "fullonlabsfullon",
+          "docs_cisumusic_app",
+          "docscisumusicapp"
+        ],
+        "domains": [
+          "app_support",
+          "product_usage",
+          "transaction",
+          "support_ops"
+        ],
+        "contentFocus": [
+          "faq",
+          "procedure",
+          "troubleshooting",
+          "transaction"
+        ]
+      }
+    }
+  ]
+}
