@@ -8,6 +8,7 @@
       "category": "support_ops",
       "syncAudience": "support",
       "summary": "CisuMusiC 的使用方法、功能介绍、页面操作和常见问题",
+      "description": "CisuMusiC 的使用方法、功能介绍、页面操作和常见问题",
       "routing": {
         "scopeAliases": [
           "cisumusic",
