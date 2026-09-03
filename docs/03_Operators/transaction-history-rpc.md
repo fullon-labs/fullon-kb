@@ -11,7 +11,7 @@ source: official
 ## Purpose
 
 This page expands the Transaction History section of the
-[[funod-rpc|funod RPC Developer Guide]]. It covers only native `funod` RPC.
+[funod RPC Developer Guide](funod-rpc.md). It covers only native `funod` RPC.
 Flonscan is mentioned as integration evidence because its source and production
 calls exercise these native routes; Flonscan's private application APIs are not
 part of the `funod` RPC contract.
@@ -322,8 +322,8 @@ This guide was checked against:
 
 ## Related pages
 
-- [[funod-rpc|funod RPC Developer Guide]]
-- [[README|Operator and Developer Guides]]
-- [[../05_Glossary/finality|Finality]]
+- [funod RPC Developer Guide](funod-rpc.md)
+- [Operator and Developer Guides](README.md)
+- [Finality](../05_Glossary/finality.md)
 - [FullOn Core source](https://github.com/fullon-labs/flon-core)
 - [Flonscan](https://flonscan.io)

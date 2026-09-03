@@ -370,7 +370,7 @@ The following methods are declared internally but are **not** HTTP RPC routes
 in the checked version: `get_optimization_suggestions`, `get_cache_analysis`,
 `get_maintenance_needs`, and `trigger_auto_optimize`.
 
-See [[transaction-history-rpc|funod Transaction History RPC]] for pagination,
+See [funod Transaction History RPC](transaction-history-rpc.md) for pagination,
 irreversibility, and examples verified through the Flonscan integration.
 
 ## Trace API
@@ -681,8 +681,8 @@ This guide was checked against:
 
 ## Related pages
 
-- [[transaction-history-rpc|funod Transaction History RPC]]
-- [[README|Operator and Developer Guides]]
-- [[../01_Core_Chain/chain-overview|Chain Overview]]
-- [[../05_Glossary/finality|Finality]]
+- [funod Transaction History RPC](transaction-history-rpc.md)
+- [Operator and Developer Guides](README.md)
+- [Chain Overview](../01_Core_Chain/chain-overview.md)
+- [Finality](../05_Glossary/finality.md)
 - [FullOn Core source](https://github.com/fullon-labs/flon-core)
