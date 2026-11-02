@@ -1,0 +1,56 @@
+{
+  "observed_date": "2026-11-02",
+  "endpoint": "https://m.flonscan.io",
+  "method": "read-only POST get_info and get_consensus_parameters; responses read separately, not an atomic snapshot",
+  "get_info": {
+    "chain_id": "d4019d7d8633a337973408c6c00e5c4888933ad1b6ce10edddea8145317d8d12",
+    "server_full_version_string": "v0.9.2-2188e4f94a1e9fe564a31c33e497b464556f3650",
+    "head_block_num": 14968372,
+    "head_block_time": "2026-11-02T13:46:45.000",
+    "last_irreversible_block_num": 14968370,
+    "gas_per_cpu_ms": 10000,
+    "gas_per_net_kb": 50000,
+    "gas_per_ram_kb": 50000
+  },
+  "get_consensus_parameters": {
+    "chain_config": {
+      "max_block_net_usage": 1048576,
+      "target_block_net_usage_pct": 1000,
+      "max_transaction_net_usage": 524288,
+      "base_per_transaction_net_usage": 12,
+      "net_usage_leeway": 500,
+      "context_free_discount_net_usage_num": 20,
+      "context_free_discount_net_usage_den": 100,
+      "max_block_cpu_usage": 200000,
+      "target_block_cpu_usage_pct": 1000,
+      "max_transaction_cpu_usage": 150000,
+      "min_transaction_cpu_usage": 100,
+      "max_transaction_lifetime": 3600,
+      "deferred_trx_expiration_window": 600,
+      "max_transaction_delay": 3888000,
+      "max_inline_action_size": 524288,
+      "max_inline_action_depth": 4,
+      "max_authority_depth": 6,
+      "max_total_ram_usage": "68719476736",
+      "gas_per_cpu_ms": 10000,
+      "gas_per_net_kb": 50000,
+      "gas_per_ram_kb": 50000,
+      "max_action_return_value_size": 256
+    },
+    "wasm_config": {
+      "max_mutable_global_bytes": 1024,
+      "max_table_elements": 1024,
+      "max_section_elements": 8192,
+      "max_linear_memory_init": 65536,
+      "max_func_local_bytes": 8192,
+      "max_nested_structures": 1024,
+      "max_symbol_bytes": 8192,
+      "max_module_bytes": 20971520,
+      "max_code_bytes": 20971520,
+      "max_pages": 528,
+      "max_call_depth": 251
+    }
+  },
+  "ordinary_transfer_sample_count": 0,
+  "average_status": "No measured ordinary-transfer average published; numeric transfer examples are hypothetical, not network measurements."
+}
