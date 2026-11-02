@@ -4,6 +4,8 @@ title: FullOn 文档中心
 
 # FullOn 文档中心
 
+**目标版本：FullOn Core v0.9.2。** [版本基线、接口变化与升级要求](09_Release_Notes/v0.9.2.md)。
+
 从了解账户开始，到完成第一笔转账、接入应用与部署合约。
 
 <div class="grid cards" markdown>
@@ -45,6 +47,8 @@ title: FullOn 文档中心
 | 编写并部署合约 | [编译](10_Developer_Guides/build-contract.md) · [部署](10_Developer_Guides/deploy-contract.md) · [调用](10_Developer_Guides/call-actions.md) |
 | 发行自己的代币 | [创建、发行与分发](10_Developer_Guides/issue-tokens.md) |
 | 运行节点 | [普通节点与 BP](10_Developer_Guides/nodes.md) · [P2P](10_Developer_Guides/p2p.md) |
+
+| 参与 DAO、BP 投票或申请预算 | [治理入门](11_DAO_Governance/README.md) · [提案与投票](11_DAO_Governance/proposals.md) · [Treasury](11_DAO_Governance/treasury.md) |
 
 ## 阅读前确认
 

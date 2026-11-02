@@ -1,49 +1,38 @@
 ---
-title: funod Transaction History RPC
+title: funod 交易历史 RPC
 type: developer_guide
 status: verified
-updated: 2026-09-03
-source: official
+updated: 2026-11-02
+source: FullOn Core v0.9.2 source review
+translation_of: 03_Operators/transaction-history-rpc.md
+translated: '2026-11-02'
+target_version: v0.9.2
+source_revision: 2188e4f94a1e9fe564a31c33e497b464556f3650
 ---
 
-# funod Transaction History RPC
+# funod 交易历史 RPC
 
-## Purpose
+## 用途与范围
 
-This page expands the Transaction History section of the
-[funod RPC Developer Guide](funod-rpc.md). It covers only native `funod` RPC.
-Flonscan is mentioned as integration evidence because its source and production
-calls exercise these native routes; Flonscan's private application APIs are not
-part of the `funod` RPC contract.
+本页以 **FullOn Core v0.9.2**（`2188e4f94a1e9fe564a31c33e497b464556f3650`，2026-11-02 审阅）为目标，扩展[完整 RPC 参考](funod-rpc.md)中的原生 `funod` 交易历史 API。需使用 history 构建或显式启用相应编译功能，再配置两个运行插件。Flonscan 源码和实际调用用作消费侧证据；浏览器私有应用 API 不属于原生 RPC 协议。
 
-Use this API to retrieve:
+可查询账户动作、按交易 ID 获取交易及 trace、公钥到账户和控制关系索引、区块交易数，以及本地历史数据库健康。历史数据是节点维护的索引；当前账户、余额、权限和合约表应查询 `/v1/chain/*`。
 
-- action history involving an account;
-- a transaction and its action traces by transaction ID;
-- indexed key-to-account and controlling-account relationships;
-- transaction counts and local history-database health.
-
-History is an index maintained by the node. Use `/v1/chain/*` for authoritative
-current account, balance, permission, and contract-table state.
-
-## Enable and detect the API
-
-Enable both plugins:
+## 启用与探测
 
 ```ini
 plugin = eosio::transaction_history_plugin
 plugin = eosio::transaction_history_api_plugin
 ```
 
-The current source registers identical handlers under both prefixes:
+两种前缀注册相同处理器：
 
 ```text
 /v1/history/*
 /v1/transaction_history/*
 ```
 
-Use `/v1/history/*` when compatibility with older deployed nodes is required.
-Feature-detect before using newer methods or the longer alias:
+兼容旧节点优先 `/v1/history/*`。使用新方法或长别名前先检查能力：
 
 ```bash
 rpc=http://127.0.0.1:8888
@@ -52,52 +41,43 @@ curl -sS "$rpc/v1/node/get_supported_apis" | jq \
   '.apis[] | select(test("^/v1/(history|transaction_history)/"))'
 ```
 
-All routes are in the `history_ro` HTTP category. FullOn Core also applies
-shared History admission controls:
+全部位于 `history_ro` 类别。共享准入控制的源码默认值：
 
 ```ini
 http-max-history-requests-in-flight = 4
 http-history-requests-per-second = 5
 ```
 
-Those are the checked source defaults. Tune them for node capacity; both must
-remain greater than zero.
+按容量调整，但两项都须大于零。
 
-## Complete method list
+## 方法列表
 
-Each method below is available under both route prefixes when the current API
-plugin is enabled.
-
-| Method | Request | Main result |
+| 方法 | 请求 | 主要结果 |
 | --- | --- | --- |
-| `get_transaction` | `id`, optional `block_num_hint` | Indexed transaction, traces, resource/gas data, block and LIB |
-| `get_actions` | `account_name`, optional `pos`, `offset` | Account action sequence, LIB, pagination flags |
-| `get_transaction_count` | optional `start_block`, `end_block` | Count and effective block range |
+| `get_transaction` | `id`，可选 `block_num_hint` | 索引交易、trace、资源/gas、区块与 LIB |
+| `get_actions` | `account_name`，可选 `pos`、`offset` | 动作序列、LIB、分页标志 |
+| `get_transaction_count` | 可选 `start_block`、`end_block` | 数量与实际范围 |
 | `get_key_accounts` | `public_key` | `account_names` |
 | `get_controlled_accounts` | `controlling_account` | `controlled_accounts` |
-| `get_database_stats` | `{}` | `success`, database `stats`, optional `error` |
-| `get_performance_metrics` | `{}` | `success`, performance `metrics`, optional `error` |
+| `get_database_stats` | `{}` | `success`、数据库 `stats`、可选 `error` |
+| `get_performance_metrics` | `{}` | `success`、性能 `metrics`、可选 `error` |
+| `get_optimization_suggestions` | `{}` | `success`、`suggestions`、可选 `error` |
+| `get_cache_analysis` | `{}` | `success`、`analysis`、可选 `error` |
+| `get_maintenance_needs` | `{}` | `success`、`maintenance_needs`、可选 `error` |
 
-The plugin header also declares maintenance helpers named
-`get_optimization_suggestions`, `get_cache_analysis`, `get_maintenance_needs`,
-and `trigger_auto_optimize`. They are not registered by the current HTTP API
-plugin and therefore are not RPC endpoints.
+v0.9.2 已注册前三个诊断接口，两种前缀均可用；它们返回建议或状态，不执行优化。`trigger_auto_optimize` 仍未注册。
 
-## Get account actions
-
-Endpoint:
+## 查询账户动作
 
 ```text
 POST /v1/history/get_actions
 ```
 
-Request fields:
-
-| Field | Type | Required | Meaning |
+| 字段 | 类型 | 必填 | 含义 |
 | --- | --- | --- | --- |
-| `account_name` | string | yes | Account whose received or authorized actions are queried |
-| `pos` | signed integer | no | Account action sequence cursor; `-1` starts at the newest action |
-| `offset` | signed integer | no | Negative reads backward, positive reads forward, zero returns no rows |
+| `account_name` | string | 是 | 查询该账户接收或授权的动作 |
+| `pos` | 有符号整数 | 否 | 动作序列游标，`-1` 从最新开始 |
+| `offset` | 有符号整数 | 否 | 负数向后、正数向前、零不返回行 |
 
 ```bash
 curl --fail --silent --show-error \
@@ -110,27 +90,22 @@ curl --fail --silent --show-error \
   }' | jq
 ```
 
-Result fields:
-
-| Field | Meaning |
+| 结果字段 | 含义 |
 | --- | --- |
-| `actions` | Action records with account/global sequence, block metadata, and `action_trace` |
-| `last_irreversible_block` | LIB observed by the node for this response |
-| `more` | Whether more matching history is available; optional on older nodes |
-| `time_limit_exceeded_error` | Whether scanning stopped at its time limit; optional on older nodes |
+| `actions` | 动作记录，含账户/全局序号、区块元数据和 `action_trace` |
+| `last_irreversible_block` | 此响应观察到的 LIB |
+| `more` | 是否还有匹配历史，旧节点可能缺失 |
+| `time_limit_exceeded_error` | 扫描是否因时限停止，旧节点可能缺失 |
 
-An account history result is an action list, not a unique transaction list.
-One transaction can produce multiple top-level and inline actions. Group by
-`action_trace.trx_id` only when the product intends to display transactions
-rather than actions.
+返回的是动作列表，不是唯一交易列表。一笔交易可产生多个顶层和内联动作；产品需要显示交易时才按 `action_trace.trx_id` 分组。
 
-### Backward pagination
+### 向后分页
 
-1. Request `pos: -1` with a negative `offset`.
-2. Find the smallest returned `account_action_seq`.
-3. Use that value minus one as the next `pos`.
-4. Keep the same negative `offset`.
-5. Stop on an empty page; on current nodes also stop when `more` is `false`.
+1. 用 `pos: -1` 和负 `offset` 请求。
+2. 找到返回的最小 `account_action_seq`。
+3. 减一作为下一页 `pos`。
+4. 保持负 `offset`。
+5. 空页停止；当前节点还可按 `more: false` 停止。
 
 ```ts
 type HistoryAction = {
@@ -144,30 +119,23 @@ function olderCursor(actions: HistoryAction[]): number | null {
 }
 ```
 
-Older history implementations can include the explicit `pos` boundary and
-return one extra row. Derive the next cursor from returned sequence values and
-deduplicate by `account_action_seq`; do not assume an exact page length.
+旧实现可能包含 `pos` 边界并多返回一行；按实际序号推进，并以 `account_action_seq` 去重，不假设固定页长。若超时标志为 true，保留已有行，从序号继续并减小页大小。
 
-If `time_limit_exceeded_error` is true, retain the rows already returned and
-continue from their sequence cursor with a smaller page.
-
-### Determine irreversibility
+### 不可逆判定
 
 ```ts
 const irreversible = action.block_num <= response.last_irreversible_block;
 ```
 
-Actions above LIB remain reversible and can disappear after a fork.
+高于 LIB 的动作仍可逆，分叉后可能消失。
 
-## Get a transaction
-
-Endpoint:
+## 查询交易
 
 ```text
 POST /v1/history/get_transaction
 ```
 
-Use the full 64-character hexadecimal ID for compatibility:
+为保持兼容，发送完整 64 位十六进制 ID：
 
 ```bash
 curl --fail --silent --show-error \
@@ -176,8 +144,7 @@ curl --fail --silent --show-error \
   --data '{"id":"TRANSACTION_ID"}' | jq
 ```
 
-Optional `block_num_hint` can reduce lookup work when the containing block is
-known:
+已知所在区块时可提供提示以减少查找工作：
 
 ```json
 {
@@ -186,25 +153,20 @@ known:
 }
 ```
 
-Result fields:
-
-| Field | Meaning |
+| 字段 | 含义 |
 | --- | --- |
-| `id` | Transaction ID |
-| `trx` | Indexed receipt and transaction data |
-| `block_time` | Block timestamp |
-| `block_num` | Containing block number |
-| `last_irreversible_block` | Node LIB at query time |
-| `traces` | Top-level and inline action traces |
-| `res_usage` | Recorded resource usage |
-| `gas_traces` | Recorded gas-related traces |
+| `id` | 交易 ID |
+| `trx` | 索引的回执与交易数据 |
+| `block_time` | 区块时间戳 |
+| `block_num` | 所在区块号 |
+| `last_irreversible_block` | 查询时节点 LIB |
+| `traces` | 顶层与内联动作 trace |
+| `res_usage` | 记录的资源使用量 |
+| `gas_traces` | 记录的 gas trace |
 
-The current implementation accepts an unambiguous hexadecimal prefix of at
-least eight characters, but public clients should continue to send full IDs.
+当前实现接受至少八位且无歧义的十六进制前缀，但公开客户端应继续使用完整 ID。
 
-## Count transactions by block range
-
-Endpoint:
+## 按区块范围计数
 
 ```text
 POST /v1/history/get_transaction_count
@@ -216,14 +178,11 @@ curl -sS -X POST "$rpc/v1/history/get_transaction_count" \
   --data '{"start_block":14415000,"end_block":14416000}' | jq
 ```
 
-Both bounds are optional. The response returns `count`, `start_block`, and
-`end_block`, including the effective range selected by the implementation.
-Older deployed nodes may not expose this method even when `get_actions` and
-`get_transaction` are available.
+两个边界均可选；返回 `count`、`start_block`、`end_block`，包含实现选择的有效范围。旧节点即使支持动作/交易查询，也可能没有计数方法。
 
-## Query authority indexes
+## 权限关系索引
 
-Public-key lookup:
+按公钥查询：
 
 ```bash
 curl -sS -X POST "$rpc/v1/history/get_key_accounts" \
@@ -231,7 +190,7 @@ curl -sS -X POST "$rpc/v1/history/get_key_accounts" \
   --data '{"public_key":"PUB_K1_..."}' | jq
 ```
 
-Controlling-account lookup:
+按控制账户查询：
 
 ```bash
 curl -sS -X POST "$rpc/v1/history/get_controlled_accounts" \
@@ -239,10 +198,9 @@ curl -sS -X POST "$rpc/v1/history/get_controlled_accounts" \
   --data '{"controlling_account":"alice"}' | jq
 ```
 
-These results reflect the history index. Before authorizing or signing an
-operation, confirm current permissions with `/v1/chain/get_account`.
+这些是历史索引结果。授权或签名前仍需用 `/v1/chain/get_account` 核对当前权限。
 
-## Inspect history database health
+## 数据库健康
 
 ```bash
 curl -sS -X POST "$rpc/v1/history/get_database_stats" \
@@ -252,11 +210,9 @@ curl -sS -X POST "$rpc/v1/history/get_performance_metrics" \
   -H 'Content-Type: application/json' --data '{}' | jq
 ```
 
-Both methods return a `success` flag, a plugin-defined data object, and an
-optional `error`. Their nested metrics are operational diagnostics rather than
-a stable DApp data schema; monitoring clients should tolerate added fields.
+两方法返回 `success`、插件定义数据对象和可选 `error`。嵌套指标属于运维诊断，不是稳定 DApp 业务 schema；监控应容忍字段增加。
 
-## TypeScript client
+## TypeScript 客户端
 
 ```ts
 async function postRpc<T>(rpcBase: string, path: string, body: unknown): Promise<T> {
@@ -279,51 +235,53 @@ const actionPage = await postRpc("https://m.flonscan.io", "/v1/history/get_actio
 });
 ```
 
-Never send wallet credentials, private keys, or signing material to a History
-endpoint.
+不向历史服务发送钱包凭据、私钥或签名材料。示例公共地址属于下述历史核验记录，不是当前服务承诺。
 
-## Flonscan integration evidence
+## Flonscan 消费证据
 
-Flonscan source was inspected to confirm how a production application consumes
-native history RPC:
+核验时检查了 Flonscan：旧账户动作入口代理 `get_actions`，交易查询代理 `get_transaction`；当前浏览器页面也可使用自己的索引 API，后者不是 `funod` RPC 结构。
 
-- its legacy account-action route proxies native `get_actions`;
-- its transaction lookup proxies native `get_transaction`;
-- current explorer pages can also use Flonscan-owned indexed APIs, whose schema
-  is not a `funod` RPC contract.
+2026-09-03 曾通过 `https://m.flonscan.io` 验证主网动作/交易查询，该节点当时报告 `v0.6.6`，未提供长前缀别名和 `get_transaction_count`。此记录不是当前部署状态。始终探测能力，不将源码支持等同于上线。
 
-Live verification on 2026-09-03 confirmed `get_actions` and `get_transaction`
-through the mainnet node at `https://m.flonscan.io`. That node reported an older
-`v0.6.6` version and did not yet expose the longer
-`/v1/transaction_history/*` alias or `get_transaction_count`. Applications
-must feature-detect rather than equating source availability with deployment.
 
-## Operational notes
+## 诊断接口示例
 
-- `404 Unknown Endpoint`: plugin, alias, category, or method is unavailable on
-  the selected listener/version.
-- Empty history: verify network, local retention/indexing, and account filters.
-- Transaction not found: use the full ID and supply `block_num_hint` when known.
-- `503`: history concurrency or token-bucket admission is saturated; retry with
-  bounded exponential backoff.
-- Cache immutable transaction details after their block is irreversible.
-- History indexes can lag head state. Use Chain API for settlement and
-  authorization decisions.
+```bash
+for method in get_optimization_suggestions get_cache_analysis get_maintenance_needs; do
+  curl --fail --silent --show-error --max-time 15 \
+    -X POST "$rpc/v1/history/$method" \
+    -H 'Content-Type: application/json' --data '{}' | jq
+done
+```
 
-## Verification basis
+## v0.9.2 索引完整性与恢复
 
-This guide was checked against:
+`get_transaction`、`get_actions`、`get_transaction_count` 可返回 `history_status`：
 
-- FullOn Core transaction-history route registration and reflected request
-  structures at source revision `72cde15a3fb1`;
-- HTTP history admission-control implementation;
-- Flonscan source as a consumer of native History RPC;
-- live mainnet responses on 2026-09-03.
+| 字段 | 含义 |
+| --- | --- |
+| `indexed_through_block` | 本地索引已处理到的区块高度，不等于链头 |
+| `recording_healthy` | 当前历史记录是否健康 |
+| `filtered` | 是否启用了记录过滤，查询不是全链全集 |
+| `account_index_gap_block` | 已知最早账户索引截断高度；缺失不证明历史从未有缺口 |
 
-## Related pages
+交易的 `account_index_complete` 在旧记录中可能缺失，含义是未知，不能当作 true。存在过滤时交易 envelope 会标记 filtered、去掉签名交易体，并禁用 `block_num_hint` 绕过过滤的回退。
 
-- [funod RPC Developer Guide](funod-rpc.md)
-- [Operator and Developer Guides](README.md)
-- [Finality](../05_Glossary/finality.md)
-- [FullOn Core source](https://github.com/fullon-labs/flon-core)
-- [Flonscan](https://flonscan.io)
+查询共享执行预算，受 20 ms 与 HTTP 响应时限约束；同步存储读取无法在调用中途抢占，边界前后检查。响应大小限制覆盖完整返回 envelope。超时或大小上限都可能影响分页，应保留已有结果并检查状态，而非把少量结果当成完整历史。
+
+持久记录缺口不会因重启而自动删除并重建数据库。先保留证据，再从保留链数据另建索引。`transaction-history-force-clean` 具有破坏性，清空并不会自动重建更早历史。
+
+## 运维说明
+
+- `404 Unknown Endpoint`：当前监听器/版本不支持插件、别名、类别或方法。
+- 空历史：检查网络、本地索引/保留和账户过滤。
+- 交易不存在：使用完整 ID，已知区块时提供 `block_num_hint`。
+- `503`：历史并发或令牌桶限流饱和，使用有界指数退避。
+- 区块不可逆后缓存不可变交易详情。
+- 历史索引可落后于 head；结算与授权应读取 Chain API 当前状态。
+
+## 核验依据
+
+本次按 `v0.9.2` / `2188e4f94a1e9fe564a31c33e497b464556f3650` 重新核对历史路径、响应结构、HTTP 准入和查询预算。Flonscan 段落保留独立的 2026-09-03 线上观察，不能作为此次部署验证。[源文件与路径审阅清单](../contributing/v0.9.2-audit.json)。
+
+[完整 RPC](funod-rpc.md) · [参考入口](README.md) · [最终性](../05_Glossary/finality.md) · [Core](https://github.com/fullon-labs/flon-core) · [Flonscan](https://flonscan.io)

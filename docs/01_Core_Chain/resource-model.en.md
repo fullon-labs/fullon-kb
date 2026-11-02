@@ -1,5 +1,5 @@
 ---
-title: Resource model: FLON, GAS and ELON
+title: "Resource model: FLON, GAS and ELON"
 status: active
 updated: 2026-11-02
 source: whitepaper v2.5.0 clarification draft

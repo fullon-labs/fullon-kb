@@ -8,6 +8,8 @@ source: source review
 
 # How to call smart contract actions｜调用合约动作
 
+本文的节点、CLI 与 RPC 目标版本为 **FullOn Core v0.9.2**。合约、CDT 和钱包各有独立版本；其已注明的核验范围不因 Core 升级自动改变。详见[版本基线与升级说明](../09_Release_Notes/v0.9.2.md)。
+
 ## 用 CLI 调用
 
 先[读取当前 ABI](get-abi-code.md)，核对动作字段、类型与授权要求。下面调用[hello 示例](build-contract.md)；需要已部署合约和已准备好的签名钱包，命令将提交写交易。
@@ -33,4 +35,4 @@ HTTP `abi_json_to_bin` 只转换参数，不签名也不提交。节点 RPC 通�
 
 ## 来源
 
-[fucli 动作调用实现](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/programs/client/main.cpp)、[RPC 参考](../03_Operators/funod-rpc.md)。
+[fucli 动作调用实现](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/programs/client/main.cpp)、[RPC 参考](../03_Operators/funod-rpc.md)。

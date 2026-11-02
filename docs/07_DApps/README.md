@@ -1,32 +1,21 @@
 ---
-title: DApps Index
+title: DApp 索引
 type: index
 status: active
 updated: 2026-04-01
+translation_of: 07_DApps/README.md
+translated: '2026-11-02'
 ---
 
-# DApps Index
+# DApp 索引
 
-## Purpose
-Store one page per DApp in the FullOn ecosystem.
+每个应用保留独立介绍页：
 
-## Current DApps
-- FullSwap
-- FullBridge
-- FullVest
-- RWAVerse
+- [FullSwap](fullswap.md)
+- [FullBridge](fullbridge.md)
+- [FullVest](fullvest.md)
+- [RWAVerse](rwaverse.md)
 
-## Pages
-- [fullswap](fullswap.md)
-- [fullbridge](fullbridge.md)
-- [fullvest](fullvest.md)
-- [rwaverse](rwaverse.md)
+项目页应说明用途、用户价值、功能、操作、常见问题、官方链接与相关指南。
 
-## Standard page shape
-- summary
-- user value
-- features
-- how to use
-- common issues
-- official links
-- related guides
+[FullOn DAO Gov](dao-gov.md) · [治理完整帮助](../11_DAO_Governance/README.md)

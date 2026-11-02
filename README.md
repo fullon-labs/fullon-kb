@@ -8,7 +8,11 @@ source: repository synthesis
 
 # FullOn 文档中心
 
+目标版本：**FullOn Core v0.9.2**，固定源码与升级说明见 [v0.9.2](docs/09_Release_Notes/v0.9.2.md)。
+
 从你要完成的任务开始，选择对应入口。
+
+**语言：** [简体中文](https://fullon-labs.github.io/fullon-kb/) · [English](https://fullon-labs.github.io/fullon-kb/en/)
 
 **文档站配置目标：** [GitHub Pages](https://fullon-labs.github.io/fullon-kb/) · [发布说明](docs/contributing/publishing.md)
 
@@ -19,6 +23,10 @@ source: repository synthesis
 | 普通用户 | [用户帮助](docs/06_User_Guides/README.md) | 钱包与账户、收发资产、使用 DApp、交易查询与排错 |
 | 开发者 | [开发者帮助](docs/10_Developer_Guides/README.md) | RPC 接入、读取状态、签名与交易确认、合约开发准备 |
 | 节点运维人员 | [节点与 RPC 参考](docs/03_Operators/README.md) | 插件、接口可见性、历史索引与服务暴露 |
+
+## DAO 治理
+
+[治理帮助中心](docs/11_DAO_Governance/README.md)：POWER、提案与投票、BP 奖励、Treasury、L1–L4 门槛、主网参数快照及开发运维。
 
 ## 我想……
 

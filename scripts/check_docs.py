@@ -11,10 +11,13 @@ blocks = 0
 files = list(docs.rglob('*.md'))
 for page in files:
     text = page.read_text()
-    if '[[' in text:
-        errors.append(f'{page.relative_to(root)}: unsupported wiki link')
-    # Ignore code examples when validating prose links.
+    # C++ attributes such as [[eosio::action]] are valid inside code examples.
     prose = re.sub(r'```.*?```', '', text, flags=re.S)
+    if '[[' in prose:
+        errors.append(f'{page.relative_to(root)}: unsupported wiki link')
+    for block in re.findall(r'```(?:cpp|c\+\+)\n(.*?)```', text, re.S):
+        if re.search(r'\[eosio::(?:contract|action)\b[^\n]*\]\([^\n]*\.md\)', block):
+            errors.append(f'{page.relative_to(root)}: C++ attribute corrupted into a Markdown link')
     for target in re.findall(r'(?<!!)\[[^\]]*\]\(([^)]+)\)', prose):
         if '://' in target or target.startswith(('#', 'mailto:')):
             continue

@@ -1,5 +1,5 @@
 ---
-title: Whitepaper integration: scope and source conflicts
+title: "Whitepaper integration: scope and source conflicts"
 status: active
 updated: 2026-11-02
 source: whitepaper v2.5.0 clarification draft

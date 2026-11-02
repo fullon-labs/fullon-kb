@@ -8,6 +8,8 @@ source: source review
 
 # How to build a smart contract｜编写与编译合约
 
+本文的节点、CLI 与 RPC 目标版本为 **FullOn Core v0.9.2**。合约、CDT 和钱包各有独立版本；其已注明的核验范围不因 Core 升级自动改变。详见[版本基线与升级说明](../09_Release_Notes/v0.9.2.md)。
+
 ## 准备工具
 
 从官方 [CDT 仓库与 releases](https://github.com/fullon-labs/flon.cdt)选择与目标网络兼容的工具链。安装方式依平台和版本而异；本文核验本机 `cdt-cpp --version` 输出为 `0.9.0`，不代表推荐所有网络使用该版本。
@@ -19,11 +21,11 @@ source: source review
 ```cpp
 #include <eosio/eosio.hpp>
 
-class [eosio::contract("hello")](eosio::contract("hello").md) hello : public eosio::contract {
+class [[eosio::contract("hello")]] hello : public eosio::contract {
 public:
     using eosio::contract::contract;
 
-    [eosio::action](eosio::action.md)
+    [[eosio::action]]
     void hi(eosio::name user) {
         eosio::require_auth(user);
         eosio::print("Hello, ", user);

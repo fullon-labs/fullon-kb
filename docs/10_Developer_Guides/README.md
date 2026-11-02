@@ -10,6 +10,7 @@ source: source review
 
 ## 接入基础
 
+- [fucli 命令行全面使用指南](fucli.md)
 - [RPC 快速开始](quickstart.md)
 - [获取 ABI 与 code](get-abi-code.md)
 - [创建 / 激活账户](accounts.md)
@@ -18,6 +19,7 @@ source: source review
 
 ## 节点与网络
 
+- [Docker Compose 部署节点](docker-compose.md)
 - [启动普通节点与 BP 节点](nodes.md)
 - [P2P 配置与同步](p2p.md)
 - [完整 RPC 参考](../03_Operators/funod-rpc.md)
@@ -36,4 +38,8 @@ source: source review
 
 ## 核验范围
 
-新增教程对照 2026-11-02 本地 Core、CDT、系统合约与 RWID 源码；现有 RPC 长篇参考保留 `72cde15a3fb1`（2026-09-03）基线。节点能力需现场发现，源码支持不代表目标网络已经部署。
+节点、CLI 与 RPC 教程统一以 **FullOn Core v0.9.2**（`2188e4f94a1e9fe564a31c33e497b464556f3650`，2026-11-02）为目标；RPC 长篇参考已经重新核对注册路径、响应结构、构建与监听限制。[版本基线与升级说明](../09_Release_Notes/v0.9.2.md)记录变化及审阅证据。CDT、系统合约、RWID 和钱包保持各自版本与核验范围，不把 Core 版本当作这些组件的版本。源码支持不等于当前网络已部署。
+
+## 治理接入
+
+[DAO 合约、表与动作](../11_DAO_Governance/developer-reference.md) · [Keeper 与 Standby 运维](../11_DAO_Governance/operations.md)。

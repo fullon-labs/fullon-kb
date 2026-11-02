@@ -1,0 +1,231 @@
+{
+  "target_version": "v0.9.2",
+  "source_revision": "2188e4f94a1e9fe564a31c33e497b464556f3650",
+  "verified_date": "2026-11-02",
+  "official_release": "https://github.com/fullon-labs/flon-core/releases/tag/v0.9.2",
+  "annotated_tag_object": "6688825a23c4fe580acea00b38299a1518131232",
+  "scope": "Static source/registration/build review; not a deployment or runtime network test. Wallet RPC belongs to fuwal and is outside the funod catalog.",
+  "logical_operations_max_without_greylist": 76,
+  "route_paths_max_without_greylist": 86,
+  "registered_paths": [
+    "/v1/chain/abi_bin_to_json",
+    "/v1/chain/abi_json_to_bin",
+    "/v1/chain/compute_transaction",
+    "/v1/chain/get_abi",
+    "/v1/chain/get_account",
+    "/v1/chain/get_accounts_by_authorizers",
+    "/v1/chain/get_activated_protocol_features",
+    "/v1/chain/get_block",
+    "/v1/chain/get_block_header",
+    "/v1/chain/get_block_header_state",
+    "/v1/chain/get_block_info",
+    "/v1/chain/get_code",
+    "/v1/chain/get_code_hash",
+    "/v1/chain/get_consensus_parameters",
+    "/v1/chain/get_currency_balance",
+    "/v1/chain/get_currency_stats",
+    "/v1/chain/get_finalizer_info",
+    "/v1/chain/get_info",
+    "/v1/chain/get_producer_schedule",
+    "/v1/chain/get_producers",
+    "/v1/chain/get_raw_abi",
+    "/v1/chain/get_raw_block",
+    "/v1/chain/get_raw_code_and_abi",
+    "/v1/chain/get_required_keys",
+    "/v1/chain/get_scheduled_transactions",
+    "/v1/chain/get_table_by_scope",
+    "/v1/chain/get_table_rows",
+    "/v1/chain/get_transaction_id",
+    "/v1/chain/get_transaction_status",
+    "/v1/chain/push_block",
+    "/v1/chain/push_transaction",
+    "/v1/chain/push_transactions",
+    "/v1/chain/send_read_only_transaction",
+    "/v1/chain/send_transaction",
+    "/v1/chain/send_transaction2",
+    "/v1/db_size/get",
+    "/v1/history/get_actions",
+    "/v1/history/get_cache_analysis",
+    "/v1/history/get_controlled_accounts",
+    "/v1/history/get_database_stats",
+    "/v1/history/get_key_accounts",
+    "/v1/history/get_maintenance_needs",
+    "/v1/history/get_optimization_suggestions",
+    "/v1/history/get_performance_metrics",
+    "/v1/history/get_transaction",
+    "/v1/history/get_transaction_count",
+    "/v1/net/connect",
+    "/v1/net/connections",
+    "/v1/net/disconnect",
+    "/v1/net/status",
+    "/v1/node/get_supported_apis",
+    "/v1/producer/create_snapshot",
+    "/v1/producer/get_account_ram_corrections",
+    "/v1/producer/get_integrity_hash",
+    "/v1/producer/get_runtime_options",
+    "/v1/producer/get_scheduled_protocol_feature_activations",
+    "/v1/producer/get_snapshot_requests",
+    "/v1/producer/get_supported_protocol_features",
+    "/v1/producer/get_unapplied_transactions",
+    "/v1/producer/get_whitelist_blacklist",
+    "/v1/producer/pause",
+    "/v1/producer/paused",
+    "/v1/producer/resume",
+    "/v1/producer/schedule_protocol_feature_activations",
+    "/v1/producer/schedule_snapshot",
+    "/v1/producer/set_whitelist_blacklist",
+    "/v1/producer/unschedule_snapshot",
+    "/v1/producer/update_runtime_options",
+    "/v1/prometheus/metrics",
+    "/v1/sign_transaction/push_transaction",
+    "/v1/sign_transaction/push_transactions",
+    "/v1/sign_transaction/send_transaction",
+    "/v1/sign_transaction/send_transaction2",
+    "/v1/test_control/kill_node_on_producer",
+    "/v1/trace_api/get_block",
+    "/v1/trace_api/get_transaction_trace",
+    "/v1/transaction_history/get_actions",
+    "/v1/transaction_history/get_cache_analysis",
+    "/v1/transaction_history/get_controlled_accounts",
+    "/v1/transaction_history/get_database_stats",
+    "/v1/transaction_history/get_key_accounts",
+    "/v1/transaction_history/get_maintenance_needs",
+    "/v1/transaction_history/get_optimization_suggestions",
+    "/v1/transaction_history/get_performance_metrics",
+    "/v1/transaction_history/get_transaction",
+    "/v1/transaction_history/get_transaction_count"
+  ],
+  "greylist_conditional_paths": [
+    "/v1/producer/add_greylist_accounts",
+    "/v1/producer/get_greylist",
+    "/v1/producer/remove_greylist_accounts"
+  ],
+  "source_files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "610ddf4eaf0ecc84ec9f1f259ff21a7215dfc5261e896e44358a4db0c04fa8cb"
+    },
+    {
+      "path": "CMakeModules/NodeProfile.cmake",
+      "sha256": "b2d2d0827339eba4cf4523bf1c5ecc3dfb12329410643346993fbc6e6747a645"
+    },
+    {
+      "path": "programs/node/CMakeLists.txt",
+      "sha256": "85f151dcbd348b2be23be5601ebbafe4f4aaba9ee48c009846bc49f7f8291dea"
+    },
+    {
+      "path": "programs/client/main.cpp",
+      "sha256": "3b36d19d0eee76a2c1ee7e83bdc05148f184c843179b2bac8eebf30f9da40ac5"
+    },
+    {
+      "path": "libraries/chain/include/eosio/chain/config.hpp",
+      "sha256": "5a99e3f1895dba384bbb51ea3b8d04de4ece2892c2d39c6351a9accccdfc5887"
+    },
+    {
+      "path": "docs/node-build-profiles.md",
+      "sha256": "afc7d99ece4ccda5d88b8d9e5df226878e915342f1d6726d7757edf6b1aad200"
+    },
+    {
+      "path": "plugins/http_plugin/http_plugin.cpp",
+      "sha256": "707e10a0001db12005fc0e85d7989fed2c4f7d545147f008f2f7a496f8869381"
+    },
+    {
+      "path": "plugins/http_plugin/include/eosio/http_plugin/beast_http_session.hpp",
+      "sha256": "d0b8eb266032e11010a5d16a186685e3a4571d8c51ad58bf83889af832fc08fb"
+    },
+    {
+      "path": "plugins/chain_api_plugin/chain_api_plugin.cpp",
+      "sha256": "351ccaa1befb666b2505ce884f68f62c0c7775765dfd117e73c9b2ce645624c8"
+    },
+    {
+      "path": "plugins/chain_plugin/include/eosio/chain_plugin/chain_plugin.hpp",
+      "sha256": "c651087e03b706bb8f8b944e15e5986cd1b88956c1d6920acea0e26be26d7d34"
+    },
+    {
+      "path": "plugins/transaction_history_api_plugin/transaction_history_api_plugin.cpp",
+      "sha256": "078d31c93438fe77ee7bc384dacfd8d2f3a7e5f3cc009e923182015482ceb350"
+    },
+    {
+      "path": "plugins/transaction_history_plugin/include/eosio/transaction_history_plugin/transaction_history_plugin.hpp",
+      "sha256": "b7edb97b212fea889359813bb9fd1b9094103db212705ab687beba756d6dc9a4"
+    },
+    {
+      "path": "plugins/transaction_history_plugin/transaction_history_plugin.cpp",
+      "sha256": "ff84684dea8e19a212af0ed875f980cbb5b2d948e6bffa545430d16a89228161"
+    },
+    {
+      "path": "plugins/producer_api_plugin/producer_api_plugin.cpp",
+      "sha256": "fba860f7b17a0547c43765585d9dbaf69219c6da98a9de3766b6f7299828ba84"
+    },
+    {
+      "path": "plugins/net_api_plugin/net_api_plugin.cpp",
+      "sha256": "ee368d3907600ef5c71192d6f9984c67d90b9f154fcdd74ff0d8554c07e526d1"
+    },
+    {
+      "path": "plugins/net_plugin/net_plugin.cpp",
+      "sha256": "3e6f094249bd58a32cb8b94c72220f2245497277ac26db6e74b4c62129023a45"
+    },
+    {
+      "path": "plugins/trace_api_plugin/trace_api_plugin.cpp",
+      "sha256": "a322e32502bfdeb54ebcb1be7aedda95fc1621eaa58714aff5aa0369c0149499"
+    },
+    {
+      "path": "plugins/sign_transaction_api_plugin/sign_transaction_api_plugin.cpp",
+      "sha256": "f6aa2be53b99d4871b2766dc73a233c04de36e1be235abec9f794e4a5fbbfc96"
+    },
+    {
+      "path": "plugins/test_control_api_plugin/test_control_api_plugin.cpp",
+      "sha256": "fb744f6ff8eb2c3e45b0843895b0a02f3c68965161e20129b6d974b5676c68fe"
+    },
+    {
+      "path": "plugins/db_size_api_plugin/db_size_api_plugin.cpp",
+      "sha256": "3df9611ec3ca1185fd293e4fefc49c64be6bb280c9bcc7ed8d4bde2985d6978f"
+    },
+    {
+      "path": "plugins/prometheus_plugin/prometheus_plugin.cpp",
+      "sha256": "020456f0914fc3378635ce48e26a1b226bffd2cdcc0c8a1cf129af590e2eb032"
+    },
+    {
+      "path": "plugins/wallet_api_plugin/wallet_api_plugin.cpp",
+      "sha256": "a143f0c993d0512d753e8ed1f97617dac97d3a5339cc338a7aa7c1ac01ed371d"
+    },
+    {
+      "path": "config/node/rpc.ini",
+      "sha256": "df96e935842685baa8de655ef2953c3a722757a46165dc4b71879c94a321f4d5"
+    },
+    {
+      "path": "config/node/bp.ini",
+      "sha256": "d80f8c1d0acace24d00162b3aeb52665490e8b87897c556f027488e352b65d0a"
+    },
+    {
+      "path": "config/node/history.ini",
+      "sha256": "fcebcec7430ee3f7cf58c612a49977eaba2a4b53c6bb5a9ae9114bf781c9ecdd"
+    },
+    {
+      "path": "config/node/seed.ini",
+      "sha256": "9dc18fe0eabdce5bba527c875e2567a6c33ea3d6fe0e90f3b3a1d65e2678e39c"
+    },
+    {
+      "path": "plugins/state_history_plugin/include/eosio/state_history_plugin/state_history_plugin.hpp",
+      "sha256": "69238d6294ba6c79ead97d4a85f32371e34b06a70d8bd0ffa905258026aac5b5"
+    },
+    {
+      "path": "plugins/transaction_history_plugin/include/eosio/transaction_history_plugin/query_budget.hpp",
+      "sha256": "4be9757ccb3fe20e8648883d9faed4ffad1f19c1f932e86d3b853e3a88d648d9"
+    },
+    {
+      "path": "plugins/transaction_history_plugin/rocksdb_manager.cpp",
+      "sha256": "481695e55991346f09cd1acde752d3c01e6ad2909f3185a009fed66f55073a5f"
+    },
+    {
+      "path": "plugins/http_plugin/include/eosio/http_plugin/macros.hpp",
+      "sha256": "c9c56acae4f03426cd489409b7095a757db94dfa82d35e1a59db321222f5c0cb"
+    }
+  ],
+  "tools_release_asset": {
+    "name": "flon-core-tools_0.9.2-ubuntu22.04_amd64.deb",
+    "url": "https://github.com/fullon-labs/flon-core/releases/download/v0.9.2/flon-core-tools_0.9.2-ubuntu22.04_amd64.deb",
+    "sha256": "e06858f051ed7c3fc5e2276258520993fbf07ba5e4636b8c20d1899172cde2a3",
+    "evidence": "GitHub official release asset digest read on 2026-11-02; package was not installed"
+  }
+}
