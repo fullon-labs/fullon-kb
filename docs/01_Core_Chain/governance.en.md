@@ -2,12 +2,12 @@
 title: Governance power and BP eligibility
 status: active
 updated: 2026-11-02
-source: whitepaper v2.5.0 clarification draft
+source: whitepaper v2.6.0 Core v0.9.2 baseline and policy clarification draft
 ---
 
 # Governance power and BP eligibility
 
-This page summarizes protocol design in the whitepaper v2.5.0 clarification draft (2026-11-02); it does not certify deployment on any network.
+This page summarizes protocol design in the whitepaper v2.6.0 clarification draft (2026-11-02); it does not certify deployment on any network.
 
 ## DAO proposals and governance power
 
@@ -31,9 +31,9 @@ The target is 21 Active and 30 Standby BPs. Bootstrapping may expand Active memb
 
 - Proposed reward epoch: six hours, or 43,200 half-second slots. This is slot accounting, not an assumption that every dynamically produced block takes half a second.
 - Votes take effect for the next ranking epoch. Historical snapshots determine reward ownership; later claims do not change it.
-- The whitepaper describes zero rewards and suspension below 90% availability, with network-wide incident protection considered before individual penalties.
-- After cooldown, the BP must authorize `resumeprod` and enter probation; 12 consecutive assigned missed slots during probation can trigger suspension again.
-- Repeated cooldowns are 1, 2, 4 and 8 epochs: 6, 12, 24 and 48 hours at the proposed epoch length.
+- `get_producer_slot_stats_v2` uses `expected = produced + missed`; `idle_skipped` neither enters the availability denominator nor counts as a miss.
+- Protect insufficient samples and network-wide incidents before individual suspension and Standby promotion.
+- Authorized recovery, probation, exact thresholds, and reward-pool treatment depend on the effective system contract and governance configuration, not the Core release number.
 - Ordinary downtime first affects rewards and eligibility. Principal slashing is reserved for objectively verifiable safety violations. Verify actual deployed rules and governance parameters.
 
 No unverified registration amount, lock duration or production command is supplied here. Check current contracts, schedules, parameters and permissions before acting.
@@ -42,4 +42,4 @@ No unverified registration amount, lock duration or production command is suppli
 
 ## Sources
 
-[English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.md) · [Chinese whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.cn.md) · [Scope and source conflicts](whitepaper.md). Pinned revision `d695da53f4e453dd0e372e9dc5a605a0c56d455e`; retrieved 2026-11-02. The clarification awaits upstream merge and is not a deployment certification.
+[English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/5758318eba75d48afd1d543bf020255c1a998d26/fullon.whitepaper.md) · [Chinese whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/5758318eba75d48afd1d543bf020255c1a998d26/fullon.whitepaper.cn.md) · [Scope and source conflicts](whitepaper.md). Pinned revision `5758318eba75d48afd1d543bf020255c1a998d26`; retrieved 2026-11-02. The Core v0.9.2 baseline is published; the additional future issuance/GAS policy clarification remains a separate draft, not a deployment certification.

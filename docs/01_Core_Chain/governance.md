@@ -2,12 +2,12 @@
 title: 治理权与 BP 资格
 status: active
 updated: 2026-11-02
-source: whitepaper v2.5.0 clarification draft
+source: whitepaper v2.6.0 Core v0.9.2 baseline and policy clarification draft
 ---
 
 # 治理权与 BP 资格
 
-本文整理白皮书 v2.5.0 澄清稿（2026-11-02）的协议设计，不代表本次已验证各网络部署。
+本文整理白皮书 v2.6.0 澄清稿（2026-11-02）的协议设计，不代表本次已验证各网络部署。
 
 ## DAO 提案与治理权
 
@@ -31,9 +31,9 @@ BP 选举与 DAO 提案共用锁定基础，但动作、门槛和执行路径分
 
 - 建议奖励 epoch 为 6 小时，即 43,200 个 0.5 秒 slot；这是 slot 计账设计，不可简单乘以动态实际产块间隔来推算。
 - epoch 内投票从下一排名 epoch 生效；奖励按产生期间历史票权归属，延后领取不改变所有权。
-- 白皮书给出可用率低于 90% 的当期奖励归零与停权、递补机制，并先考虑全网事故保护。
-- 冷却结束后需以自身权限调用 `resumeprod` 进入试运行；试运行连续漏掉 12 个分配 slot 可再次停权。
-- 重复停权冷却期描述为 1、2、4、8 个 epoch，即建议时长下的 6、12、24、48 小时。
+- `get_producer_slot_stats_v2` 按 `expected = produced + missed` 统计；`idle_skipped` 不进入可用率分母，也不算漏块。
+- 样本不足或全网事故先保护，再考虑个体停权与 Standby 递补。
+- 冷却后的授权恢复、试运行、具体门槛及奖励池处理以生效系统合约和治理配置为准，不能由 Core 版本直接推断。
 - 普通下线首先影响奖励和资格；本金罚没仅针对可客观验证的安全违规。具体门槛以目标链实现和治理配置核验。
 
 本文不提供未验证的报名金额、质押锁定期或生产命令。参与前查询当前合约、排班、治理参数及权限，再按正式操作指南执行。
@@ -42,4 +42,4 @@ BP 选举与 DAO 提案共用锁定基础，但动作、门槛和执行路径分
 
 ## 来源
 
-[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `d695da53f4e453dd0e372e9dc5a605a0c56d455e`；读取日期 2026-11-02。本次澄清稿尚待上游合并，不能标作已部署规则。
+[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/5758318eba75d48afd1d543bf020255c1a998d26/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/5758318eba75d48afd1d543bf020255c1a998d26/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `5758318eba75d48afd1d543bf020255c1a998d26`；读取日期 2026-11-02。Core v0.9.2 基线已发布；未来发行/GAS 政策澄清仍在独立草稿中，不能标作已部署规则。

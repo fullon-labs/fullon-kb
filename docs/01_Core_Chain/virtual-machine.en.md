@@ -18,4 +18,4 @@ Source: [official VM page](https://docs.flon.network/fullon-faq/what_are_fullon_
 
 ## Whitepaper supplement
 
-The v2.5.0 specification claims dual WASM/EVM support and 100% compatibility. This remains a design claim here: target-network EVM endpoints and tooling require verification. See [specifications and differences](../01_Core_Chain/whitepaper.md).
+Whitepaper v2.6.0 identifies native WASM and a separate EVM integration, rather than a second VM verified in the Core v0.9.2 package. Target-network EVM endpoints and tooling require verification. See [specifications and differences](../01_Core_Chain/whitepaper.md).
