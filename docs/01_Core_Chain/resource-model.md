@@ -2,12 +2,12 @@
 title: 资源模型：FLON、GAS 与 ELON
 status: active
 updated: 2026-11-02
-source: whitepaper v2.4.0 synthesis
+source: whitepaper v2.5.0 clarification draft
 ---
 
 # 资源模型：FLON、GAS 与 ELON
 
-本文整理白皮书 v2.4.0（2026-10-22）的协议设计，不代表本次已验证各网络部署。
+本文整理白皮书 v2.5.0 澄清稿（2026-11-02）的协议设计，不代表本次已验证各网络部署。
 
 ## 三种资源
 
@@ -23,7 +23,7 @@ source: whitepaper v2.4.0 synthesis
 
 按“资源模型”章节，交易先使用已有 GAS，也可将账户 FLON 转换为 GAS 支付资源成本，不要求标准账户总是提前手动购买。CPU/NET 消耗对应使用额度；RAM 归还时可按规则返还或回收 GAS。具体自动转换、退款条件及交易失败的处理需以运行版本为准，不能只凭白皮书认定某一报错不收费或未留痕。
 
-ELON 的可兑回记账由 `flon.gas` 的 FLON 储备支持：每新增一个 ELON 对应一个 FLON 最小单位。可兑换负债存在时，储备不得重复使用；消耗 GAS 会注销对应 ELON 负债，储备 FLON 按该章节的描述默认保留。**不能把 GAS 消耗等同于同量 FLON 已销毁**，白皮书“通缩”段与此存在措辞冲突，见[差异记录](whitepaper.md)。
+ELON 的可兑回记账由 `flon.gas` 的 FLON 储备支持：每新增一个 ELON 对应一个 FLON 最小单位。可兑换负债存在时，储备不得重复使用；消耗 GAS 会注销对应 ELON 负债，储备 FLON 按该章节的描述默认保留。其中一部分按生效规则用于符合资格的 Active 与 Standby BP 奖励，其余默认进入 DAO 锁定账；**剩余可支配部分是否销毁、何时及销毁多少，由未来 FullOn DAO Gov 决定**。没有通过并执行的销毁提案，不能计为已销毁；仍需支持未偿 ELON 兑回的储备不得用于奖励或销毁。详见[治理口径](whitepaper.md)。
 
 ## 奖励账与 DAO 锁定账
 
@@ -42,4 +42,4 @@ ELON 的可兑回记账由 `flon.gas` 的 FLON 储备支持：每新增一个 EL
 
 ## 来源
 
-[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/f49e5f0f821162a997260535be30767e3f147d8e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/f49e5f0f821162a997260535be30767e3f147d8e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `f49e5f0f821162a997260535be30767e3f147d8e`；读取日期 2026-11-02。
+[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `61913ffb2184314597a2091145c30bfe7d7c818e`；读取日期 2026-11-02。本次澄清稿尚待上游合并，不能标作已部署规则。

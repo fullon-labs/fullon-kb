@@ -32,6 +32,6 @@ source: official FAQ synthesis
 
 ## 白皮书补充（2026-11-02）
 
-原表保留对 FAQ 本身的读取记录；相关设计已从官方白皮书 v2.4.0 补入：[规格](../01_Core_Chain/specifications.md)、[资源](../01_Core_Chain/resource-model.md)、[代币经济](../01_Core_Chain/tokenomics.md)、[互操作性](../01_Core_Chain/interoperability.md)。另增加[治理](../01_Core_Chain/governance.md)与[路线图](../01_Core_Chain/roadmap.md)。
+原表保留对 FAQ 本身的读取记录；相关设计已从官方白皮书 v2.5.0 补入：[规格](../01_Core_Chain/specifications.md)、[资源](../01_Core_Chain/resource-model.md)、[代币经济](../01_Core_Chain/tokenomics.md)、[互操作性](../01_Core_Chain/interoperability.md)。另增加[治理](../01_Core_Chain/governance.md)与[路线图](../01_Core_Chain/roadmap.md)。
 
-因此“FAQ 无正文”不再代表本站没有该主题说明。白皮书内的挖矿上限、通膨与储备销毁措辞冲突保留在[核验记录](../01_Core_Chain/whitepaper.md)，不擅自改写为已确认的运行规则。
+因此“FAQ 无正文”不再代表本站没有该主题说明。白皮书澄清稿已将后续发行与剩余 GAS 储备销毁明确为未来 FullOn DAO Gov 的决策事项；[核验记录](../01_Core_Chain/whitepaper.md)保留修订状态、其余资料边界及待确认部署。

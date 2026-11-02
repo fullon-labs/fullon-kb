@@ -2,16 +2,16 @@
 title: 白皮书整合：来源、适用范围与差异
 status: active
 updated: 2026-11-02
-source: whitepaper v2.4.0 synthesis
+source: whitepaper v2.5.0 clarification draft
 ---
 
 # 白皮书整合：来源、适用范围与差异
 
-本文整理白皮书 v2.4.0（2026-10-22）的协议设计，不代表本次已验证各网络部署。
+本文整理白皮书 v2.5.0 澄清稿（2026-11-02）的协议设计，不代表本次已验证各网络部署。
 
 ## 固定来源
 
-本次从官方 `flon.whitepaper` 仓库读取中英文主白皮书及 `rwid-design.md`，固定到同一提交。主文档标注 v2.4.0、日期 2026-10-22、Core/CDT v0.8.7；仓库 README 的 v2.1 修订记录另提到 v0.8.5，不能将它当作所有章节或部署的版本号。
+本次从官方 `flon.whitepaper` 仓库读取中英文主白皮书及 `rwid-design.md`，固定到同一提交。原主文档标注 v2.4.0（2026-10-22）、Core/CDT v0.8.7；本次按用户明确的治理口径提出 v2.5.0 澄清稿（2026-11-02），目前尚待上游合并。仓库 README 的 v2.1 修订记录另提到 v0.8.5，不能将它当作所有章节或部署的版本号。
 
 [资源模型](resource-model.md) · [代币经济](tokenomics.md) · [互操作性](interoperability.md) · [治理](governance.md) · [路线图](roadmap.md)
 
@@ -19,12 +19,17 @@ source: whitepaper v2.4.0 synthesis
 
 原 FAQ 有四页只有标题，并不代表整个官方资料库没有相关解释。本次用白皮书补足协议设计，保留原 FAQ 的读取记录；源码与链上状态用于进一步核验实现与部署。
 
-## 必须保留的差异
+## 已明确的治理口径
+
+- 当前 5 亿 FLON 挖矿预算耗尽后不自动继续发行；未来是否发行及其规则由 FullOn DAO Gov 另行决定，需要时配套实施升级。
+- GAS 对应金额的一部分奖励符合资格的 Active 与 Standby BP；其余默认锁定，未来是否销毁由 DAO Gov 决定，不能动用仍支持 ELON 兑回的储备。
+
+中英文白皮书的资源、奖励、通膨与通缩章节已在同一修订稿中统一以上口径。
+
+## 仍需保留的差异与核验边界
 
 | 主题 | 来源中的不同说法 | 本站处理 |
 | --- | --- | --- |
-| 挖矿上限 | BP 奖励节禁止 5 亿预算耗尽后新增挖矿发行；通膨节又提到储备耗尽后经 DAO 批准的后续发行 | 不将通膨段解释为可追加挖矿预算；后续发行范围与总量约束需维护者澄清 |
-| GAS 与销毁 | 资源节说消费 ELON 后储备 FLON 默认保留；通缩节仍含单向转换、燃烧措辞 | 区分 ELON 负债消耗、储备锁定和真实 token burn；不声明储备已自动销毁 |
 | 区块间隔 | 源码有 500ms slot 常量；白皮书描述活跃 0.5 秒、闲置最长 12 秒动态产块 | slot 长度和实际产块间隔分开，动态策略需目标网络验证 |
 | 性能/最终性 | 白皮书写 10,000+ TPS、1–1.5 秒最终性 | 标为白皮书规格声明，不当作本次实测或服务保证 |
 | EVM | 白皮书宣称 100% 兼容；现有核验只覆盖原生 WASM/RPC 路径 | 保留宣称出处，不据此给出未经核实的 MetaMask/Ethereum RPC 配置 |
@@ -37,8 +42,8 @@ source: whitepaper v2.4.0 synthesis
 
 主网与测试网 chain ID、节点地址、当前 gas 费率、实际生产者数量、报名金额/期限、TGE 与锁仓状态、代理钱包和链列表、EVM 合约与入口、RWID 因子和审核服务，都不能单靠设计文档确认。
 
-本次不执行任何资金、权限或节点操作，也不修改上游白皮书。读取文件的哈希见[来源清单](../contributing/whitepaper-source-manifest.json)。
+本次不执行任何资金、权限或节点操作。上游白皮书另以独立修订分支提交，修订稿状态与当前部署明确分开。读取文件的哈希见[来源清单](../contributing/whitepaper-source-manifest.json)。
 
 ## 来源
 
-[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/f49e5f0f821162a997260535be30767e3f147d8e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/f49e5f0f821162a997260535be30767e3f147d8e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `f49e5f0f821162a997260535be30767e3f147d8e`；读取日期 2026-11-02。
+[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `61913ffb2184314597a2091145c30bfe7d7c818e`；读取日期 2026-11-02。本次澄清稿尚待上游合并，不能标作已部署规则。

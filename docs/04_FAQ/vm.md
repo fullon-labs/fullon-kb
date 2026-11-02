@@ -7,7 +7,7 @@ source: official FAQ synthesis
 
 # What is FullOn’s VM?｜虚拟机
 
-官方 FAQ 描述原生 WASM 与通过 WASM 提供 EVM 类执行；白皮书 v2.4.0 的规格表进一步宣称 WASM + EVM 双 VM 和 100% 兼容。此处保留设计宣称，目标网络 EVM 入口与工具链仍需核验，见[规格与差异](../01_Core_Chain/whitepaper.md)。
+官方 FAQ 描述原生 WASM 与通过 WASM 提供 EVM 类执行；白皮书 v2.5.0 的规格表进一步宣称 WASM + EVM 双 VM 和 100% 兼容。此处保留设计宣称，目标网络 EVM 入口与工具链仍需核验，见[规格与差异](../01_Core_Chain/whitepaper.md)。
 
 本站已核验的原生合约开发路径是 C/C++ → CDT → WASM + ABI。官方 FAQ 的一句兼容性描述不足以确认当前网络部署了哪些 EVM 服务、是否开放 Ethereum JSON-RPC 或能否直接使用 Solidity/MetaMask。
 

@@ -2,12 +2,12 @@
 title: Resource model: FLON, GAS and ELON
 status: active
 updated: 2026-11-02
-source: whitepaper v2.4.0 synthesis
+source: whitepaper v2.5.0 clarification draft
 ---
 
 # Resource model: FLON, GAS and ELON
 
-This page summarizes protocol design in whitepaper v2.4.0 (2026-10-22); it does not certify deployment on any network.
+This page summarizes protocol design in the whitepaper v2.5.0 clarification draft (2026-11-02); it does not certify deployment on any network.
 
 ## Resources and units
 
@@ -23,7 +23,7 @@ GAS denotes resource usage rights; ELON is its smallest accounting unit. The des
 
 The resource-model section describes spending existing GAS first and converting account FLON when needed, rather than requiring every standard account to pre-buy GAS manually. CPU/NET spending consumes usage rights; releasing RAM may return or reclaim GAS under protocol rules. Automatic conversion, refunds and failure behavior still require version-specific confirmation. Do not infer fees or record retention for every failed request from the whitepaper alone.
 
-Redeemable ELON liabilities are backed by FLON in `flon.gas`, one smallest FLON unit per new ELON. Reserves cannot be reused while they back redemption liabilities. Consuming GAS retires the corresponding liability; that section says reserve FLON remains locked by default. **GAS consumption therefore does not by itself prove FLON was burned.** The deflation section uses conflicting wording; see the [source conflict record](whitepaper.md).
+Redeemable ELON liabilities are backed by FLON in `flon.gas`, one smallest FLON unit per new ELON. Reserves cannot be reused while they back redemption liabilities. Consuming GAS retires the corresponding liability; that section says reserve FLON remains locked by default. A portion rewards eligible Active and Standby BPs under effective rules; the remainder is DAO-locked by default. **Future FullOn DAO Gov proposals decide whether, when and how much of the remaining disposable balance is burned.** No amount is counted as burned before an approved burn is executed. Reserves needed for outstanding ELON redemption cannot fund rewards or burns. See the [governance clarification](whitepaper.md).
 
 ## Reward and DAO ledgers
 
@@ -42,4 +42,4 @@ The whitepaper also describes proxy fees, 1,000 free proxy uses and variable EVM
 
 ## Sources
 
-[English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/f49e5f0f821162a997260535be30767e3f147d8e/fullon.whitepaper.md) · [Chinese whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/f49e5f0f821162a997260535be30767e3f147d8e/fullon.whitepaper.cn.md) · [Scope and source conflicts](whitepaper.md). Pinned revision `f49e5f0f821162a997260535be30767e3f147d8e`; retrieved 2026-11-02.
+[English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md) · [Chinese whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.cn.md) · [Scope and source conflicts](whitepaper.md). Pinned revision `61913ffb2184314597a2091145c30bfe7d7c818e`; retrieved 2026-11-02. The clarification awaits upstream merge and is not a deployment certification.

@@ -2,12 +2,12 @@
 title: Interoperability: proxy accounts and cross-chain flows
 status: active
 updated: 2026-11-02
-source: whitepaper v2.4.0 synthesis
+source: whitepaper v2.5.0 clarification draft
 ---
 
 # Interoperability: proxy accounts and cross-chain flows
 
-This page summarizes protocol design in whitepaper v2.4.0 (2026-10-22); it does not certify deployment on any network.
+This page summarizes protocol design in the whitepaper v2.5.0 clarification draft (2026-11-02); it does not certify deployment on any network.
 
 ## Whitepaper design
 
@@ -43,4 +43,4 @@ Two-signature validation is not a complete bridge proof protocol or security aud
 
 ## Sources
 
-[English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/f49e5f0f821162a997260535be30767e3f147d8e/fullon.whitepaper.md) · [Chinese whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/f49e5f0f821162a997260535be30767e3f147d8e/fullon.whitepaper.cn.md) · [Scope and source conflicts](whitepaper.md). Pinned revision `f49e5f0f821162a997260535be30767e3f147d8e`; retrieved 2026-11-02.
+[English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md) · [Chinese whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.cn.md) · [Scope and source conflicts](whitepaper.md). Pinned revision `61913ffb2184314597a2091145c30bfe7d7c818e`; retrieved 2026-11-02. The clarification awaits upstream merge and is not a deployment certification.

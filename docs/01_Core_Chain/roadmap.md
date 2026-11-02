@@ -2,12 +2,12 @@
 title: 扩展路线与尚待验证的能力
 status: active
 updated: 2026-11-02
-source: whitepaper v2.4.0 synthesis
+source: whitepaper v2.5.0 clarification draft
 ---
 
 # 扩展路线与尚待验证的能力
 
-本文整理白皮书 v2.4.0（2026-10-22）的协议设计，不代表本次已验证各网络部署。
+本文整理白皮书 v2.5.0 澄清稿（2026-11-02）的协议设计，不代表本次已验证各网络部署。
 
 白皮书的架构与路线图需要与当前可用产品分开阅读。
 
@@ -27,4 +27,4 @@ source: whitepaper v2.4.0 synthesis
 
 ## 来源
 
-[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/f49e5f0f821162a997260535be30767e3f147d8e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/f49e5f0f821162a997260535be30767e3f147d8e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `f49e5f0f821162a997260535be30767e3f147d8e`；读取日期 2026-11-02。
+[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `61913ffb2184314597a2091145c30bfe7d7c818e`；读取日期 2026-11-02。本次澄清稿尚待上游合并，不能标作已部署规则。

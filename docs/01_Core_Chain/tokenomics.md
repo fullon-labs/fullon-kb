@@ -2,16 +2,16 @@
 title: FLON 代币经济与 BP 奖励
 status: active
 updated: 2026-11-02
-source: whitepaper v2.4.0 synthesis
+source: whitepaper v2.5.0 clarification draft
 ---
 
 # FLON 代币经济与 BP 奖励
 
-本文整理白皮书 v2.4.0（2026-10-22）的协议设计，不代表本次已验证各网络部署。
+本文整理白皮书 v2.5.0 澄清稿（2026-11-02）的协议设计，不代表本次已验证各网络部署。
 
 ## 总量与分配
 
-白皮书设定 FLON 总量为 **100 亿（10,000,000,000）**。以下为白皮书分配计划，不是当前流通量、已解锁量或链上发行量报告。
+白皮书的现行 FLON 总量与分配计划为 **100 亿（10,000,000,000）**。以下为白皮书分配计划，不是当前流通量、已解锁量或链上发行量报告。
 
 | 类别 | 比例 | 计划额度（FLON） | 白皮书的解锁说明 |
 | --- | ---: | ---: | --- |
@@ -32,11 +32,12 @@ source: whitepaper v2.4.0 synthesis
 - 每周期 `315,360,000` 个符合资格的奖励区块；前三周期预算依次为 250,000,000、125,000,000、62,500,000 FLON。
 - 首周期理论均值约 `0.7927447996 FLON / 奖励区块`；实际按整数最小单位分配余数，并受剩余预算约束。
 - 停链不推进奖励区块计数；不能把周期直接等同于固定的自然年。
-- 按该节，DAO 不得提高预算、重置减半计数或在预算耗尽后批准新增挖矿发行。它与白皮书“通膨”段的后续发行措辞存在冲突，见[核验记录](whitepaper.md)。
+- 5 亿上限与减半曲线约束当前挖矿计划；预算耗尽后不会自动继续发行或重置计数器。**未来是否增发、是否设立新挖矿/激励计划，以及额外发行量、年度上限、受益对象和时间表，由 FullOn DAO Gov 通过新提案决定。**
+- 新决策须说明对现行 100 亿总量与分配计划的影响，遵守生效的链上限制；如需调整合约/协议限制，须完成相应升级，不直接绕过当前执行限制，也不追溯改写已结算奖励。
 
 ## GAS 奖励与挖矿分开
 
-白皮书初始建议新增 GAS 对应金额中 10% 用于 BP 奖励、90% 进入 DAO 锁定账；BP GAS 池再分为 Active 80%、合格 Standby 20%，即对应总额的 8% 与 2%。这些比例不是本次验证过的运行参数。
+白皮书初始建议新增 GAS 对应金额中 10% 用于 BP 奖励、90% 进入 DAO 锁定账；BP GAS 池再分为 Active 80%、合格 Standby 20%，即对应总额的 8% 与 2%。这些比例不是本次验证过的运行参数。其余可支配余额是否销毁或另作他用由未来 FullOn DAO Gov 决定，未有已执行决策前默认锁定。
 
 Active GAS 池按实际合格出块分配；Standby 需满足在线 proof 与备用资格，只领取这类 GAS 可用性奖励。未分配份额、资格不足与整数余数转入 DAO 锁定账。GAS 池不增加或替代 5 亿 FLON 挖矿预算，且储备必须继续满足 ELON 兑换约束。
 
@@ -52,4 +53,4 @@ FLON 是原生资产；ELON 是 GAS/储备记账最小单位；GLON 是锁定 FL
 
 ## 来源
 
-[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/f49e5f0f821162a997260535be30767e3f147d8e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/f49e5f0f821162a997260535be30767e3f147d8e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `f49e5f0f821162a997260535be30767e3f147d8e`；读取日期 2026-11-02。
+[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `61913ffb2184314597a2091145c30bfe7d7c818e`；读取日期 2026-11-02。本次澄清稿尚待上游合并，不能标作已部署规则。

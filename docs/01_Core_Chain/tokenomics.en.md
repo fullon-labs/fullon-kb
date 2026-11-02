@@ -2,16 +2,16 @@
 title: FLON tokenomics and BP rewards
 status: active
 updated: 2026-11-02
-source: whitepaper v2.4.0 synthesis
+source: whitepaper v2.5.0 clarification draft
 ---
 
 # FLON tokenomics and BP rewards
 
-This page summarizes protocol design in whitepaper v2.4.0 (2026-10-22); it does not certify deployment on any network.
+This page summarizes protocol design in the whitepaper v2.5.0 clarification draft (2026-11-02); it does not certify deployment on any network.
 
 ## Supply and allocation
 
-The whitepaper sets total FLON supply at **10 billion (10,000,000,000)**. These are allocation plans, not measurements of current issuance, unlocking or circulation.
+The current whitepaper supply and allocation plan is **10 billion FLON (10,000,000,000)**. These are allocation plans, not measurements of current issuance, unlocking or circulation.
 
 | Category | Share | Planned FLON | Vesting description |
 | --- | ---: | ---: | --- |
@@ -32,11 +32,12 @@ The foundation row lists “10%” at TGE and “10%” later, without clearly i
 - Each period contains `315,360,000` eligible reward blocks. The first three period budgets are 250,000,000, 125,000,000 and 62,500,000 FLON.
 - The first period's theoretical average is approximately `0.7927447996 FLON` per reward block. Integer-unit remainders are distributed deterministically and constrained by the remaining budget.
 - Downtime does not advance the reward-block counter. A period is not a guaranteed number of calendar years.
-- The mining section prohibits DAO increases to the cap, counter resets and new mining issuance after exhaustion. Its wording conflicts with the later inflation paragraph; see [source conflicts](whitepaper.md).
+- The cap and curve constrain the current mining program. Exhaustion does not automatically continue issuance or reset counters. **FullOn DAO Gov decides through a new proposal whether to issue more, establish new mining/incentive programs, and set amounts, annual caps, beneficiaries and schedules.**
+- Proposals must address the current 10-billion supply/allocation plan and effective on-chain limits. Changes to contract/protocol constraints require upgrades; decisions cannot bypass enforced limits or rewrite settled rewards.
 
 ## GAS rewards are separate
 
-The proposed initial GAS-linked split is 10% for BP rewards and 90% DAO-locked. The BP GAS pool is split 80% Active / 20% eligible Standby, equivalent to 8% / 2% of the total. These are not verified live ratios.
+The proposed initial GAS-linked split is 10% for BP rewards and 90% DAO-locked. The BP GAS pool is split 80% Active / 20% eligible Standby, equivalent to 8% / 2% of the total. These are not verified live ratios. Future FullOn DAO Gov decisions determine whether the remaining disposable balance is burned or assigned another use; it remains locked until an effective decision is executed.
 
 Active allocation follows qualified actual production; Standby eligibility requires online proofs and readiness. Unallocated shares and integer remainders move to the DAO ledger. This pool does not increase or replace the 500-million-FLON mining budget; ELON reserve obligations still apply.
 
@@ -52,4 +53,4 @@ Use `get_currency_stats` for deployed supply, max_supply and issuer, and inspect
 
 ## Sources
 
-[English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/f49e5f0f821162a997260535be30767e3f147d8e/fullon.whitepaper.md) · [Chinese whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/f49e5f0f821162a997260535be30767e3f147d8e/fullon.whitepaper.cn.md) · [Scope and source conflicts](whitepaper.md). Pinned revision `f49e5f0f821162a997260535be30767e3f147d8e`; retrieved 2026-11-02.
+[English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md) · [Chinese whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.cn.md) · [Scope and source conflicts](whitepaper.md). Pinned revision `61913ffb2184314597a2091145c30bfe7d7c818e`; retrieved 2026-11-02. The clarification awaits upstream merge and is not a deployment certification.
