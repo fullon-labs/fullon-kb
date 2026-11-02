@@ -19,4 +19,4 @@ RWAVerse is an RWA invest tool.
 - Page title: Rwaverse
 
 ## Related guides
-- [[../06_User_Guides/query-account]]
+- [DApp 使用与授权](../06_User_Guides/use-dapps.md)

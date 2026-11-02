@@ -33,19 +33,19 @@ Examples:
 - FullVest
 - RWAVerse
 
-### 3. Operator / developer workflows
-Use:
-- `docs/03_Operators/`
-- `docs/06_User_Guides/`
+### 3. User, developer, and operator workflows
 
-Examples:
-- create wallet
-- query account
-- transfer token
-- deploy contract
-- read contract state
-- query chain info
-- CLI commands
+- Wallet setup, transfers, DApp usage, transaction status, and user support:
+  `docs/06_User_Guides/`.
+- RPC onboarding, transaction integration, contract development, and developer
+  troubleshooting: `docs/10_Developer_Guides/`, then `docs/03_Operators/`
+  for the detailed API reference.
+- Node plugins, listeners, history indexing, and operational controls:
+  `docs/03_Operators/`.
+
+Do not route ordinary wallet users to node configuration or contract deployment.
+Preserve source verification dates and distinguish documented interfaces from
+currently deployed node capabilities.
 
 ### 4. Canonical short answers
 Use:

@@ -19,4 +19,4 @@ FullBridge is a decentralized cross-chain bridge.
 - Page title: FullBridge
 
 ## Related guides
-- [[../04_Operators/chain-api]]
+- [跨链使用与确认](../06_User_Guides/use-dapps.md)

@@ -19,4 +19,4 @@ FullSwap is an AMM swap DEX tool.
 - Page title: FullSwap
 
 ## Related guides
-- [[../06_User_Guides/transfer-token]]
+- [DApp 使用指南](../06_User_Guides/use-dapps.md)

@@ -8,6 +8,11 @@ source: official
 
 # Operator and Developer Guides
 
+## Start here
+
+- [开发者帮助](../10_Developer_Guides/README.md) — 分步接入与排错。
+- [用户帮助](../06_User_Guides/README.md) — 钱包与应用操作。
+
 ## Developer guides
 
 - [funod RPC Developer Guide](funod-rpc.md) — Complete current `funod` HTTP RPC and State History WebSocket catalog, including plugin, parameter, availability, and security guidance.
