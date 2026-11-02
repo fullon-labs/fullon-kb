@@ -78,6 +78,7 @@ plugins:
         交易查询: Transaction status
         排错与求助: Troubleshooting and support
         开发者指南: Developer guides
+        fucli 命令行指南: fucli command-line guide
         RPC 快速开始: RPC quickstart
         获取 ABI 与 code: Get ABI and code
         创建与激活账户: Create and activate accounts
@@ -180,6 +181,7 @@ nav:
   - 治理资料来源: 11_DAO_Governance/sources.md
 - 开发者指南:
   - 阅读路线: 10_Developer_Guides/README.md
+  - fucli 命令行指南: 10_Developer_Guides/fucli.md
   - RPC 快速开始: 10_Developer_Guides/quickstart.md
   - 获取 ABI 与 code: 10_Developer_Guides/get-abi-code.md
   - 创建与激活账户: 10_Developer_Guides/accounts.md

@@ -10,6 +10,7 @@ source: source review
 
 ## 接入基础
 
+- [fucli 命令行全面使用指南](fucli.md)
 - [RPC 快速开始](quickstart.md)
 - [获取 ABI 与 code](get-abi-code.md)
 - [创建 / 激活账户](accounts.md)
