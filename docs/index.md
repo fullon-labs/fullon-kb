@@ -46,6 +46,8 @@ title: FullOn 文档中心
 | 发行自己的代币 | [创建、发行与分发](10_Developer_Guides/issue-tokens.md) |
 | 运行节点 | [普通节点与 BP](10_Developer_Guides/nodes.md) · [P2P](10_Developer_Guides/p2p.md) |
 
+| 参与 DAO、BP 投票或申请预算 | [治理入门](11_DAO_Governance/README.md) · [提案与投票](11_DAO_Governance/proposals.md) · [Treasury](11_DAO_Governance/treasury.md) |
+
 ## 阅读前确认
 
 主网与测试网分开。页面标注的源码版本说明核验范围，不保证所有节点已部署同一版本。示例账户、密钥占位符、金额与路径需要替换；写交易应先在测试环境验证。

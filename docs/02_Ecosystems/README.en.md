@@ -23,3 +23,5 @@ The official FAQ groups ecosystem directions into Web3, AI, and Social. These ar
 Project pages may remain drafts. Verify supported networks, availability, and reward conditions with the current product.
 
 Source: [official ecosystem FAQ](https://docs.flon.network/fullon-faq/what_are_fullon_ecosystems), retrieved 2026-11-02.
+
+[DAO Gov application](../07_DApps/dao-gov.md) · [Governance help](../11_DAO_Governance/README.md)

@@ -30,3 +30,7 @@ source: repository synthesis
 [什么是 FullOn](what-is-fullon.md) · [账户类型](account-types.md) · [虚拟机](vm.md) · [互操作性](interoperability.md) · [资源模型](resource-model.md) · [代币经济](tokenomics.md)
 
 官方 FAQ 中只有标题的页面已明确标注资料缺口；具体实现见各页链接的源码核验说明。
+
+## 治理问题
+
+如何参与 DAO、为何附议不等于赞成、为什么 100% 赞成还失败、预算为何未付款？见[DAO 常见问题](../11_DAO_Governance/troubleshooting.md)和[主网参数快照](../11_DAO_Governance/rules-and-parameters.md)。

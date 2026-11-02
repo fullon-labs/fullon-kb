@@ -39,3 +39,7 @@ translation_of: 10_Developer_Guides/README.md
 ## Verification scope
 
 New tutorials were reviewed against local Core, CDT, system-contract, and RWID source on 2026-11-02. Existing long-form RPC references retain their `72cde15a3fb1` (2026-09-03) baseline. Discover live node capabilities: source support does not establish deployment.
+
+## Governance integration
+
+[DAO contracts, tables, and actions](../11_DAO_Governance/developer-reference.md) · [Keeper and Standby operations](../11_DAO_Governance/operations.md).
