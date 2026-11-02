@@ -19,6 +19,7 @@ translation_of: 10_Developer_Guides/README.md
 
 ## Nodes and networking
 
+- [Docker Compose deployment](docker-compose.md)
 - [Run common nodes and BP nodes](nodes.md)
 - [P2P configuration and synchronization](p2p.md)
 - [Complete RPC reference](../03_Operators/funod-rpc.md)

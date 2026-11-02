@@ -97,6 +97,7 @@ plugins:
         维护: Maintenance
         来源与核验: Sources and verification
         文档维护与发布: Maintain and publish
+        Docker Compose 部署: Docker Compose deployment
       theme:
         palette:
         - scheme: default
@@ -159,6 +160,7 @@ nav:
   - 获取 ABI 与 code: 10_Developer_Guides/get-abi-code.md
   - 创建与激活账户: 10_Developer_Guides/accounts.md
   - 签名与交易确认: 10_Developer_Guides/transactions.md
+  - Docker Compose 部署: 10_Developer_Guides/docker-compose.md
   - 普通节点与 BP: 10_Developer_Guides/nodes.md
   - P2P: 10_Developer_Guides/p2p.md
   - 合约开发路线: 10_Developer_Guides/contracts.md
@@ -184,6 +186,5 @@ nav:
 - 维护:
   - 来源与核验: contributing/sources.md
   - 文档维护与发布: contributing/publishing.md
-
 hooks:
 - scripts/docs_hooks.py

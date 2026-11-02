@@ -9,6 +9,8 @@ translation_of: 10_Developer_Guides/nodes.md
 
 # Run a node: common nodes and BP nodes
 
+For official container deployment, follow the [Docker Compose tutorial](docker-compose.md), including `docker-compose.yaml`, network isolation, role selection, and health checks.
+
 ## Choose a role
 
 | Role | Responsibilities | Package | Producer identity/key needed? |
