@@ -14,7 +14,7 @@ source: official FAQ synthesis
 - Social-recoverable accounts：可社交恢复账户。
 - Simple address accounts：简单地址账户，并区分 WASM-managed 与 EVM-managed。
 
-原页面只有分类和小标题，未完整解释每一类的权限、注册方式或实际网络支持。因此不能仅凭分类名判断用户是否独自持有 owner、能否免费创建或保证可恢复。
+原 FAQ 页面只有分类和小标题；白皮书进一步解释 canonical/主权账户、EVM 地址账户与代理账户，见[账户基础](../01_Core_Chain/accounts.md)和[互操作流程](../01_Core_Chain/interoperability.md)。这两套分类范围不同，仍不能证明每类的实际网络支持。因此不能仅凭分类名判断用户是否独自持有 owner、能否免费创建或保证可恢复。
 
 本站另有[FullOn 账户与权限](../01_Core_Chain/accounts.md)和[RWID 合约实现](../01_Core_Chain/rwid-accounts.md)，用于说明已核验的实际机制。
 

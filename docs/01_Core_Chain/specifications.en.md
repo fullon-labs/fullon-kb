@@ -44,3 +44,18 @@ Mainnet/testnet chain IDs, current BP count, live gas rates, measured finality l
 ## Sources and scope
 
 [Source 1](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/libraries/chain/include/eosio/chain/config.hpp), [Source 2](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/README.md), [Source 3](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/docs/node-build-profiles.md). Source review: 2026-11-02. This does not verify the version deployed on every network.
+
+## Specifications stated by the whitepaper
+
+The v2.5.0 technical specifications describe a different evidence layer from the source review above.
+
+| Item | Whitepaper description | Scope |
+| --- | --- | --- |
+| Dynamic block interval | 0.5 seconds when active; up to 12 seconds when idle | Distinguish this from the 500 ms slot constant; verify runtime policy separately |
+| Finality | 1–1.5 seconds | Whitepaper claim, not measured here; applications should still confirm LIB |
+| Throughput | 10,000+ TPS, single-threaded | Requires workload and environment evidence; see the roadmap for parallelism/sharding |
+| Consensus | DPoS + Savanna | Verify the target chain's schedule, policy, and activation |
+| VM | Native WASM + claimed 100% compatible EVM | EVM endpoints, deployment, and tooling are not verified here |
+| Native asset | FLON; planned total of 10 billion | Does not establish current issued or circulating supply |
+
+See [whitepaper integration](whitepaper.md), [resources](resource-model.md), [tokenomics](tokenomics.md), [governance](governance.md), and [roadmap](roadmap.md).

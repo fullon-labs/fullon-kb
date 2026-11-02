@@ -1,17 +1,15 @@
 ---
-title: What is FullOn’s interoperability?
+title: How does FullOn interoperability work?
 status: active
 updated: 2026-11-02
-source: official FAQ synthesis
+source: whitepaper v2.5.0 clarification draft
 translation_of: 04_FAQ/interoperability.md
 ---
 
-# What is FullOn’s interoperability?
+# How does FullOn interoperability work?
 
-The official definition lists multi-chain interoperability as a FullOn goal, but its FAQ subpage currently contains only a heading, without a verification model, security model, or supported-chain list.
+The whitepaper describes external-chain identity binding, proxy accounts, user message signatures, and proxy submission signatures. Asset bridging requires separate verification.
 
-This does not imply any asset can be bridged or every network is interconnected. For a particular bridge, verify source/destination chains, token contracts, order flow, and receipt rules.
+See the [topic guide](../01_Core_Chain/interoperability.md). The original FAQ page contains only a heading. This supplement uses the [pinned whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md) and distinguishes design, reviewed implementation, and deployment evidence.
 
-[FullBridge](../07_DApps/fullbridge.md) · [DApps and bridging](../06_User_Guides/use-dapps.md). An application bridge is not a substitute for a protocol security explanation.
-
-Sources: [definition](https://docs.flon.network/fullon-faq/what_is_fullon) and [interoperability page](https://docs.flon.network/fullon-faq/what_is_fullon_interoperability), retrieved 2026-11-02.
+See [source verification](../01_Core_Chain/whitepaper.md) for conflicts and unresolved questions.

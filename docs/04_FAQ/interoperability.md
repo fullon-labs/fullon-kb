@@ -1,16 +1,14 @@
 ---
-title: What is FullOn’s interoperability?｜互操作性
+title: FullOn 如何实现互操作性
 status: active
 updated: 2026-11-02
-source: official FAQ synthesis
+source: whitepaper v2.5.0 clarification draft
 ---
 
-# What is FullOn’s interoperability?｜互操作性
+# FullOn 如何实现互操作性
 
-官方定义将多链互操作性列为 FullOn 的定位之一，但 FAQ 对应子页目前只有标题，没有消息验证、安全模型或支持链列表。
+白皮书通过外部链身份绑定、代理账户、用户消息签名与代理提交签名描述互操作流程；资产桥接仍需单独核验。
 
-不能据此认为任意资产都能跨链，或所有网络均已互联。具体转移资产需核对所用桥当前支持的来源链、目标链、代币合约、订单流程和到账规则。
+完整解释见[专题指南](../01_Core_Chain/interoperability.md)。原 FAQ 对应页只有标题；本次依据[固定版本白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.cn.md)补充设计内容，并在专题中区分设计、已审阅实现和待验证部署。
 
-[FullBridge 介绍](../07_DApps/fullbridge.md) · [DApp 与跨链操作](../06_User_Guides/use-dapps.md)。应用层跨链工具的存在也不能替代底层协议安全性说明。
-
-来源：[官方定义](https://docs.flon.network/fullon-faq/what_is_fullon)、[互操作性子页](https://docs.flon.network/fullon-faq/what_is_fullon_interoperability)，读取日期 2026-11-02。
+白皮书内的冲突与未确认内容见[来源核验](../01_Core_Chain/whitepaper.md)。

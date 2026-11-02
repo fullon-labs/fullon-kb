@@ -2,16 +2,14 @@
 title: What is FullOn’s tokenomics?
 status: active
 updated: 2026-11-02
-source: official FAQ synthesis
+source: whitepaper v2.5.0 clarification draft
 translation_of: 04_FAQ/tokenomics.md
 ---
 
 # What is FullOn’s tokenomics?
 
-The official FAQ tokenomics page currently contains only a heading, without total supply, allocation, inflation, unlock, or reward rules. Historical guesses and source defaults are not a current economic model.
+The whitepaper plans a total of 10 billion FLON and describes allocation, a fixed 500 million mining budget, GAS rewards, and GLON voting power.
 
-For a specific token, identify network, contract, symbol, and precision, then query `get_currency_stats` for supply, max_supply, and issuer. Supply/balance data alone does not fully explain allocation, locking, or governance policy.
+See the [topic guide](../01_Core_Chain/tokenomics.md). The original FAQ page contains only a heading. This supplement uses the [pinned whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md) and distinguishes design, reviewed implementation, and deployment evidence.
 
-[Issuing and querying tokens](../10_Developer_Guides/issue-tokens.md) is a development tutorial, not the native token's economic model.
-
-Source: [official tokenomics page](https://docs.flon.network/fullon-faq/what_is_fullon_tokenomics), retrieved 2026-11-02.
+See [source verification](../01_Core_Chain/whitepaper.md) for conflicts and unresolved questions.

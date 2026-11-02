@@ -20,3 +20,7 @@ The original page provides categories and subheadings, not complete permission, 
 Read [account permissions](../01_Core_Chain/accounts.md) and the [reviewed RWID implementation](../01_Core_Chain/rwid-accounts.md) for verified mechanisms.
 
 Source: [official account categories](https://docs.flon.network/fullon-faq/what_are_fullon_account_types), retrieved 2026-11-02.
+
+## Whitepaper supplement
+
+The whitepaper further describes canonical/sovereign accounts, EVM address accounts, and proxy accounts; see [account basics](../01_Core_Chain/accounts.md) and [interoperability](../01_Core_Chain/interoperability.md). Its classification differs from the FAQ and does not establish current network support, sole owner custody, free creation, or guaranteed recovery.

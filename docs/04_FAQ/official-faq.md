@@ -30,6 +30,12 @@ source: official FAQ synthesis
 
 源文件的 URL、内容 SHA-256 和读取状态保存在[核验记录](../contributing/faq-source-manifest.json)，便于后续判断来源是否变化。
 
+## 白皮书补充（2026-11-02）
+
+原表保留对 FAQ 本身的读取记录；相关设计已从官方白皮书 v2.5.0 补入：[规格](../01_Core_Chain/specifications.md)、[资源](../01_Core_Chain/resource-model.md)、[代币经济](../01_Core_Chain/tokenomics.md)、[互操作性](../01_Core_Chain/interoperability.md)。另增加[治理](../01_Core_Chain/governance.md)与[路线图](../01_Core_Chain/roadmap.md)。
+
+因此“FAQ 无正文”不再代表本站没有该主题说明。白皮书澄清稿已将后续发行与剩余 GAS 储备销毁明确为未来 FullOn DAO Gov 的决策事项；[核验记录](../01_Core_Chain/whitepaper.md)保留修订状态、其余资料边界及待确认部署。
+
 ## 来源引用
 
 [原始官方 FAQ](https://docs.flon.network/fullon-faq) · [读取核验记录](../contributing/faq-source-manifest.json)。这些链接仅用于追溯来源；上方阅读入口均为本站页面。

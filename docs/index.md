@@ -55,3 +55,7 @@ title: FullOn 文档中心
 主网与测试网分开。页面标注的源码版本说明核验范围，不保证所有节点已部署同一版本。示例账户、密钥占位符、金额与路径需要替换；写交易应先在测试环境验证。
 
 [官方 FAQ 的整合范围](04_FAQ/official-faq.md) · [文档来源与核验规则](contributing/sources.md)
+
+## 白皮书专题
+
+[资源与 GAS](01_Core_Chain/resource-model.md) · [FLON 分配和奖励](01_Core_Chain/tokenomics.md) · [代理互操作性](01_Core_Chain/interoperability.md) · [GLON 与 BP 治理](01_Core_Chain/governance.md) · [来源与差异](01_Core_Chain/whitepaper.md)

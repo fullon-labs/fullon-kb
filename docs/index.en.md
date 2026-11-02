@@ -56,3 +56,7 @@ From understanding accounts to your first transfer, application integration, and
 Mainnet and testnet are separate. Source versions describe the review baseline, not the version deployed by every node. Replace example accounts, public-key placeholders, amounts, and paths. Validate write operations in a test environment first.
 
 [Official FAQ integration](04_FAQ/official-faq.md) · [Sources and verification](contributing/sources.md)
+
+## Whitepaper topics
+
+[Resources and GAS](01_Core_Chain/resource-model.md) · [FLON allocation and rewards](01_Core_Chain/tokenomics.md) · [Proxy interoperability](01_Core_Chain/interoperability.md) · [GLON and BP governance](01_Core_Chain/governance.md) · [Sources and differences](01_Core_Chain/whitepaper.md)

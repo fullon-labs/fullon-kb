@@ -2,16 +2,14 @@
 title: What is FullOn’s resource model?
 status: active
 updated: 2026-11-02
-source: official FAQ synthesis
+source: whitepaper v2.5.0 clarification draft
 translation_of: 04_FAQ/resource-model.md
 ---
 
 # What is FullOn’s resource model?
 
-The official FAQ resource page currently contains only a heading. It does not establish fixed transfer fees, free quotas, or resource prices.
+The whitepaper describes GAS payment for CPU, NET, and RAM, the ELON accounting unit, and flon.gas reserve rules.
 
-Reviewed Core source contains CPU, NET, and RAM gas-conversion parameters. Applications should read actual account resources and node information from the target network. Source defaults and live rates are distinct.
+See the [topic guide](../01_Core_Chain/resource-model.md). The original FAQ page contains only a heading. This supplement uses the [pinned whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md) and distinguishes design, reviewed implementation, and deployment evidence.
 
-Users should follow their wallet's current resource guidance. Developers: see [account creation and gas](../10_Developer_Guides/accounts.md), [specifications](../01_Core_Chain/specifications.md), and the [RPC reference](../03_Operators/funod-rpc.md).
-
-Source: [official resource page](https://docs.flon.network/fullon-faq/what_is_fullon_resource_model), retrieved 2026-11-02. Source verification is documented in the specifications.
+See [source verification](../01_Core_Chain/whitepaper.md) for conflicts and unresolved questions.

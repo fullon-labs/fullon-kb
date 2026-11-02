@@ -16,3 +16,7 @@ source: source review
 4. [网络与入口](network.md)：如何确认目标网络并核对节点。
 
 准备操作资产请进入[用户指南](../06_User_Guides/README.md)；准备接入应用请进入[开发者指南](../10_Developer_Guides/README.md)。
+
+## 深入理解协议
+
+[资源与 GAS](resource-model.md) · [代币经济](tokenomics.md) · [互操作性](interoperability.md) · [治理与 BP](governance.md) · [路线图](roadmap.md) · [白皮书来源与差异](whitepaper.md)

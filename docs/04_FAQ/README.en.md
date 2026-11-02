@@ -35,3 +35,7 @@ Official pages containing only headings are explicitly identified. Follow each t
 ## Governance questions
 
 How do I participate, why is endorsement not approval, why can 100% approval fail, and why is a grant not paid? See [DAO troubleshooting](../11_DAO_Governance/troubleshooting.md) and the [mainnet snapshot](../11_DAO_Governance/rules-and-parameters.md).
+
+## Whitepaper supplement
+
+Whitepaper design content supplements FAQ pages that contain only headings; see [whitepaper integration and differences](../01_Core_Chain/whitepaper.md). Implementation and current deployment still require separate verification.

@@ -34,3 +34,9 @@ Source URLs, SHA-256 hashes, and retrieval status are recorded in the [source ma
 ## Source attribution
 
 [Original official FAQ](https://docs.flon.network/fullon-faq) · [Retrieval records](https://fullon-labs.github.io/fullon-kb/contributing/faq-source-manifest.json). These links document provenance; the reading pages above are hosted on this site.
+
+## Whitepaper supplement (2026-11-02)
+
+The table above records the FAQ itself. The v2.5.0 whitepaper supplements [specifications](../01_Core_Chain/specifications.md), [resources](../01_Core_Chain/resource-model.md), [tokenomics](../01_Core_Chain/tokenomics.md), and [interoperability](../01_Core_Chain/interoperability.md), with additional [governance](../01_Core_Chain/governance.md) and [roadmap](../01_Core_Chain/roadmap.md) topics.
+
+An empty FAQ source page therefore does not mean this site lacks a topic guide. The clarification draft places future issuance and burning of remaining GAS reserves under future FullOn DAO Gov decisions. The [verification record](../01_Core_Chain/whitepaper.md) retains revision status, source limitations, and deployment questions.

@@ -29,7 +29,8 @@ source: repository synthesis
 
 [什么是 FullOn](what-is-fullon.md) · [账户类型](account-types.md) · [虚拟机](vm.md) · [互操作性](interoperability.md) · [资源模型](resource-model.md) · [代币经济](tokenomics.md)
 
-官方 FAQ 中只有标题的页面已明确标注资料缺口；具体实现见各页链接的源码核验说明。
+官方 FAQ 的标题页已用白皮书补充设计内容，见[白皮书整合与差异](../01_Core_Chain/whitepaper.md)。具体实现与当前部署仍需分别核验。
+
 
 ## 治理问题
 

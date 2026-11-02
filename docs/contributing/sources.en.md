@@ -23,3 +23,9 @@ RPC documentation was rechecked against v0.9.2 on 2026-11-02. Historical live ob
 ## Publication boundary
 
 Build only `docs/`. Root agent configuration and internal `docs_CisuMusiC_App/` materials are outside the site. Unfilled historical templates are outside primary navigation. Public pages must be suitable for external readers.
+
+## Whitepaper sources
+
+The v2.5.0 clarification draft (2026-11-02, pending upstream merge) is pinned to `61913ffb2184314597a2091145c30bfe7d7c818e`. This integration uses the main Markdown files and does not assume repository PDFs are synchronized. New topics have Chinese and English text. The [source and conflict record](../01_Core_Chain/whitepaper.md) separates protocol design, source review, and network deployment; file hashes are in the [manifest](whitepaper-source-manifest.json).
+
+The upstream license for adapted content is retained in the [whitepaper MIT license](whitepaper-license.txt).

@@ -27,6 +27,12 @@ RWID 是一套基于合约的账户创建与权限恢复方案。在本次审阅
 
 当前审阅的 owner 实现校验 active：阈值为正、公钥数量 1–10、权重为正、无重复公钥、总权重足以达到阈值，并且不接受 active 中的账户权限和 waits。此限制属于这份 RWID 合约实现，不能推广到所有普通 FullOn authority。
 
+## 白皮书仓库中的 RWID 设计
+
+[RWID 设计稿](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/rwid-design.md)将 RWID 展开为 Real-World Identity，提出绑定手机号、邮箱、Google、WhatsApp、Telegram 等现实身份因素，并通过可配置恢复阈值与去中心化预言机验证实现密钥替换。
+
+这些是设计目标，不是本文已确认的可用认证服务清单。它与上文实际审阅的 auth/DAO/owner 权限路径需分别看待；不能因此称当前恢复流程已完全去中心化或无信任。密钥生成、因子保存和恢复审核仍需产品级核验，详见[设计与实现差异](whitepaper.md)。
+
 ## 使用前确认
 
 1. 当前钱包是否提供 RWID 注册入口，支持哪些认证方式。

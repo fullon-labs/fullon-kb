@@ -15,3 +15,7 @@ The verified native development path is C/C++ → CDT → WASM + ABI. That short
 Start with the [contract build tutorial](../10_Developer_Guides/build-contract.md). For EVM requirements, obtain the target network's implementation, addresses, interfaces, and toolchain documentation first.
 
 Source: [official VM page](https://docs.flon.network/fullon-faq/what_are_fullon_virtual_machines), retrieved 2026-11-02.
+
+## Whitepaper supplement
+
+The v2.5.0 specification claims dual WASM/EVM support and 100% compatibility. This remains a design claim here: target-network EVM endpoints and tooling require verification. See [specifications and differences](../01_Core_Chain/whitepaper.md).
