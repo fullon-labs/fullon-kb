@@ -29,7 +29,7 @@ RWID 是一套基于合约的账户创建与权限恢复方案。在本次审阅
 
 ## 白皮书仓库中的 RWID 设计
 
-[RWID 设计稿](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/rwid-design.md)将 RWID 展开为 Real-World Identity，提出绑定手机号、邮箱、Google、WhatsApp、Telegram 等现实身份因素，并通过可配置恢复阈值与去中心化预言机验证实现密钥替换。
+[RWID 设计稿](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/rwid-design.md)将 RWID 展开为 Real-World Identity，提出绑定手机号、邮箱、Google、WhatsApp、Telegram 等现实身份因素，并通过可配置恢复阈值与去中心化预言机验证实现密钥替换。
 
 这些是设计目标，不是本文已确认的可用认证服务清单。它与上文实际审阅的 auth/DAO/owner 权限路径需分别看待；不能因此称当前恢复流程已完全去中心化或无信任。密钥生成、因子保存和恢复审核仍需产品级核验，详见[设计与实现差异](whitepaper.md)。
 

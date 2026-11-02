@@ -59,4 +59,4 @@ Mainnet and testnet are separate. Source versions describe the review baseline, 
 
 ## Whitepaper topics
 
-[Resources and GAS](01_Core_Chain/resource-model.md) · [FLON allocation and rewards](01_Core_Chain/tokenomics.md) · [Proxy interoperability](01_Core_Chain/interoperability.md) · [GLON and BP governance](01_Core_Chain/governance.md) · [Sources and differences](01_Core_Chain/whitepaper.md)
+[Resources and GAS](01_Core_Chain/resource-model.md) · [FLON allocation and rewards](01_Core_Chain/tokenomics.md) · [Proxy interoperability](01_Core_Chain/interoperability.md) · [Governance power and BP governance](01_Core_Chain/governance.md) · [Sources and differences](01_Core_Chain/whitepaper.md)

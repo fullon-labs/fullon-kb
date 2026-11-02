@@ -42,4 +42,4 @@ ELON 的可兑回记账由 `flon.gas` 的 FLON 储备支持：每新增一个 EL
 
 ## 来源
 
-[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `61913ffb2184314597a2091145c30bfe7d7c818e`；读取日期 2026-11-02。本次澄清稿尚待上游合并，不能标作已部署规则。
+[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `d695da53f4e453dd0e372e9dc5a605a0c56d455e`；读取日期 2026-11-02。本次澄清稿尚待上游合并，不能标作已部署规则。

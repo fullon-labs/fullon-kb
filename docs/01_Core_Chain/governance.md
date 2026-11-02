@@ -1,19 +1,19 @@
 ---
-title: 治理、GLON 与 BP 资格
+title: 治理权与 BP 资格
 status: active
 updated: 2026-11-02
 source: whitepaper v2.5.0 clarification draft
 ---
 
-# 治理、GLON 与 BP 资格
+# 治理权与 BP 资格
 
 本文整理白皮书 v2.5.0 澄清稿（2026-11-02）的协议设计，不代表本次已验证各网络部署。
 
-## DAO 提案与 GLON
+## DAO 提案与治理权
 
 白皮书描述的生命周期为：草稿 → 附议 → 投票 → 定案 → 时间锁 → 执行。协议参数、国库拨款和合约控制动作需可审计；高风险动作受执行白名单与较长时间锁约束。
 
-锁定 FLON 参与 BP 投票时产生等额且不可转让的 GLON 票权。退出 BP 投票会注销对应 GLON，使其不再参与新的治理提案；已经记录的提案票权按快照处理。GLON 不代表股权、分红或固定收益。
+锁定 FLON 参与 BP 投票时，合约在账户内部账本记录等额治理权。治理权不是另行发行的代币，不可转让、支付或交易，也不代表股权、分红或固定收益。减少或退出投票本金会调整账户可用治理权；已激活提案仍使用其冻结的治理权快照，不涉及另一种代币的发行或销毁。
 
 BP 选举与 DAO 提案共用锁定基础，但动作、门槛和执行路径分开。白皮书允许每账户最多选 30 个 BP，并把票权平均分配给所选候选人，不因多选放大总票权。
 
@@ -42,4 +42,4 @@ BP 选举与 DAO 提案共用锁定基础，但动作、门槛和执行路径分
 
 ## 来源
 
-[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `61913ffb2184314597a2091145c30bfe7d7c818e`；读取日期 2026-11-02。本次澄清稿尚待上游合并，不能标作已部署规则。
+[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `d695da53f4e453dd0e372e9dc5a605a0c56d455e`；读取日期 2026-11-02。本次澄清稿尚待上游合并，不能标作已部署规则。

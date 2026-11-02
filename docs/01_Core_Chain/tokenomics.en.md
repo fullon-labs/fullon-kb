@@ -43,9 +43,9 @@ Active allocation follows qualified actual production; Standby eligibility requi
 
 BP reward sharing may benefit voters under permitted ratios, historical epoch snapshots and performance rules. Delaying claims does not change settled ownership. Rewards can be zero and are not fixed returns.
 
-## FLON, ELON and GLON
+## FLON, ELON and governance power
 
-FLON is the native asset; ELON is the smallest GAS/reserve accounting unit; GLON is non-transferable governance power associated with FLON locked for BP voting. GLON is not a tradable investment or dividend claim.
+FLON is the native asset; ELON is the smallest GAS/reserve accounting unit. Governance power is a value recorded in the account’s internal contract ledger based on locked BP voting principal, not a separately issued governance token. It cannot be transferred, spent or traded and is not a dividend claim.
 
 Use `get_currency_stats` for deployed supply, max_supply and issuer, and inspect vesting contracts for unlock status. Allocation, maximum supply, issued supply, circulation and protocol-locked balances are distinct.
 
@@ -53,4 +53,4 @@ Use `get_currency_stats` for deployed supply, max_supply and issuer, and inspect
 
 ## Sources
 
-[English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md) · [Chinese whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.cn.md) · [Scope and source conflicts](whitepaper.md). Pinned revision `61913ffb2184314597a2091145c30bfe7d7c818e`; retrieved 2026-11-02. The clarification awaits upstream merge and is not a deployment certification.
+[English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.md) · [Chinese whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.cn.md) · [Scope and source conflicts](whitepaper.md). Pinned revision `d695da53f4e453dd0e372e9dc5a605a0c56d455e`; retrieved 2026-11-02. The clarification awaits upstream merge and is not a deployment certification.

@@ -26,6 +26,6 @@ Build only `docs/`. Root agent configuration and internal `docs_CisuMusiC_App/` 
 
 ## Whitepaper sources
 
-The v2.5.0 clarification draft (2026-11-02, pending upstream merge) is pinned to `61913ffb2184314597a2091145c30bfe7d7c818e`. This integration uses the main Markdown files and does not assume repository PDFs are synchronized. New topics have Chinese and English text. The [source and conflict record](../01_Core_Chain/whitepaper.md) separates protocol design, source review, and network deployment; file hashes are in the [manifest](whitepaper-source-manifest.json).
+The v2.5.0 clarification draft (2026-11-02, pending upstream merge) is pinned to `d695da53f4e453dd0e372e9dc5a605a0c56d455e`. This integration uses the main Markdown files and does not assume repository PDFs are synchronized. New topics have Chinese and English text. The [source and conflict record](../01_Core_Chain/whitepaper.md) separates protocol design, source review, and network deployment; file hashes are in the [manifest](whitepaper-source-manifest.json).
 
 The upstream license for adapted content is retained in the [whitepaper MIT license](whitepaper-license.txt).

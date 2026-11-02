@@ -58,4 +58,4 @@ title: FullOn 文档中心
 
 ## 白皮书专题
 
-[资源与 GAS](01_Core_Chain/resource-model.md) · [FLON 分配和奖励](01_Core_Chain/tokenomics.md) · [代理互操作性](01_Core_Chain/interoperability.md) · [GLON 与 BP 治理](01_Core_Chain/governance.md) · [来源与差异](01_Core_Chain/whitepaper.md)
+[资源与 GAS](01_Core_Chain/resource-model.md) · [FLON 分配和奖励](01_Core_Chain/tokenomics.md) · [代理互操作性](01_Core_Chain/interoperability.md) · [治理权与 BP 治理](01_Core_Chain/governance.md) · [来源与差异](01_Core_Chain/whitepaper.md)
