@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="FullOn 文档中心：通用概念、用户帮助与开发者指南。">
+<title>FullOn 文档中心</title>
+<style>
+:root{color-scheme:light dark;--bg:#f5f7fb;--panel:#fff;--ink:#18243c;--muted:#52627c;--line:#dde4ef;--accent:#215fe6}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:var(--accent);text-underline-offset:4px}a:focus-visible{outline:3px solid var(--accent);outline-offset:5px}.wrap{max-width:1120px;margin:auto;padding:0 24px}header{border-bottom:1px solid var(--line);background:var(--panel)}nav{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;flex-wrap:wrap}.brand{font-weight:800;font-size:20px;color:var(--ink);text-decoration:none}nav div{display:flex;gap:22px;flex-wrap:wrap}nav a{text-decoration:none}.hero{padding:64px 0 36px}.label{color:var(--accent);font-weight:700;letter-spacing:.12em;font-size:13px}h1{font-size:clamp(32px,6vw,52px);line-height:1.2;letter-spacing:-.04em;margin:12px 0 20px}.lead{font-size:19px;max-width:720px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:24px 0 36px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px}.card h2{font-size:23px;margin:0 0 8px}.card p{color:var(--muted);margin:0 0 16px}.card ul{padding-left:20px;margin:0}.card li{margin:10px 0}.resources{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px;margin-bottom:36px}.resources h2{margin:0 0 12px;font-size:23px}.links{display:flex;gap:12px 28px;flex-wrap:wrap}.note{color:var(--muted);font-size:14px}footer{padding:24px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;background:var(--panel);padding:10px;z-index:1}@media(max-width:800px){.grid{grid-template-columns:1fr}.hero{padding-top:40px}.wrap{padding:0 18px}}@media(prefers-color-scheme:dark){:root{--bg:#0c1423;--panel:#142036;--ink:#edf2fc;--muted:#afbed5;--line:#2c3c56;--accent:#8cb4ff}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳转到正文</a>
+<header><div class="wrap"><nav aria-label="主导航"><a class="brand" href="./">FullOn Docs</a><div><a href="#general">通用概念</a><a href="#users">用户帮助</a><a href="#developers">开发者</a><a href="https://github.com/fullon-labs/fullon-kb">GitHub</a></div></nav></div></header>
+<main id="main" class="wrap">
+<section class="hero"><div class="label">FULLON KNOWLEDGE BASE</div><h1>FullOn 文档中心</h1><p class="lead">从了解 FullOn 到使用钱包与应用，再到接入 RPC 和开发智能合约，选择适合你的阅读入口。</p></section>
+<div class="grid">
+<section id="general" class="card"><h2>通用概念</h2><p>了解网络、账户和基本术语。</p><ul><li><a href="04_FAQ/what-is-fullon.html">什么是 FullOn</a></li><li><a href="04_FAQ/account-types.html">账户类型</a></li><li><a href="05_Glossary/account.html">账户与权限概念</a></li><li><a href="04_FAQ/README.html">常见问题</a></li><li><a href="05_Glossary/README.html">术语表</a></li></ul></section>
+<section id="users" class="card"><h2>用户帮助</h2><p>寻找钱包和生态应用的使用资料。</p><ul><li><a href="06_User_Guides/README.html">用户指南入口</a></li><li><a href="02_Ecosystems/hufu-wallet.html">HuFu 手机钱包</a></li><li><a href="07_DApps/fullswap.html">FullSwap 代币交易</a></li><li><a href="07_DApps/fullbridge.html">FullBridge 跨链</a></li><li><a href="07_DApps/README.html">DApp 目录</a></li></ul></section>
+<section id="developers" class="card"><h2>开发者帮助</h2><p>读取链上数据，了解接口和交易历史。</p><ul><li><a href="03_Operators/README.html">开发与节点资料入口</a></li><li><a href="03_Operators/funod-rpc.html">RPC 完整参考</a></li><li><a href="03_Operators/funod-rpc.html#accounts-code-and-abi">获取账户、Code 与 ABI</a></li><li><a href="03_Operators/transaction-history-rpc.html">交易历史与最终性</a></li><li><a href="https://github.com/fullon-labs/flon-core">FullOn Core 源码</a></li></ul></section>
+</div>
+<section class="resources"><h2>相关入口</h2><div class="links"><a href="https://docs.flon.network/fullon-faq">FullOn 原站 FAQ</a><a href="https://hufu.io">HuFu 官网</a><a href="https://flonscan.io">Flonscan 浏览器</a><a href="https://github.com/fullon-labs/fullon-kb/tree/main/docs">GitHub 文档目录</a></div><p class="note">文档持续完善中。部分概念与应用介绍仍为草稿，使用前请查看对应页面的来源和版本；原站 FAQ 提供独立入口，其整合内容将在后续文档更新中提供。</p></section>
+</main><footer><div class="wrap">FullOn 文档中心 · 通过 GitHub Pages 发布 · <a href="https://github.com/fullon-labs/fullon-kb/issues">反馈文档问题</a></div></footer>
+</body>
+</html>
