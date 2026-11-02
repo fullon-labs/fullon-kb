@@ -7,6 +7,7 @@ edit_uri: edit/main/docs/
 docs_dir: docs
 site_dir: site
 exclude_docs: |
+  index.html
   06_User_Guides/guide-template.md
   07_DApps/dapp-template.md
 theme:
