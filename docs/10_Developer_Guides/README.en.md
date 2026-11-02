@@ -11,6 +11,7 @@ translation_of: 10_Developer_Guides/README.md
 
 ## Integration basics
 
+- [Comprehensive fucli command-line guide](fucli.md)
 - [RPC quickstart](quickstart.md)
 - [Retrieve ABI and code](get-abi-code.md)
 - [Create / activate accounts](accounts.md)
