@@ -99,6 +99,17 @@ plugins:
         来源与核验: Sources and verification
         文档维护与发布: Maintain and publish
         Docker Compose 部署: Docker Compose deployment
+        DAO 治理: DAO governance
+        治理帮助入口: Governance overview
+        入门与治理权: Getting started and POWER
+        提案与投票: Proposals and voting
+        规则与主网快照: Rules and mainnet snapshot
+        BP 投票与奖励: BP voting and rewards
+        Treasury 与预算: Treasury and grants
+        开发接入: Developer integration
+        Keeper 与 Standby 运维: Keeper and Standby operations
+        治理排错: Governance troubleshooting
+        治理资料来源: Governance sources
       theme:
         palette:
         - scheme: default
@@ -156,6 +167,17 @@ nav:
   - FullSwap 兑换: 06_User_Guides/fullswap.md
   - 交易查询: 06_User_Guides/transaction-status.md
   - 排错与求助: 06_User_Guides/troubleshooting.md
+- DAO 治理:
+  - 治理帮助入口: 11_DAO_Governance/README.md
+  - 入门与治理权: 11_DAO_Governance/getting-started.md
+  - 提案与投票: 11_DAO_Governance/proposals.md
+  - 规则与主网快照: 11_DAO_Governance/rules-and-parameters.md
+  - BP 投票与奖励: 11_DAO_Governance/bp-voting-rewards.md
+  - Treasury 与预算: 11_DAO_Governance/treasury.md
+  - 开发接入: 11_DAO_Governance/developer-reference.md
+  - Keeper 与 Standby 运维: 11_DAO_Governance/operations.md
+  - 治理排错: 11_DAO_Governance/troubleshooting.md
+  - 治理资料来源: 11_DAO_Governance/sources.md
 - 开发者指南:
   - 阅读路线: 10_Developer_Guides/README.md
   - RPC 快速开始: 10_Developer_Guides/quickstart.md
@@ -185,6 +207,7 @@ nav:
   - FullBridge: 07_DApps/fullbridge.md
   - FullVest: 07_DApps/fullvest.md
   - RWAVerse: 07_DApps/rwaverse.md
+  - DAO Gov: 07_DApps/dao-gov.md
 - 维护:
   - 来源与核验: contributing/sources.md
   - 文档维护与发布: contributing/publishing.md

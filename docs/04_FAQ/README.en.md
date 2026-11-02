@@ -31,3 +31,7 @@ translation_of: 04_FAQ/README.md
 [What is FullOn?](what-is-fullon.md) · [Account types](account-types.md) · [VM](vm.md) · [Interoperability](interoperability.md) · [Resources](resource-model.md) · [Tokenomics](tokenomics.md)
 
 Official pages containing only headings are explicitly identified. Follow each topic's source-review references for implementation details.
+
+## Governance questions
+
+How do I participate, why is endorsement not approval, why can 100% approval fail, and why is a grant not paid? See [DAO troubleshooting](../11_DAO_Governance/troubleshooting.md) and the [mainnet snapshot](../11_DAO_Governance/rules-and-parameters.md).

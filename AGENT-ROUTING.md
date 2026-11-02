@@ -77,3 +77,7 @@ Only when the user asks about past changes or deprecated content.
 3. If needed, search the next most relevant directory.
 4. Answer using the smallest sufficient set of pages.
 5. If information is missing, say what is missing.
+
+## DAO governance
+
+Route POWER, proposals, endorsement, voting, Timelock, Treasury, BP allocations, rewards, and Keeper questions to `docs/11_DAO_Governance/`. Treat the mainnet snapshot as dated evidence, not live configuration; check its source/discrepancy page before reusing historical DApp help.

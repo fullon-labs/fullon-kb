@@ -21,3 +21,7 @@ Start with the task you want to complete; no node or RPC knowledge is required.
 8. [Troubleshooting and support](troubleshooting.md).
 
 For background, read [FullOn accounts](../01_Core_Chain/accounts.md) and [RWID accounts](../01_Core_Chain/rwid-accounts.md). To write software, use the [developer guides](../10_Developer_Guides/README.md).
+
+## DAO governance
+
+[DAO Gov help](../11_DAO_Governance/README.md): POWER, proposals, endorsement, voting, BP allocation, rewards, and grants.
