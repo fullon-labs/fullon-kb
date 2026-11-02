@@ -35,7 +35,7 @@ The templates declare `platform: linux/amd64`. ARM hosts may require emulation; 
 | BP | `compose.bp.yaml` | Same as above | Producer plugins and separate signing configuration |
 | History | `compose.history.yaml` | `ghcr.io/fullon-labs/floncore/flon-node-history` | State History WebSocket, no BP keys |
 
-All three use service name `funod`. Their default image tag `v0.9.0` **does not establish current mainnet compatibility**. Check the target network's release/upgrade requirements and pin `FLON_VERSION` before starting. Do not infer compatibility from `latest`.
+This guide targets **Core v0.9.2**; all three services are named `funod`. The pinned templates still default to `v0.9.0`, so the example explicitly overrides `FLON_VERSION=v0.9.2`. Verify image availability/digest and target-network upgrade requirements; a documentation target is not a blanket compatibility guarantee.
 
 ## 2. Select mainnet or testnet explicitly
 
@@ -43,6 +43,8 @@ This example selects testnet. For mainnet, select `.env.mainnet.example` and use
 
 ```bash
 cp .env.testnet.example .env
+# Explicit Core target; keep the reviewed template default out of the running node.
+printf '\nFLON_VERSION=v0.9.2\n' >> .env
 # 编辑 .env，核对网络、版本、Chain ID、端口和 P2P peer。
 set -a
 . ./.env
@@ -174,19 +176,26 @@ Node images provide `funod`; do not assume `fucli` / `fuwal` are installed insid
 ```bash
 # 从 deploy/ 进入 CLI 目录；使用当前网络的 ../.env。
 cd cli
-docker compose --env-file ../.env build wallet
+# Confirm CDT_IMAGE_TAG independently; it is not the Core/tools version.
+TOOLS_SHA256=e06858f051ed7c3fc5e2276258520993fbf07ba5e4636b8c20d1899172cde2a3
+docker compose --env-file ../.env build \
+  --build-arg "FLON_VERSION=${CDT_IMAGE_TAG:?set a verified floncdt base-image tag}" \
+  --build-arg TOOLS_VERSION=0.9.2 \
+  --build-arg "TOOLS_SHA256=$TOOLS_SHA256" wallet
 docker compose --env-file ../.env up -d wallet cli
 docker compose --env-file ../.env exec cli   fucli --wallet-url unix:///wallet/fuwal.sock version client
 ```
 
-`deploy/cli/compose.yaml` uses a Unix wallet socket and persists wallets under `deploy/wallet/<network>/`. Set a real `RPC_URL` before querying/submitting transactions. Container `127.0.0.1` refers to that container, not the host's node. At the reviewed revision, the CLI Dockerfile pins tools `0.9.0` and its checksum. Changing only base-image `FLON_VERSION` does not update the tools version; review both when upgrading.
+`deploy/cli/compose.yaml` uses a Unix wallet socket and persists wallets under `deploy/wallet/<network>/`. Set a real `RPC_URL` before querying/submitting transactions. Container `127.0.0.1` refers to that container, not the host's node. The pinned CLI Dockerfile defaults to tools `0.9.0`; the example overrides tools to `0.9.2` using its official release asset digest. Verify `CDT_IMAGE_TAG` independently: do not assume `floncdt:v0.9.2` exists. The build checks downloaded bytes against the digest; afterwards verify `fucli version client` and `fuwal --version`. Node, tools, and CDT/base-image versions are separate concerns.
 
 The CDT container mounts your source through `CONTRACTS_DIR`:
 
 ```bash
 # 从 deploy/ 执行。
 cd cdt
-CONTRACTS_DIR=/absolute/path/to/contracts   docker compose --env-file ../.env run --rm cdt cdt-cpp --version
+FLON_VERSION="${CDT_IMAGE_TAG:?set a verified floncdt tag}" \
+  CONTRACTS_DIR=/absolute/path/to/contracts \
+  docker compose --env-file ../.env run --rm cdt cdt-cpp --version
 ```
 
 See the [contract build tutorial](build-contract.md) for compilation. This guide validates Compose rendering and example syntax only. No node was started, synchronized, or upgraded.

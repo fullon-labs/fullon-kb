@@ -9,6 +9,8 @@ translation_of: 01_Core_Chain/specifications.md
 
 # FullOn blockchain specifications
 
+Node source specifications target **v0.9.2**, `2188e4f94a1e9fe564a31c33e497b464556f3650`, reviewed 2026-11-02. See [release guidance](../09_Release_Notes/v0.9.2.md).
+
 Source specifications and running-network parameters are different. A source value is not necessarily a current mainnet setting. Performance claims require a test environment, version, and measurement method.
 
 | Item | Confirmed information | Scope |
@@ -41,4 +43,4 @@ Mainnet/testnet chain IDs, current BP count, live gas rates, measured finality l
 
 ## Sources and scope
 
-[Source 1](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/libraries/chain/include/eosio/chain/config.hpp), [Source 2](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/README.md), [Source 3](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/docs/node-build-profiles.md). Source review: 2026-11-02. This does not verify the version deployed on every network.
+[Source 1](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/libraries/chain/include/eosio/chain/config.hpp), [Source 2](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/README.md), [Source 3](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/docs/node-build-profiles.md). Source review: 2026-11-02. This does not verify the version deployed on every network.

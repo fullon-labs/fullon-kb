@@ -7,6 +7,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements-docs.txt
 python scripts/check_docs.py
+python scripts/check_release_baseline.py
 mkdocs build --strict
 mkdocs serve
 ```

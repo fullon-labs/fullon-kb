@@ -9,6 +9,8 @@ translation_of: 10_Developer_Guides/call-actions.md
 
 # Call smart contract actions
 
+Node, CLI, and RPC examples target **FullOn Core v0.9.2**. Contracts, CDT, and wallets have independent versions; their stated verification scope does not automatically change with Core. See [version baseline and migration](../09_Release_Notes/v0.9.2.md).
+
 ## CLI calls
 
 [Read the current ABI](get-abi-code.md) and verify action fields, types, and authorization. This calls the [hello example](build-contract.md) and requires a deployed contract and prepared signing wallet. It submits a write transaction.
@@ -34,4 +36,4 @@ For missing authority, inspect current permissions. For ABI mismatch, reserializ
 
 ## Sources and scope
 
-[Source 1](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/programs/client/main.cpp), [Source 2](../03_Operators/funod-rpc.md). Source review: 2026-11-02. This does not verify the version deployed on every network.
+[Source 1](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/programs/client/main.cpp), [Source 2](../03_Operators/funod-rpc.md). Source review: 2026-11-02. This does not verify the version deployed on every network.

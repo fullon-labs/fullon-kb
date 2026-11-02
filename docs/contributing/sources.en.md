@@ -12,13 +12,13 @@ translation_of: contributing/sources.md
 3. Official product documentation/FAQ: retain provenance and distinguish goals or historical values from current state.
 4. Internal notes/drafts: verification leads only.
 
-Reviewed baselines: Core `49256d6bdb989b935e114de2b00b748f3f8b4911`; system contracts `d34fc8f588e4bcc581e1377e729a248e0098f090`; RWID `d0fcb698711a0ea807515e76cf44e357d38787f3`; CDT `5c4b07b077b8bc9378c7e7adcf52b474fbf63c74`. Local review does not verify remote branches, release packages, or deployed code.
+Reviewed baselines: Core `2188e4f94a1e9fe564a31c33e497b464556f3650`; system contracts `d34fc8f588e4bcc581e1377e729a248e0098f090`; RWID `d0fcb698711a0ea807515e76cf44e357d38787f3`; CDT `5c4b07b077b8bc9378c7e7adcf52b474fbf63c74`. Local review does not verify remote branches, release packages, or deployed code.
 
 ## Maintenance rules
 
 State audience, task, prerequisites, steps, completion checks, troubleshooting, and sources. Record network, source, and date for live parameters. Check commands against source or actual CLI. Never include real private keys, authentication tokens, or personal authentication information.
 
-Preserve historical RPC verification dates. Explain conflicts rather than hiding sources or changing dates to imply new verification.
+RPC documentation was rechecked against v0.9.2 on 2026-11-02. Historical live observations retain their own dates and are not evidence of a new deployment. The [audit manifest](v0.9.2-audit.json) records the pinned source, file hashes, and route catalog. Explain conflicts instead of hiding provenance or changing observation dates.
 
 ## Publication boundary
 

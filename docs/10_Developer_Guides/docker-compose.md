@@ -34,7 +34,7 @@ cd deploy
 | BP 节点 | `compose.bp.yaml` | 同上 | producer 插件与独立生产身份配置 |
 | History 节点 | `compose.history.yaml` | `ghcr.io/fullon-labs/floncore/flon-node-history` | State History WebSocket，不配置 BP 私钥 |
 
-三个文件中的服务名称均为 `funod`。模板默认镜像标签为 `v0.9.0`，**不代表该版本已适合当前主网**。根据目标网络当前发布/升级要求确认并固定 `FLON_VERSION` 后再启动，不使用 `latest` 推断兼容性。
+本文目标为 **Core v0.9.2**，三个服务都叫 `funod`。固定模板仍默认 `v0.9.0`，下面显式覆盖为 `FLON_VERSION=v0.9.2`；这是文档目标版本，不是对每条网络或镜像可用性的保证。启动前确认节点镜像标签和摘要，以及目标网络升级要求。
 
 ## 2. 显式选择主网或测试网
 
@@ -42,6 +42,8 @@ cd deploy
 
 ```bash
 cp .env.testnet.example .env
+# Explicit Core target; keep the reviewed template default out of the running node.
+printf '\nFLON_VERSION=v0.9.2\n' >> .env
 # 编辑 .env，核对网络、版本、Chain ID、端口和 P2P peer。
 set -a
 . ./.env
@@ -173,19 +175,26 @@ docker compose --env-file .env -f docker-compose.yaml up -d --force-recreate
 ```bash
 # 从 deploy/ 进入 CLI 目录；使用当前网络的 ../.env。
 cd cli
-docker compose --env-file ../.env build wallet
+# Confirm CDT_IMAGE_TAG independently; it is not the Core/tools version.
+TOOLS_SHA256=e06858f051ed7c3fc5e2276258520993fbf07ba5e4636b8c20d1899172cde2a3
+docker compose --env-file ../.env build \
+  --build-arg "FLON_VERSION=${CDT_IMAGE_TAG:?set a verified floncdt base-image tag}" \
+  --build-arg TOOLS_VERSION=0.9.2 \
+  --build-arg "TOOLS_SHA256=$TOOLS_SHA256" wallet
 docker compose --env-file ../.env up -d wallet cli
 docker compose --env-file ../.env exec cli   fucli --wallet-url unix:///wallet/fuwal.sock version client
 ```
 
-`deploy/cli/compose.yaml` 的钱包使用 Unix socket，并按网络持久化到 `deploy/wallet/<network>/`。填写实际 `RPC_URL` 后再查询/提交交易；容器里的 `127.0.0.1` 指向该容器自身，不能直接当成宿主机节点。CLI Dockerfile 在本核验版本固定安装 tools `0.9.0` 及校验和；仅改变基础镜像 `FLON_VERSION` 不会自动更新其 tools 版本，升级时需一并核对。
+`deploy/cli/compose.yaml` 的钱包使用 Unix socket，并按网络持久化到 `deploy/wallet/<network>/`。填写实际 `RPC_URL` 后再查询/提交交易；容器里的 `127.0.0.1` 指向该容器自身，不能直接当成宿主机节点。固定 CLI Dockerfile 默认安装 tools `0.9.0`；上例使用官方 v0.9.2 tools 包摘要覆盖为 `TOOLS_VERSION=0.9.2`。`CDT_IMAGE_TAG` 是须单独确认的编译环境镜像版本，不能假定存在 `floncdt:v0.9.2`。上例的摘要来自官方 release asset 元数据，构建时仍校验下载字节；构建后检查 `fucli version client` 和 `fuwal --version`。节点版本与 CDT/基础镜像版本不是同一个变量。
 
 编译容器通过 `CONTRACTS_DIR` 挂载你的源码目录：
 
 ```bash
 # 从 deploy/ 执行。
 cd cdt
-CONTRACTS_DIR=/absolute/path/to/contracts   docker compose --env-file ../.env run --rm cdt cdt-cpp --version
+FLON_VERSION="${CDT_IMAGE_TAG:?set a verified floncdt tag}" \
+  CONTRACTS_DIR=/absolute/path/to/contracts \
+  docker compose --env-file ../.env run --rm cdt cdt-cpp --version
 ```
 
 实际编译命令见[合约编译教程](build-contract.md)。本文仅校验 Compose 展开与文档示例语法，没有实际启动、同步或升级任何链上节点。

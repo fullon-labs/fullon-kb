@@ -16,7 +16,7 @@ Confirm the target network before using any service. Mainnet and testnet assets,
 | [HuFu](https://hufu.io) | Mobile wallet | Download source, publisher, and selected network |
 | [Flonscan](https://flonscan.io) | Account and transaction explorer | Network selected in the interface |
 | [FullSwap](https://fullswap.flon.network) | Token swaps | Application network, token contracts, and transaction parameters |
-| [Core releases](https://github.com/fullon-labs/flon-core/releases) | Node and tools packages | Version compatible with the target network |
+| [Core releases](https://github.com/fullon-labs/flon-core/releases/tag/v0.9.2) | Node and tools packages | Version compatible with the target network |
 
 These product URLs come from repository records and do not guarantee current availability. The RPC reference's historical `https://m.flonscan.io` address is historical verification evidence, not a current SLA or default mainnet configuration.
 

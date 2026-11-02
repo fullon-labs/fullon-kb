@@ -21,6 +21,7 @@ jobs:
           cache-dependency-path: requirements-docs.txt
       - run: pip install -r requirements-docs.txt
       - run: python scripts/check_docs.py
+      - run: python scripts/check_release_baseline.py
       - run: mkdocs build --strict
       - run: python scripts/check_bilingual_site.py
       - uses: actions/upload-pages-artifact@v3

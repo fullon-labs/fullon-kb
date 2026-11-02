@@ -8,6 +8,8 @@ source: source review
 
 # How to get ABI / code｜读取合约接口与 WASM
 
+本文的节点、CLI 与 RPC 目标版本为 **FullOn Core v0.9.2**。合约、CDT 和钱包各有独立版本；其已注明的核验范围不因 Core 升级自动改变。详见[版本基线与升级说明](../09_Release_Notes/v0.9.2.md)。
+
 ABI 是动作和数据结构的接口描述；WASM 是已部署的可执行字节码。获取 WASM 不能还原原始 C++ 源码，也不能证明某个 Git 仓库就是部署来源。
 
 ## 前提
@@ -38,4 +40,4 @@ curl --fail --silent --show-error --max-time 15   -X POST "$FULLON_RPC/v1/chain/
 
 ## 来源
 
-[fucli get code / get abi 参数与实现](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/programs/client/main.cpp)，源码审阅：2026-11-02。
+[fucli get code / get abi 参数与实现](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/programs/client/main.cpp)，源码审阅：2026-11-02。

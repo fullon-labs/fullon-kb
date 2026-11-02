@@ -8,6 +8,8 @@ source: source review
 
 # How to create / activate an account｜创建与启用账户
 
+本文的节点、CLI 与 RPC 目标版本为 **FullOn Core v0.9.2**。合约、CDT 和钱包各有独立版本；其已注明的核验范围不因 Core 升级自动改变。详见[版本基线与升级说明](../09_Release_Notes/v0.9.2.md)。
+
 ## 前提
 
 需要已有创建者账户、可满足其权限的本地签名钱包、目标网络 RPC、新账户 owner/active 公钥，以及足够的资金/资源。公钥由用户生成并确认；不要收集用户私钥。
@@ -40,4 +42,4 @@ RWID 不应绕过认证服务直接照抄普通账户创建。参考实现经 au
 
 ## 来源
 
-[CLI 创建参数](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/programs/client/main.cpp)、[命名与资源限制](https://github.com/fullon-labs/flon.contracts/blob/d34fc8f588e4bcc581e1377e729a248e0098f090/contracts/flon.system/src/flon.system.cpp)。
+[CLI 创建参数](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/programs/client/main.cpp)、[命名与资源限制](https://github.com/fullon-labs/flon.contracts/blob/d34fc8f588e4bcc581e1377e729a248e0098f090/contracts/flon.system/src/flon.system.cpp)。

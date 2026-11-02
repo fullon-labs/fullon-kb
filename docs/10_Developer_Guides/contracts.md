@@ -8,6 +8,8 @@ source: source review
 
 # 智能合约开发路径
 
+本文的节点、CLI 与 RPC 目标版本为 **FullOn Core v0.9.2**。合约、CDT 和钱包各有独立版本；其已注明的核验范围不因 Core 升级自动改变。详见[版本基线与升级说明](../09_Release_Notes/v0.9.2.md)。
+
 按可执行教程依次完成：
 
 1. [编写与编译](build-contract.md)：最小 C++ 合约与 WASM/ABI 产物。

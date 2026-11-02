@@ -4,6 +4,8 @@ title: FullOn 文档中心
 
 # FullOn 文档中心
 
+**目标版本：FullOn Core v0.9.2。** [版本基线、接口变化与升级要求](09_Release_Notes/v0.9.2.md)。
+
 从了解账户开始，到完成第一笔转账、接入应用与部署合约。
 
 <div class="grid cards" markdown>

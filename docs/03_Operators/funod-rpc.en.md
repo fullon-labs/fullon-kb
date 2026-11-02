@@ -2,25 +2,33 @@
 title: funod RPC Developer Guide
 type: developer_guide
 status: verified
-updated: 2026-09-03
-source: official
+updated: 2026-11-02
+source: FullOn Core v0.9.2 source review
+target_version: v0.9.2
+source_revision: 2188e4f94a1e9fe564a31c33e497b464556f3650
 ---
 
 # funod RPC Developer Guide
 
 ## Scope and source baseline
 
-This is the complete RPC catalog for the `funod` executable in the current
-FullOn Core `v0.8.0-alpha` source. It covers:
+This catalog targets **FullOn Core v0.9.2** and the plugins that can be built
+into `funod`. It covers:
 
 - every HTTP route registered by plugins linked into `funod`;
 - conditions that make a route available or unavailable;
 - request fields, response purpose, and mutability;
 - the State History WebSocket protocol, which is not a `/v1/*` JSON endpoint.
 
-The catalog was verified against route registration code, not inferred from
-Swagger alone. The checked source revision was `72cde15a3fb1` on 2026-09-03.
-Some repository Swagger files do not yet include every current route.
+Reviewed on 2026-11-02 against release tag `v0.9.2`, commit
+`2188e4f94a1e9fe564a31c33e497b464556f3650`: route registration, request structures, and build switches,
+not Swagger alone. This replaces the previous RPC baseline and does not
+assert that every public node runs this release.
+
+**Build boundary:** default `core` excludes History, Trace, and State History;
+`history` includes them by default. Local signing is off by default and test
+control depends on build switches. Runtime configuration cannot add omitted
+plugins. See [release and migration guidance](../09_Release_Notes/v0.9.2.md).
 
 `fuwal` wallet RPC belongs to a different executable and is intentionally not
 included here.
@@ -112,8 +120,12 @@ http-category-address = producer_rw,./producer-rw.sock
 http-category-address = snapshot,./snapshot.sock
 ```
 
-Do not expose `net_rw`, `producer_rw`, `snapshot`, `test_control`, or signing
-categories directly to the Internet.
+In v0.9.2, plugin initialization rejects non-loopback/non-Unix listeners for
+`net_rw`, `producer_rw`, `snapshot`, `test_control`, and the separate wallet
+API by default. `http-allow-insecure-management-api = true` is an explicit
+compatibility override, not authentication or encryption, and is only for
+already protected gateway topologies. Signing remains Unix-only even with
+that override. Disabling protection is not a routine troubleshooting step.
 
 ### Linked plugins without standalone JSON routes
 
@@ -347,6 +359,9 @@ The complete registered path set is:
 /v1/history/get_controlled_accounts
 /v1/history/get_database_stats
 /v1/history/get_performance_metrics
+/v1/history/get_optimization_suggestions
+/v1/history/get_cache_analysis
+/v1/history/get_maintenance_needs
 /v1/transaction_history/get_transaction
 /v1/transaction_history/get_actions
 /v1/transaction_history/get_transaction_count
@@ -354,6 +369,9 @@ The complete registered path set is:
 /v1/transaction_history/get_controlled_accounts
 /v1/transaction_history/get_database_stats
 /v1/transaction_history/get_performance_metrics
+/v1/transaction_history/get_optimization_suggestions
+/v1/transaction_history/get_cache_analysis
+/v1/transaction_history/get_maintenance_needs
 ```
 
 | Method | Request fields | Purpose |
@@ -365,10 +383,14 @@ The complete registered path set is:
 | `get_controlled_accounts` | `controlling_account` | Accounts controlled by an indexed account authority |
 | `get_database_stats` | `{}` | History database statistics |
 | `get_performance_metrics` | `{}` | History database/cache performance metrics |
+| `get_optimization_suggestions` | `{}` | `success`, `suggestions`, optional `error` |
+| `get_cache_analysis` | `{}` | `success`, `analysis`, optional `error` |
+| `get_maintenance_needs` | `{}` | `success`, `maintenance_needs`, optional `error` |
 
-The following methods are declared internally but are **not** HTTP RPC routes
-in the checked version: `get_optimization_suggestions`, `get_cache_analysis`,
-`get_maintenance_needs`, and `trigger_auto_optimize`.
+v0.9.2 registers the first three diagnostic methods as read-only HTTP RPC
+under both prefixes. They do not perform automatic optimization.
+`trigger_auto_optimize` is still not a registered HTTP route. See the history
+guide for `history_status` and index completeness.
 
 See [funod Transaction History RPC](transaction-history-rpc.md) for pagination,
 irreversibility, and examples verified through the Flonscan integration.
@@ -647,16 +669,16 @@ Client rules:
 
 ## Coverage summary
 
-The checked source can expose up to 73 logical HTTP operations without the
-compile-time greylist feature. The actual node exposes only the enabled and
-listener-visible subset:
+A v0.9.2 build with all optional features compiled/enabled can expose up to
+76 logical HTTP operations without the compile-time greylist feature. This
+is a source maximum, not the default core/history package capability set:
 
 - 1 Node discovery operation;
 - 35 Chain operations, including two conditionally registered routes and one
   always-registered read-only transaction route whose execution requires read
   threads;
 - 17 standard Producer/Snapshot operations;
-- 7 Transaction History operations, each exposed under two prefixes;
+- 10 Transaction History operations, each exposed under two prefixes;
 - 4 Net operations;
 - 4 Unix-only Sign Transaction operations;
 - 2 Trace operations;
@@ -664,13 +686,16 @@ listener-visible subset:
 - 1 Prometheus operation;
 - 1 Test Control operation.
 
-The three compile-time greylist operations raise the maximum logical total to
-76 in a custom `ENABLE_GREYLIST_LIMIT` build. The duplicated History aliases
-mean the maximum route-path count is 80, or 83 with those greylist routes.
+The three greylist operations raise the logical maximum to 79 in a custom
+`ENABLE_GREYLIST_LIMIT` build. History aliases bring the route-path maximum
+to 86, or 89 with greylist. Actual availability requires compilation, plugin
+enabling, and listener exposure.
 
 ## Verification basis
 
-This guide was checked against:
+This guide was rechecked against `v0.9.2` / `2188e4f94a1e9fe564a31c33e497b464556f3650`.
+The [audit manifest](../contributing/v0.9.2-audit.json) records source hashes
+and registered paths. The review covers:
 
 - `programs/node/CMakeLists.txt` for plugins linked into `funod`;
 - each API plugin's route-registration implementation;

@@ -8,6 +8,8 @@ source: repository synthesis
 
 # FullOn 文档中心
 
+目标版本：**FullOn Core v0.9.2**，固定源码与升级说明见 [v0.9.2](docs/09_Release_Notes/v0.9.2.md)。
+
 从你要完成的任务开始，选择对应入口。
 
 **语言：** [简体中文](https://fullon-labs.github.io/fullon-kb/) · [English](https://fullon-labs.github.io/fullon-kb/en/)

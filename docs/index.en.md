@@ -5,6 +5,8 @@ translation_of: index.md
 
 # FullOn Documentation
 
+**Target release: FullOn Core v0.9.2.** [Baseline, API changes, and migration](09_Release_Notes/v0.9.2.md).
+
 From understanding accounts to your first transfer, application integration, and smart contract deployment.
 
 <div class="grid cards" markdown>

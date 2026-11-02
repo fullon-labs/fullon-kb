@@ -2,17 +2,19 @@
 title: funod 交易历史 RPC
 type: developer_guide
 status: verified
-updated: 2026-09-03
-source: official
+updated: 2026-11-02
+source: FullOn Core v0.9.2 source review
 translation_of: 03_Operators/transaction-history-rpc.md
 translated: '2026-11-02'
+target_version: v0.9.2
+source_revision: 2188e4f94a1e9fe564a31c33e497b464556f3650
 ---
 
 # funod 交易历史 RPC
 
 ## 用途与范围
 
-本页扩展[完整 RPC 参考](funod-rpc.md)中的交易历史部分，只讨论原生 `funod` RPC。Flonscan 源码和实际调用用作消费侧证据；浏览器私有应用 API 不属于原生 RPC 协议。
+本页以 **FullOn Core v0.9.2**（`2188e4f94a1e9fe564a31c33e497b464556f3650`，2026-11-02 审阅）为目标，扩展[完整 RPC 参考](funod-rpc.md)中的原生 `funod` 交易历史 API。需使用 history 构建或显式启用相应编译功能，再配置两个运行插件。Flonscan 源码和实际调用用作消费侧证据；浏览器私有应用 API 不属于原生 RPC 协议。
 
 可查询账户动作、按交易 ID 获取交易及 trace、公钥到账户和控制关系索引、区块交易数，以及本地历史数据库健康。历史数据是节点维护的索引；当前账户、余额、权限和合约表应查询 `/v1/chain/*`。
 
@@ -59,8 +61,11 @@ http-history-requests-per-second = 5
 | `get_controlled_accounts` | `controlling_account` | `controlled_accounts` |
 | `get_database_stats` | `{}` | `success`、数据库 `stats`、可选 `error` |
 | `get_performance_metrics` | `{}` | `success`、性能 `metrics`、可选 `error` |
+| `get_optimization_suggestions` | `{}` | `success`、`suggestions`、可选 `error` |
+| `get_cache_analysis` | `{}` | `success`、`analysis`、可选 `error` |
+| `get_maintenance_needs` | `{}` | `success`、`maintenance_needs`、可选 `error` |
 
-插件头文件声明的 `get_optimization_suggestions`、`get_cache_analysis`、`get_maintenance_needs`、`trigger_auto_optimize` 未注册为 HTTP RPC。
+v0.9.2 已注册前三个诊断接口，两种前缀均可用；它们返回建议或状态，不执行优化。`trigger_auto_optimize` 仍未注册。
 
 ## 查询账户动作
 
@@ -238,6 +243,34 @@ const actionPage = await postRpc("https://m.flonscan.io", "/v1/history/get_actio
 
 2026-09-03 曾通过 `https://m.flonscan.io` 验证主网动作/交易查询，该节点当时报告 `v0.6.6`，未提供长前缀别名和 `get_transaction_count`。此记录不是当前部署状态。始终探测能力，不将源码支持等同于上线。
 
+
+## 诊断接口示例
+
+```bash
+for method in get_optimization_suggestions get_cache_analysis get_maintenance_needs; do
+  curl --fail --silent --show-error --max-time 15 \
+    -X POST "$rpc/v1/history/$method" \
+    -H 'Content-Type: application/json' --data '{}' | jq
+done
+```
+
+## v0.9.2 索引完整性与恢复
+
+`get_transaction`、`get_actions`、`get_transaction_count` 可返回 `history_status`：
+
+| 字段 | 含义 |
+| --- | --- |
+| `indexed_through_block` | 本地索引已处理到的区块高度，不等于链头 |
+| `recording_healthy` | 当前历史记录是否健康 |
+| `filtered` | 是否启用了记录过滤，查询不是全链全集 |
+| `account_index_gap_block` | 已知最早账户索引截断高度；缺失不证明历史从未有缺口 |
+
+交易的 `account_index_complete` 在旧记录中可能缺失，含义是未知，不能当作 true。存在过滤时交易 envelope 会标记 filtered、去掉签名交易体，并禁用 `block_num_hint` 绕过过滤的回退。
+
+查询共享执行预算，受 20 ms 与 HTTP 响应时限约束；同步存储读取无法在调用中途抢占，边界前后检查。响应大小限制覆盖完整返回 envelope。超时或大小上限都可能影响分页，应保留已有结果并检查状态，而非把少量结果当成完整历史。
+
+持久记录缺口不会因重启而自动删除并重建数据库。先保留证据，再从保留链数据另建索引。`transaction-history-force-clean` 具有破坏性，清空并不会自动重建更早历史。
+
 ## 运维说明
 
 - `404 Unknown Endpoint`：当前监听器/版本不支持插件、别名、类别或方法。
@@ -249,6 +282,6 @@ const actionPage = await postRpc("https://m.flonscan.io", "/v1/history/get_actio
 
 ## 核验依据
 
-原核验针对 `72cde15a3fb1` 的历史路径注册和请求反射、HTTP 准入控制、Flonscan 消费代码及 2026-09-03 主网响应。翻译保留此范围和日期。
+本次按 `v0.9.2` / `2188e4f94a1e9fe564a31c33e497b464556f3650` 重新核对历史路径、响应结构、HTTP 准入和查询预算。Flonscan 段落保留独立的 2026-09-03 线上观察，不能作为此次部署验证。[源文件与路径审阅清单](../contributing/v0.9.2-audit.json)。
 
 [完整 RPC](funod-rpc.md) · [参考入口](README.md) · [最终性](../05_Glossary/finality.md) · [Core](https://github.com/fullon-labs/flon-core) · [Flonscan](https://flonscan.io)

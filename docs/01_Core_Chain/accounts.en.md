@@ -39,4 +39,4 @@ Query current permissions with `get_account`. A historical key index, wallet cac
 
 ## Sources and scope
 
-[Source 1](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/programs/client/main.cpp), [Source 2](https://github.com/fullon-labs/flon.contracts/blob/d34fc8f588e4bcc581e1377e729a248e0098f090/contracts/flon.system/src/flon.system.cpp). Source review: 2026-11-02. This does not verify the version deployed on every network.
+[Source 1](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/programs/client/main.cpp), [Source 2](https://github.com/fullon-labs/flon.contracts/blob/d34fc8f588e4bcc581e1377e729a248e0098f090/contracts/flon.system/src/flon.system.cpp). Source review: 2026-11-02. This does not verify the version deployed on every network.

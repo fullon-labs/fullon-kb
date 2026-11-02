@@ -8,6 +8,8 @@ source: repository synthesis
 
 # RPC 快速开始：读取链上数据
 
+本文的节点、CLI 与 RPC 目标版本为 **FullOn Core v0.9.2**。合约、CDT 和钱包各有独立版本；其已注明的核验范围不因 Core 升级自动改变。详见[版本基线与升级说明](../09_Release_Notes/v0.9.2.md)。
+
 目标：用只读请求确认网络、账户、资产与合约状态。
 
 ## 准备

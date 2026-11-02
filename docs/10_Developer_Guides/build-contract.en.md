@@ -9,6 +9,8 @@ translation_of: 10_Developer_Guides/build-contract.md
 
 # Write and build a smart contract
 
+Node, CLI, and RPC examples target **FullOn Core v0.9.2**. Contracts, CDT, and wallets have independent versions; their stated verification scope does not automatically change with Core. See [version baseline and migration](../09_Release_Notes/v0.9.2.md).
+
 ## Toolchain
 
 Choose a compatible toolchain from the official [CDT repository and releases](https://github.com/fullon-labs/flon.cdt). Installation varies by platform/version. The installed `cdt-cpp --version` returned `0.9.0` during verification; this is not a recommendation for every network.
