@@ -8,6 +8,8 @@ source: source review
 
 # How to launch a node｜普通节点与 BP 节点
 
+使用官方 Docker 模板部署请直接阅读[Docker Compose 部署教程](docker-compose.md)，覆盖 `docker-compose.yaml`、网络隔离、角色选择与健康检查。
+
 ## 先选择角色
 
 | 角色 | 职责 | 构建包 | 是否需要生产身份/密钥 |

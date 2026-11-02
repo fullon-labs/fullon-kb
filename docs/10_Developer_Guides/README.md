@@ -18,6 +18,7 @@ source: source review
 
 ## 节点与网络
 
+- [Docker Compose 部署节点](docker-compose.md)
 - [启动普通节点与 BP 节点](nodes.md)
 - [P2P 配置与同步](p2p.md)
 - [完整 RPC 参考](../03_Operators/funod-rpc.md)
