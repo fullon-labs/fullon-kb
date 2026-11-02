@@ -19,6 +19,8 @@ This page summarizes protocol design in the whitepaper v2.6.0 clarification draf
 
 GAS denotes resource usage rights; ELON is its smallest accounting unit. The design states `1 FLON = 100,000,000 ELON` and `1 ELON = 0.00000001 FLON`. This is an accounting relationship, not a market price or investment claim. Verify deployed symbols and precision.
 
+For v0.9.2 payment flow, unit conversion and wallet presentation, see [GAS and ELON automatic payment](gas-auto-payment.md).
+
 ## Payment and reserves
 
 The resource-model section describes spending existing GAS first and converting account FLON when needed, rather than requiring every standard account to pre-buy GAS manually. CPU/NET spending consumes usage rights; releasing RAM may return or reclaim GAS under protocol rules. Automatic conversion, refunds and failure behavior still require version-specific confirmation. Do not infer fees or record retention for every failed request from the whitepaper alone.
