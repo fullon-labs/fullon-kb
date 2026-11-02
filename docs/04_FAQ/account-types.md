@@ -1,21 +1,9 @@
 ---
-title: What are FullOn account types?｜账户类型
-status: active
-updated: 2026-11-02
-source: official FAQ synthesis
+title: 页面已归并
+search:
+  exclude: true
 ---
 
-# What are FullOn account types?｜账户类型
+# 页面已归并
 
-官方 FAQ 列出以下分类：
-
-- Native & sovereign accounts：原生与自主账户。
-- Proxy accounts：代理账户。
-- Social-recoverable accounts：可社交恢复账户。
-- Simple address accounts：简单地址账户，并区分 WASM-managed 与 EVM-managed。
-
-原 FAQ 页面只有分类和小标题；白皮书进一步解释 canonical/主权账户、EVM 地址账户与代理账户，见[账户基础](../01_Core_Chain/accounts.md)和[互操作流程](../01_Core_Chain/interoperability.md)。这两套分类范围不同，仍不能证明每类的实际网络支持。因此不能仅凭分类名判断用户是否独自持有 owner、能否免费创建或保证可恢复。
-
-本站另有[FullOn 账户与权限](../01_Core_Chain/accounts.md)和[RWID 合约实现](../01_Core_Chain/rwid-accounts.md)，用于说明已核验的实际机制。
-
-来源：[官方账户分类](https://docs.flon.network/fullon-faq/what_are_fullon_account_types)，读取日期 2026-11-02。
+本页内容已归入对应专题。[前往完整文档](../01_Core_Chain/accounts.md)。

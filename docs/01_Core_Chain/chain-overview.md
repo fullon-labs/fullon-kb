@@ -20,3 +20,11 @@ source: source review
 ## 深入理解协议
 
 [资源与 GAS](resource-model.md) · [代币经济](tokenomics.md) · [互操作性](interoperability.md) · [治理与 BP](governance.md) · [路线图](roadmap.md) · [白皮书来源与差异](whitepaper.md)
+
+## FullOn 是什么
+
+官方 FAQ 将 FullOn 定位为具有扩展性、低延迟、快速最终性及多链互操作性的去中心化 Layer 1 区块链。
+
+这段是产品定位，不是具体 TPS 或最终性耗时的性能测试报告。使用前可继续阅读[账户](accounts.md)、[RWID](rwid-accounts.md)、[技术规格](specifications.md)。
+
+来源：[官方定义](https://docs.flon.network/fullon-faq/what_is_fullon)，读取日期 2026-11-02。

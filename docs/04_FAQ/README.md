@@ -1,14 +1,14 @@
 ---
-title: 常见问题
+title: 常见问题速查
 type: index
 status: active
 updated: 2026-11-02
 source: repository synthesis
 ---
 
-# 常见问题
+# 常见问题速查
 
-[官方 FAQ 的 8 项整合记录与来源](official-faq.md)
+[官方 FAQ 的 8 项整合记录与来源](../contributing/faq-integration.md)
 
 ## 用户问题
 
@@ -27,7 +27,7 @@ source: repository synthesis
 
 ## 基础概念与官方 FAQ
 
-[什么是 FullOn](what-is-fullon.md) · [账户类型](account-types.md) · [虚拟机](vm.md) · [互操作性](interoperability.md) · [资源模型](resource-model.md) · [代币经济](tokenomics.md)
+[什么是 FullOn](../01_Core_Chain/chain-overview.md) · [账户类型](../01_Core_Chain/accounts.md) · [虚拟机](../01_Core_Chain/virtual-machine.md) · [互操作性](../01_Core_Chain/interoperability.md) · [资源模型](../01_Core_Chain/resource-model.md) · [代币经济](../01_Core_Chain/tokenomics.md)
 
 官方 FAQ 的标题页已用白皮书补充设计内容，见[白皮书整合与差异](../01_Core_Chain/whitepaper.md)。具体实现与当前部署仍需分别核验。
 
