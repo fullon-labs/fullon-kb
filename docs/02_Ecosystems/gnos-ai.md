@@ -4,26 +4,16 @@ type: ecosystem
 status: draft
 updated: 2026-04-01
 source: internal
+translation_of: 02_Ecosystems/gnos-ai.md
+translated: '2026-11-02'
 ---
 
 # Gnos AI
 
 > 本页为历史草稿，内容与入口尚需核验，不代表当前网络或产品承诺。
 
-Gnos AI is a music and music video creation and sharing platform.
+Gnos AI 的内部工作描述是音乐与音乐视频创作、分享平台。
 
-## Summary
-- music creation
-- music video creation
-- sharing platform
+原记录写作时仍在开发，并提到预计“四月下旬”发布；该历史预期不代表当前进度，年份和最新状态尚需核验。原抓取官网曾超时。
 
-## Status
-- currently under development
-- expected release: late April
-
-## Reference
-- Official site: https://gnos.ai
-- Working description provided by the team; official site fetch was timing out at the time of capture
-
-## Related pages
-- [Ecosystems Index](README.md)
+[官网](https://gnos.ai) · [生态索引](README.md)
