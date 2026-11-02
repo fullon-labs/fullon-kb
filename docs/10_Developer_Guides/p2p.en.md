@@ -11,7 +11,7 @@ translation_of: 10_Developer_Guides/p2p.md
 
 P2P propagates blocks, transactions, and consensus-related messages between nodes. RPC handles application requests. An HTTP RPC URL is not a P2P peer, and State History WebSocket is not P2P.
 
-## Configuration
+## Configuration {#net-plugin-configuration}
 
 ```ini
 # 以下主机名是示例，启动前替换为可信网络配置。
@@ -38,6 +38,11 @@ The hostnames are examples; replace them with trusted network configuration befo
 
 For sync failures, check network, DNS/firewall/NAT, version, snapshot compatibility, disk, and peers. Preserve logs and determine a recovery plan before deleting any data directory.
 
-## Sources and scope
+## Related documentation
 
-[Source 1](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/plugins/net_plugin/net_plugin.cpp), [Source 2](../03_Operators/funod-rpc.md). Source review: 2026-11-02. This does not verify the version deployed on every network.
+- [Net Plugin configuration guide](#net-plugin-configuration): P2P examples and parameter descriptions on this page.
+- [Net RPC API guide](../03_Operators/funod-rpc.md#net-api): request formats for inspecting, connecting, and disconnecting peers.
+
+## Source reference
+
+[Source reference: Net Plugin configuration definitions](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/plugins/net_plugin/net_plugin.cpp), for developers checking the implementation. Source review: 2026-11-02. This does not verify the version deployed on every network.
