@@ -45,6 +45,6 @@ This guide does not publish phone numbers, verification codes, or private authen
 
 ## RWID design in the whitepaper repository
 
-The [RWID design](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/rwid-design.md) expands RWID as Real-World Identity. It proposes binding factors such as phone, email, Google, WhatsApp, and Telegram, with configurable recovery thresholds and decentralized oracle verification for key replacement.
+The [RWID design](https://github.com/fullon-labs/flon.whitepaper/blob/5758318eba75d48afd1d543bf020255c1a998d26/rwid-design.md) expands RWID as Real-World Identity. It proposes binding factors such as phone, email, Google, WhatsApp, and Telegram, with configurable recovery thresholds and decentralized oracle verification for key replacement.
 
 These are design goals, not a verified list of available authentication services. Consider them separately from the reviewed auth/DAO/owner permission paths above. They do not establish that current recovery is fully decentralized or trustless. Key generation, factor storage, and recovery review require product-level verification; see [design and implementation differences](whitepaper.md).

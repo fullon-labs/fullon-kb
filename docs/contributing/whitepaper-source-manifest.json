@@ -1,36 +1,44 @@
 {
   "repository": "https://github.com/fullon-labs/flon.whitepaper",
-  "revision": "d695da53f4e453dd0e372e9dc5a605a0c56d455e",
-  "document_version": "v2.5.0",
+  "revision": "5758318eba75d48afd1d543bf020255c1a998d26",
+  "document_version": "v2.6.0",
   "document_date": "2026-11-02",
   "retrieved": "2026-11-02",
   "files": [
     {
       "path": "README.md",
-      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/README.md",
-      "sha256": "847445a8e35893519f3a2774c07a2214df33eba650d340f8815964033ca9f7d1"
+      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/5758318eba75d48afd1d543bf020255c1a998d26/README.md",
+      "sha256": "dacc91008620ed8d593adb646ae31ee278c4a42f84b8a7fb3a811d5172e5f970"
     },
     {
       "path": "fullon.whitepaper.cn.md",
-      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.cn.md",
-      "sha256": "e01dbcbd34a41f4d62fe8d5d1fd99cc9c983f90b39eef544f9959402f5d476d4"
+      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/5758318eba75d48afd1d543bf020255c1a998d26/fullon.whitepaper.cn.md",
+      "sha256": "e403a66609358deec818a72e128f53a0f5fcfe4de64155ca4ff7cf8b5d588856"
     },
     {
       "path": "fullon.whitepaper.md",
-      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.md",
-      "sha256": "6d71b6c90dac9c8e69d09a38c7fb8b5a4ef3af7e37d78911a466d737bcb2480b"
+      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/5758318eba75d48afd1d543bf020255c1a998d26/fullon.whitepaper.md",
+      "sha256": "739676c748340af417b3cae24c6c2a3cda33192958f5a1747deb0d6cbe21d27e"
     },
     {
       "path": "rwid-design.md",
-      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/rwid-design.md",
+      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/5758318eba75d48afd1d543bf020255c1a998d26/rwid-design.md",
       "sha256": "8f18a64cd6ae159d86be7448b88ee8bdc1a84b70ba87bfd099654dd3cf645bd0"
     },
     {
       "path": "LICENSE",
-      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/LICENSE",
+      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/5758318eba75d48afd1d543bf020255c1a998d26/LICENSE",
       "sha256": "318c94205c52c2e197921c973957bf0f9dacb605b6dc33a932c840f627c3f667"
+    },
+    {
+      "path": "v0.9.2-source-manifest.json",
+      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/5758318eba75d48afd1d543bf020255c1a998d26/v0.9.2-source-manifest.json",
+      "sha256": "2bc5db374616fe93fc2925c5160fa9af86e556152faeb24d1138b53cf024f44a"
     }
   ],
-  "baseline_revision": "116c6f6bda429037a446f002cf5c815c5dab5aeb",
-  "document_status": "clarification proposed; upstream merge pending"
+  "baseline_revision": "c1b5ed6cc8572fc79c9eacd964b04d4ca60e8d9a",
+  "document_status": "Core v0.9.2 baseline published; additional future issuance/GAS policy clarification remains draft",
+  "implementation_baseline": "FullOn Core v0.9.2",
+  "cdt_api_reference": "v0.9.0",
+  "published_revision": "c1b5ed6cc8572fc79c9eacd964b04d4ca60e8d9a"
 }

@@ -2,12 +2,12 @@
 title: 互操作性：代理账户与跨链流程
 status: active
 updated: 2026-11-02
-source: whitepaper v2.5.0 clarification draft
+source: whitepaper v2.6.0 Core v0.9.2 baseline and policy clarification draft
 ---
 
 # 互操作性：代理账户与跨链流程
 
-本文整理白皮书 v2.5.0 澄清稿（2026-11-02）的协议设计，不代表本次已验证各网络部署。
+本文整理白皮书 v2.6.0 澄清稿（2026-11-02）的协议设计，不代表本次已验证各网络部署。
 
 ## 白皮书的设计路径
 
@@ -43,4 +43,4 @@ source: whitepaper v2.5.0 clarification draft
 
 ## 来源
 
-[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `d695da53f4e453dd0e372e9dc5a605a0c56d455e`；读取日期 2026-11-02。本次澄清稿尚待上游合并，不能标作已部署规则。
+[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/5758318eba75d48afd1d543bf020255c1a998d26/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/5758318eba75d48afd1d543bf020255c1a998d26/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `5758318eba75d48afd1d543bf020255c1a998d26`；读取日期 2026-11-02。Core v0.9.2 基线已发布；未来发行/GAS 政策澄清仍在独立草稿中，不能标作已部署规则。

@@ -21,6 +21,6 @@ RPC 文档现已按 v0.9.2 重新核对，2026-11-02 为本次源码核验日期
 
 ## 白皮书补充来源
 
-白皮书 v2.5.0 澄清稿（2026-11-02，待上游合并），固定提交 `d695da53f4e453dd0e372e9dc5a605a0c56d455e`。本次补充以主 Markdown 文件为准，不假设仓库 PDF 与 Markdown 必然同步。新专题提供中英文文本；[来源与冲突记录](../01_Core_Chain/whitepaper.md)明确区分协议设计、源码核验与网络部署，文件哈希见[清单](whitepaper-source-manifest.json)。
+白皮书 v2.6.0 澄清稿（2026-11-02，待上游合并），固定提交 `5758318eba75d48afd1d543bf020255c1a998d26`。本次补充以主 Markdown 文件为准，不假设仓库 PDF 与 Markdown 必然同步。新专题提供中英文文本；[来源与冲突记录](../01_Core_Chain/whitepaper.md)明确区分协议设计、源码核验与网络部署，文件哈希见[清单](whitepaper-source-manifest.json)。
 
 改编内容的上游许可保留于 [白皮书 MIT 许可](whitepaper-license.txt)。
