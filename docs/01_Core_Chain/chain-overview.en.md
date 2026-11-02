@@ -21,3 +21,11 @@ For wallet and application tasks, use the [user guides](../06_User_Guides/README
 ## Whitepaper topics
 
 See [GAS and ELON](resource-model.md), [FLON allocation and rewards](tokenomics.md), [proxy interoperability](interoperability.md), [Governance power and BP governance](governance.md), [scalability roadmap](roadmap.md), and [source verification and differences](whitepaper.md). These pages distinguish protocol design, reviewed implementation, and deployment evidence.
+
+## What is FullOn?
+
+The official FAQ describes FullOn as a decentralized Layer 1 blockchain focused on scalability, low latency, fast finality, and multi-chain interoperability.
+
+This is product positioning, not a measured TPS or finality-latency report. Continue with [accounts](accounts.md), [RWID](rwid-accounts.md), and [specifications](specifications.md).
+
+Source: [official definition](https://docs.flon.network/fullon-faq/what_is_fullon), retrieved 2026-11-02.

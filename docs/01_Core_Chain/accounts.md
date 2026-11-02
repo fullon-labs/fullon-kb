@@ -28,7 +28,7 @@ FullOn 账户是链上身份：账户名用于定位身份，权限用于决定�
 
 原 FAQ 另列 social-recoverable 和 simple address 分类。两份资料的分类范围不完全相同；不能把 RWID、代理账户和 EVM 地址互相等同，也不能从“12 字元英数字”文字推断所有拉丁字母/数字均可作为账户名。实际命名规则仍看目标链系统合约。
 
-[互操作性及账户区别](interoperability.md) · [分类与来源](../04_FAQ/account-types.md)。
+[互操作性及账户区别](interoperability.md)。
 
 ## 创建与使用
 
@@ -43,3 +43,5 @@ FullOn 账户是链上身份：账户名用于定位身份，权限用于决定�
 ## 来源
 
 [CLI 账户创建与权限参数](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/programs/client/main.cpp)、[系统合约命名检查](https://github.com/fullon-labs/flon.contracts/blob/d34fc8f588e4bcc581e1377e729a248e0098f090/contracts/flon.system/src/flon.system.cpp)。源码审阅日期：2026-11-02。
+
+来源：[官方账户分类](https://docs.flon.network/fullon-faq/what_are_fullon_account_types)，读取日期 2026-11-02。

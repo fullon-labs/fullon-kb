@@ -25,7 +25,7 @@ Accounts usually have `owner` and `active` permissions. `owner` is the root perm
 
 ## Official account categories
 
-The official FAQ lists native & sovereign, proxy, social-recoverable, and simple address accounts, with WASM/EVM-managed variants for the latter. See [categories and their limits](../04_FAQ/account-types.md). A category name alone does not establish current registration or recovery capabilities.
+The official FAQ lists native & sovereign, proxy, social-recoverable, and simple address accounts, with WASM/EVM-managed variants for the latter. A category name alone does not establish current registration or recovery capabilities.
 
 ## Creation and use
 
@@ -47,4 +47,6 @@ The whitepaper distinguishes canonical/sovereign accounts, EVM address accounts,
 
 The FAQ also lists social-recoverable and simple-address accounts. These classifications have different scopes: RWID, proxy accounts, and EVM addresses are not interchangeable. A description of “12 alphanumeric characters” does not establish that every Latin letter or digit is accepted; consult the target chain's system contract.
 
-See [interoperability and account distinctions](interoperability.md) and [account classifications and sources](../04_FAQ/account-types.md).
+See [interoperability and account distinctions](interoperability.md).
+
+Source: [official account categories](https://docs.flon.network/fullon-faq/what_are_fullon_account_types), retrieved 2026-11-02.

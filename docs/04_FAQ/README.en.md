@@ -1,5 +1,5 @@
 ---
-title: Frequently asked questions
+title: Common questions quick reference
 type: index
 status: active
 updated: 2026-11-02
@@ -7,9 +7,9 @@ source: repository synthesis
 translation_of: 04_FAQ/README.md
 ---
 
-# Frequently asked questions
+# Common questions quick reference
 
-[Integration record and sources for all eight official FAQ topics](official-faq.md)
+[Integration record and sources for all eight official FAQ topics](../contributing/faq-integration.md)
 
 ## User questions
 
@@ -28,7 +28,7 @@ translation_of: 04_FAQ/README.md
 
 ## Concepts and official FAQ
 
-[What is FullOn?](what-is-fullon.md) · [Account types](account-types.md) · [VM](vm.md) · [Interoperability](interoperability.md) · [Resources](resource-model.md) · [Tokenomics](tokenomics.md)
+[What is FullOn?](../01_Core_Chain/chain-overview.md) · [Account types](../01_Core_Chain/accounts.md) · [VM](../01_Core_Chain/virtual-machine.md) · [Interoperability](../01_Core_Chain/interoperability.md) · [Resources](../01_Core_Chain/resource-model.md) · [Tokenomics](../01_Core_Chain/tokenomics.md)
 
 Official pages containing only headings are explicitly identified. Follow each topic's source-review references for implementation details.
 
