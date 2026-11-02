@@ -19,3 +19,5 @@ HuFu 是多链自托管钱包，仓库记录其默认支持 FullOn。
 - 产品标语：HuFu - Hügging Füture of Web3 & AI。
 
 [生态索引](README.md)
+
+[HuFu Chrome 扩展安装与使用](../06_User_Guides/hufu-extension.md)

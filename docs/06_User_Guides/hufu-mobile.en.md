@@ -34,3 +34,5 @@ A wallet password or phone biometrics generally protect local access. Understand
 This page explains mobile wallet use. Application integration additionally requires an officially supported SDK, callback flow, and signing protocol. Do not label generic EOSIO wallet-connection code as the official HuFu API.
 
 Source: [HuFu repository page](../02_Ecosystems/hufu-wallet.md).
+
+[Desktop: download and use the HuFu Chrome extension](hufu-extension.md)

@@ -71,6 +71,7 @@ plugins:
         新手入门: Getting started
         开通账户: Create an account
         手机钱包与 HuFu: HuFu mobile wallet
+        HuFu Chrome 扩展: HuFu Chrome extension
         收发资产: Transfer assets
         参与 DApp: Use DApps
         FullSwap 兑换: FullSwap trading
@@ -149,6 +150,7 @@ nav:
   - 新手入门: 06_User_Guides/getting-started.md
   - 开通账户: 06_User_Guides/create-account.md
   - 手机钱包与 HuFu: 06_User_Guides/hufu-mobile.md
+  - HuFu Chrome 扩展: 06_User_Guides/hufu-extension.md
   - 收发资产: 06_User_Guides/transfer-token.md
   - 参与 DApp: 06_User_Guides/use-dapps.md
   - FullSwap 兑换: 06_User_Guides/fullswap.md

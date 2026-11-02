@@ -33,3 +33,5 @@ source: source review
 本页说明终端用户如何安装和使用手机钱包；应用集成需另外取得官方支持的 SDK、回调与签名协议。不要把通用 EOSIO 钱包连接代码直接标为 HuFu 官方 API。
 
 来源：[仓库 HuFu 介绍](../02_Ecosystems/hufu-wallet.md)。
+
+[电脑端：HuFu Chrome 扩展下载与使用](hufu-extension.md)
