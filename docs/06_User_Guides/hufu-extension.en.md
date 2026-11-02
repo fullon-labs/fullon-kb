@@ -1,5 +1,5 @@
 ---
-title: HuFu Wallet Chrome extension: download and use
+title: "HuFu Wallet Chrome extension: download and use"
 type: guide
 status: active
 updated: 2026-11-02
