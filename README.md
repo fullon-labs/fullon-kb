@@ -22,6 +22,10 @@ source: repository synthesis
 | 开发者 | [开发者帮助](docs/10_Developer_Guides/README.md) | RPC 接入、读取状态、签名与交易确认、合约开发准备 |
 | 节点运维人员 | [节点与 RPC 参考](docs/03_Operators/README.md) | 插件、接口可见性、历史索引与服务暴露 |
 
+## DAO 治理
+
+[治理帮助中心](docs/11_DAO_Governance/README.md)：POWER、提案与投票、BP 奖励、Treasury、L1–L4 门槛、主网参数快照及开发运维。
+
 ## 我想……
 
 - 第一次使用 FullOn → [新手入门](docs/06_User_Guides/getting-started.md)

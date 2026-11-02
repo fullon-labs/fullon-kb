@@ -38,3 +38,7 @@ source: source review
 ## 核验范围
 
 新增教程对照 2026-11-02 本地 Core、CDT、系统合约与 RWID 源码；现有 RPC 长篇参考保留 `72cde15a3fb1`（2026-09-03）基线。节点能力需现场发现，源码支持不代表目标网络已经部署。
+
+## 治理接入
+
+[DAO 合约、表与动作](../11_DAO_Governance/developer-reference.md) · [Keeper 与 Standby 运维](../11_DAO_Governance/operations.md)。
