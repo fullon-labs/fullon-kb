@@ -21,6 +21,12 @@ source: repository synthesis
 | FullVest | 代币锁定与线性释放 | [项目与官方入口](../07_DApps/fullvest.md) |
 | RWAVerse | RWA 应用 | [项目与官方入口](../07_DApps/rwaverse.md) |
 
+## 在 PC 使用 HuFu 扫码连接
+
+DApp 在 PC 网页打开时，可选择其 **Wallet Connect** 入口，使用 **HuFu App 扫描二维码**，选择并确认要连接的 **FullOn 账户**。PC 页面显示正确账户后，再发起应用操作；交易签名仍需在 HuFu 中核对并确认。
+
+完整步骤及连接排错见[HuFu 的 PC 扫码连接说明](hufu-mobile.md)。
+
 ## 通用步骤
 
 1. 从项目官方入口进入，确认域名、网络与钱包账户。

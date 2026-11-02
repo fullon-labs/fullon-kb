@@ -22,6 +22,12 @@ The following purposes and links come from existing draft pages. Current availab
 | FullVest | Token locks and linear release | [Project and official entry](../07_DApps/fullvest.md) |
 | RWAVerse | RWA application | [Project and official entry](../07_DApps/rwaverse.md) |
 
+## Connect HuFu from a PC browser
+
+On the PC DApp page, choose **Wallet Connect**, scan the QR code with **HuFu App**, and select and approve the **FullOn account** to connect. Verify the account displayed on PC before using the application. Review and confirm transaction signing requests in HuFu.
+
+See the [HuFu PC connection guide](hufu-mobile.md) for full steps and troubleshooting.
+
 ## General steps
 
 1. Enter through the project's official link and verify domain, network, and wallet account.

@@ -3,7 +3,7 @@ title: Manage FullOn on your phone with HuFu
 type: guide
 status: active
 updated: 2026-11-02
-source: source review
+source: source review; user-confirmed Wallet Connect flow
 translation_of: 06_User_Guides/hufu-mobile.md
 ---
 
@@ -27,7 +27,34 @@ Goal: install a mobile wallet, manage accounts, and connect to DApps.
 - Swap: see the [FullSwap guide](fullswap.md).
 - Multiple accounts: check the active account before each operation.
 
-A wallet password or phone biometrics generally protect local access. Understand these separately from on-chain signing permissions and RWID recovery conditions. The current HuFu screens were not verified step by step; specific button names, an in-app browser, or a connection protocol are not assumed.
+A wallet password or phone biometrics generally protect local access. Understand these separately from on-chain signing permissions and RWID recovery conditions. Exact button labels and locations depend on the installed HuFu version and the current DApp interface.
+
+## Connect HuFu to a PC DApp with Wallet Connect
+
+Open a DApp that supports this feature in your PC browser, then use Wallet Connect and scan its QR code with HuFu App to connect a FullOn account from your mobile wallet.
+
+### Connection steps
+
+1. **On PC**: open the official DApp website, choose Connect Wallet, and select **Wallet Connect** to display a QR code.
+2. **On your phone**: open HuFu App and use its scanner to scan the QR code on the PC screen.
+3. **Choose an account**: select the FullOn account in HuFu and verify that its network matches the DApp, particularly mainnet versus testnet.
+4. **Approve the connection**: review the DApp information and account shown by HuFu, then confirm the connection request.
+5. **Return to PC**: verify that the page displays the correct FullOn account before continuing.
+
+### After connecting
+
+When you initiate a swap, vote, or another operation on PC, review the signing request in HuFu App, including contract, action, amount, and permission, before confirming. Connecting a wallet does not approve every subsequent transaction. Check the transaction result on the PC page or explorer after the operation.
+
+Disconnect from the DApp when finished, especially on a public or shared computer.
+
+### Common issues
+
+| Issue | Action |
+| --- | --- |
+| QR code expired or connection timed out | Generate a fresh QR code on PC and scan it again with HuFu. |
+| Wrong account or network connected | Disconnect, select the correct FullOn account/network in HuFu, and reconnect. |
+| No signing request after a PC operation | Open HuFu and check requests, connection status, and network. Reconcile the original operation before submitting again. |
+| No Wallet Connect option | This flow applies to DApps offering the feature; use the connection methods currently supported by that application. |
 
 ## For developers
 
