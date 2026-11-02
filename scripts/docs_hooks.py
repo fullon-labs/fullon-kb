@@ -1,5 +1,6 @@
 """Keep Material search within the reader's selected language."""
 import json
+from html import escape
 import os
 from pathlib import Path
 import re
@@ -9,6 +10,14 @@ from mkdocs.plugins import event_priority
 
 @event_priority(-200)
 def on_post_page(output, page, config):
+    # Relative destinations preserve the locale and GitHub Pages project prefix.
+    if destination := page.meta.get('redirect_to'):
+        destination = escape(destination, quote=True)
+        output = re.sub(r'<link[^>]+rel="canonical"[^>]*>', '', output)
+        redirect = (f'<meta http-equiv="refresh" content="0; url={destination}">'
+                    f'<link rel="canonical" href="{destination}">'
+                    '<meta name="robots" content="noindex">')
+        output = output.replace('</head>', redirect + '</head>', 1)
     if config.plugins['i18n'].current_language != 'en':
         return output
     # Material loads search/search_index.json relative to __config.base.
