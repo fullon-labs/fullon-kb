@@ -39,7 +39,7 @@ translation_of: 10_Developer_Guides/README.md
 
 ## Verification scope
 
-New tutorials were reviewed against local Core, CDT, system-contract, and RWID source on 2026-11-02. Existing long-form RPC references retain their `72cde15a3fb1` (2026-09-03) baseline. Discover live node capabilities: source support does not establish deployment.
+Node, CLI, and RPC documentation targets **FullOn Core v0.9.2**, `2188e4f94a1e9fe564a31c33e497b464556f3650`, reviewed on 2026-11-02. The RPC references have been rechecked for registration, response structures, builds, and listener restrictions. See [baseline and migration](../09_Release_Notes/v0.9.2.md). CDT, contracts, RWID, and wallets retain independent versions and verification scopes. Source availability does not establish current deployment.
 
 ## Governance integration
 

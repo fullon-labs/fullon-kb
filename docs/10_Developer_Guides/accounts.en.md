@@ -9,6 +9,8 @@ translation_of: 10_Developer_Guides/accounts.md
 
 # Create and activate an account
 
+Node, CLI, and RPC examples target **FullOn Core v0.9.2**. Contracts, CDT, and wallets have independent versions; their stated verification scope does not automatically change with Core. See [version baseline and migration](../09_Release_Notes/v0.9.2.md).
+
 ## Prerequisites
 
 You need an existing creator account, a local signing wallet satisfying its authority, the target RPC, owner/active public keys for the new account, and sufficient funding/resources. Users should generate and confirm their public keys; do not collect private keys.
@@ -41,4 +43,4 @@ Keep the creation transaction ID, confirm successful irreversible execution, que
 
 ## Sources and scope
 
-[Source 1](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/programs/client/main.cpp), [Source 2](https://github.com/fullon-labs/flon.contracts/blob/d34fc8f588e4bcc581e1377e729a248e0098f090/contracts/flon.system/src/flon.system.cpp). Source review: 2026-11-02. This does not verify the version deployed on every network.
+[Source 1](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/programs/client/main.cpp), [Source 2](https://github.com/fullon-labs/flon.contracts/blob/d34fc8f588e4bcc581e1377e729a248e0098f090/contracts/flon.system/src/flon.system.cpp). Source review: 2026-11-02. This does not verify the version deployed on every network.

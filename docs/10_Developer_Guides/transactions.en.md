@@ -9,6 +9,8 @@ translation_of: 10_Developer_Guides/transactions.md
 
 # Transactions: signing, broadcast, and confirmation
 
+Node, CLI, and RPC examples target **FullOn Core v0.9.2**. Contracts, CDT, and wallets have independent versions; their stated verification scope does not automatically change with Core. See [version baseline and migration](../09_Release_Notes/v0.9.2.md).
+
 Goal: display reliable transaction states and prevent duplicate business operations.
 
 ## Recommended flow

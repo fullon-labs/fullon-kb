@@ -9,6 +9,8 @@ translation_of: 10_Developer_Guides/nodes.md
 
 # Run a node: common nodes and BP nodes
 
+Node, CLI, and RPC examples target **FullOn Core v0.9.2**. Contracts, CDT, and wallets have independent versions; their stated verification scope does not automatically change with Core. See [version baseline and migration](../09_Release_Notes/v0.9.2.md).
+
 For official container deployment, follow the [Docker Compose tutorial](docker-compose.md), including `docker-compose.yaml`, network isolation, role selection, and health checks.
 
 ## Choose a role
@@ -24,7 +26,7 @@ A common node also validates blocks and need not be a BP. Actual production requ
 
 ## Installation and network preparation
 
-1. Choose a version/platform compatible with the target network from [Core releases](https://github.com/fullon-labs/flon-core/releases). The development branch is not a production release.
+1. Choose a version/platform compatible with the target network from [Core releases](https://github.com/fullon-labs/flon-core/releases/tag/v0.9.2). The development branch is not a production release.
 2. Verify release checksums and extract the node package. CLI/wallet tools come separately in `flon-tools`.
 3. Obtain trusted genesis or a compatible snapshot, expected chain ID, P2P peers, and upgrade requirements from network operators.
 4. Give each process separate configuration/data directories; plan disk, logging, and monitoring. Snapshot format must match the version. A snapshot need not include history indexes.
@@ -46,7 +48,7 @@ Replace `/path/to/verified-genesis.json`. This example initializes a new data di
 
 ## RPC node
 
-Enable required plugins such as `eosio::chain_api_plugin` and expose only necessary chain read/write categories. Use category listeners to keep management on loopback or protected Unix sockets. Do not expose a generic preset containing management plugins directly to the Internet.
+The v0.9.2 `config/rpc.ini` preset enables `net_api_plugin` while binding ordinary HTTP to `0.0.0.0`; default management validation rejects that combination. Do not simply disable protection. Remove unneeded management plugins or separate `chain_ro`/`chain_rw` from `net_rw` and monitoring categories with category listeners, keeping management on loopback or Unix sockets. See the [RPC reference](../03_Operators/funod-rpc.md).
 
 ## Additional BP steps
 
@@ -66,4 +68,4 @@ Check expected chain ID, advancing head/LIB, P2P connections, resources/disk, er
 
 ## Sources and scope
 
-[Source 1](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/docs/node-build-profiles.md), [Source 2](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/README.md). Source review: 2026-11-02. This does not verify the version deployed on every network.
+[Source 1](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/docs/node-build-profiles.md), [Source 2](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/README.md). Source review: 2026-11-02. This does not verify the version deployed on every network.

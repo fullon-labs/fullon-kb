@@ -8,6 +8,8 @@ source: source review
 
 # How to deploy a smart contract｜部署与升级
 
+本文的节点、CLI 与 RPC 目标版本为 **FullOn Core v0.9.2**。合约、CDT 和钱包各有独立版本；其已注明的核验范围不因 Core 升级自动改变。详见[版本基线与升级说明](../09_Release_Notes/v0.9.2.md)。
+
 ## 前提
 
 已生成 WASM/ABI，有目标网络的合约账户、足够资源和可满足该账户部署权限的签名钱包。下例会修改链上代码；先在隔离开发链或测试网执行，`contractacct` 必须替换。
@@ -35,4 +37,4 @@ fucli -u "$FULLON_RPC" get code contractacct -c deployed.wasm -a deployed.abi
 
 ## 来源
 
-[fucli set contract 参数](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/programs/client/main.cpp)，源码审阅：2026-11-02。
+[fucli set contract 参数](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/programs/client/main.cpp)，源码审阅：2026-11-02。

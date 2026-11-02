@@ -2,19 +2,23 @@
 title: funod RPC 完整参考
 type: developer_guide
 status: verified
-updated: 2026-09-03
-source: official
+updated: 2026-11-02
+source: FullOn Core v0.9.2 source review
 translation_of: 03_Operators/funod-rpc.md
 translated: '2026-11-02'
+target_version: v0.9.2
+source_revision: 2188e4f94a1e9fe564a31c33e497b464556f3650
 ---
 
 # funod RPC 完整参考
 
 ## 范围与源码基线
 
-本目录覆盖核验时 FullOn Core `v0.8.0-alpha` 中链接到 `funod` 的插件所注册的全部 HTTP 路径，包括可用条件、请求字段、响应用途、读写属性，以及独立的 State History 二进制 WebSocket 协议。它不是 `/v1/*` JSON 接口。
+本页以 FullOn Core **v0.9.2** 为目标版本，核对该标签下 `funod` 可构建插件所注册的 HTTP 路径、可用条件、请求字段、响应与读写属性，并覆盖独立的 State History 二进制 WebSocket 协议。State History 不是 `/v1/*` JSON 接口。
 
-基线为 2026-09-03 的 `72cde15a3fb1`，依据实际注册代码，不只依赖 Swagger。部分 Swagger 尚未列全接口。`fuwal` 是独立程序，其钱包 RPC 不在本页范围。翻译不改变原核验日期，也不代表当前部署全部符合此基线。
+核验日期：2026-11-02；发布标签 `v0.9.2` 对应提交 `2188e4f94a1e9fe564a31c33e497b464556f3650`。依据实际注册代码、请求结构和构建开关，不只依赖 Swagger。本文替代旧版 RPC 基线；不代表公共节点已经运行相同版本。`fuwal` 是独立程序，其钱包 RPC 不在本页目录内。
+
+**构建边界：** 默认 `core` 不包含 History、Trace 和 State History；`history` 构建默认包含这三项。本地签名默认未编译，测试控制受构建开关影响，不能仅通过运行时配置给缺失的二进制增加插件。见[版本与升级说明](../09_Release_Notes/v0.9.2.md)。
 
 ## 发现实际可用接口
 
@@ -80,7 +84,7 @@ http-category-address = producer_rw,./producer-rw.sock
 http-category-address = snapshot,./snapshot.sock
 ```
 
-不要将 `net_rw`、`producer_rw`、`snapshot`、`test_control` 或签名类别直接暴露公网。
+v0.9.2 在插件初始化时校验管理监听器：`net_rw`、`producer_rw`、`snapshot`、`test_control` 以及独立钱包 API 默认必须位于回环地址或 Unix socket，否则拒绝启动。`http-allow-insecure-management-api = true` 是显式兼容开关，不提供鉴权或加密；仅用于已受保护的网关拓扑。签名类别仍强制 Unix socket，不能用此开关放到 TCP。不要把关闭保护当成常规排错方式。
 
 `chain_plugin`、`net_plugin`、`producer_plugin`、`signature_provider_plugin`、`transaction_history_plugin`、`sign_transaction_plugin` 为 API 插件提供功能，本身不独立注册 `/v1/*`。`resource_monitor_plugin` 监控磁盘，也没有客户端 RPC。`state_history_plugin` 提供独立 WebSocket。
 
@@ -283,6 +287,9 @@ plugin = eosio::transaction_history_api_plugin
 /v1/history/get_controlled_accounts
 /v1/history/get_database_stats
 /v1/history/get_performance_metrics
+/v1/history/get_optimization_suggestions
+/v1/history/get_cache_analysis
+/v1/history/get_maintenance_needs
 /v1/transaction_history/get_transaction
 /v1/transaction_history/get_actions
 /v1/transaction_history/get_transaction_count
@@ -290,6 +297,9 @@ plugin = eosio::transaction_history_api_plugin
 /v1/transaction_history/get_controlled_accounts
 /v1/transaction_history/get_database_stats
 /v1/transaction_history/get_performance_metrics
+/v1/transaction_history/get_optimization_suggestions
+/v1/transaction_history/get_cache_analysis
+/v1/transaction_history/get_maintenance_needs
 ```
 
 | 方法 | 请求字段 | 用途 |
@@ -301,8 +311,11 @@ plugin = eosio::transaction_history_api_plugin
 | `get_controlled_accounts` | `controlling_account` | 索引账户权限控制的账户 |
 | `get_database_stats` | `{}` | 历史数据库统计 |
 | `get_performance_metrics` | `{}` | 历史数据库/缓存性能指标 |
+| `get_optimization_suggestions` | `{}` | `success`、`suggestions`、可选 `error` |
+| `get_cache_analysis` | `{}` | `success`、`analysis`、可选 `error` |
+| `get_maintenance_needs` | `{}` | `success`、`maintenance_needs`、可选 `error` |
 
-头文件内部声明的 `get_optimization_suggestions`、`get_cache_analysis`、`get_maintenance_needs`、`trigger_auto_optimize` 没有注册为 HTTP RPC。
+v0.9.2 已将前三个诊断方法注册为只读 HTTP RPC，并同时提供两个前缀；它们不会自动执行优化。`trigger_auto_optimize` 仍不是已注册 HTTP RPC。历史查询的 `history_status` 与完整性处理见[交易历史参考](transaction-history-rpc.md)。
 
 分页、不可逆状态与 Flonscan 消费示例见[交易历史参考](transaction-history-rpc.md)。
 
@@ -535,12 +548,12 @@ finality-data-history = true
 
 ## 覆盖统计
 
-不含编译期灰名单时最多 73 个逻辑 HTTP 操作：发现 1、Chain 35、Producer/Snapshot 17、History 7（各两个前缀）、Net 4、Unix 签名 4、Trace 2、DB Size 1、Prometheus 1、Test Control 1。Chain 包含两个条件注册接口和一个注册但需只读线程才能执行的接口。
+在把所有可选功能也编译并启用的 v0.9.2 构建中，不含编译期灰名单时最多 76 个逻辑 HTTP 操作：发现 1、Chain 35、Producer/Snapshot 17、History 10（各两个前缀）、Net 4、Unix 签名 4、Trace 2、DB Size 1、Prometheus 1、Test Control 1。Chain 包含两个条件注册接口和一个注册但需只读线程才能执行的接口。
 
-灰名单另加 3 个操作，总计最多 76。计入 History 别名后，路径数最多 80，含灰名单为 83。实际节点只暴露启用且当前监听器可见的子集。
+灰名单另加 3 个操作，总计最多 79。计入 History 别名后，路径数最多 86，含灰名单为 89。此为源码可构建的上限，并非默认 core/history 发布包的可用数量。实际节点只暴露已编译、已启用且当前监听器可见的子集。
 
 ## 核验依据
 
-`programs/node/CMakeLists.txt` 的插件链接、API 路径注册、Chain/Producer/History/State History/Test Control 请求反射结构、HTTP 类别与 Unix 限制，及作为次要交叉核对的 Swagger。均以原始 `72cde15a3fb1` 基线为准。
+`programs/node/CMakeLists.txt` 的插件链接、API 路径注册、Chain/Producer/History/State History/Test Control 请求反射结构、HTTP 类别与 Unix 限制，及作为次要交叉核对的 Swagger。本次均按 `v0.9.2` / `2188e4f94a1e9fe564a31c33e497b464556f3650` 重新核对。可复核的路径目录和源文件哈希见[审阅清单](../contributing/v0.9.2-audit.json)。
 
 [交易历史](transaction-history-rpc.md) · [参考入口](README.md) · [链概览](../01_Core_Chain/chain-overview.md) · [最终性](../05_Glossary/finality.md) · [Core 源码](https://github.com/fullon-labs/flon-core)

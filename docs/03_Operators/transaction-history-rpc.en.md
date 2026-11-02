@@ -2,16 +2,20 @@
 title: funod Transaction History RPC
 type: developer_guide
 status: verified
-updated: 2026-09-03
-source: official
+updated: 2026-11-02
+source: FullOn Core v0.9.2 source review
+target_version: v0.9.2
+source_revision: 2188e4f94a1e9fe564a31c33e497b464556f3650
 ---
 
 # funod Transaction History RPC
 
 ## Purpose
 
-This page expands the Transaction History section of the
-[funod RPC Developer Guide](funod-rpc.md). It covers only native `funod` RPC.
+This page targets **FullOn Core v0.9.2**, commit `2188e4f94a1e9fe564a31c33e497b464556f3650`,
+reviewed on 2026-11-02, and expands the native History section of the
+[RPC reference](funod-rpc.md). Use the history build or explicit compile-time
+feature overrides before enabling the two runtime plugins.
 Flonscan is mentioned as integration evidence because its source and production
 calls exercise these native routes; Flonscan's private application APIs are not
 part of the `funod` RPC contract.
@@ -77,11 +81,13 @@ plugin is enabled.
 | `get_controlled_accounts` | `controlling_account` | `controlled_accounts` |
 | `get_database_stats` | `{}` | `success`, database `stats`, optional `error` |
 | `get_performance_metrics` | `{}` | `success`, performance `metrics`, optional `error` |
+| `get_optimization_suggestions` | `{}` | `success`, `suggestions`, optional `error` |
+| `get_cache_analysis` | `{}` | `success`, `analysis`, optional `error` |
+| `get_maintenance_needs` | `{}` | `success`, `maintenance_needs`, optional `error` |
 
-The plugin header also declares maintenance helpers named
-`get_optimization_suggestions`, `get_cache_analysis`, `get_maintenance_needs`,
-and `trigger_auto_optimize`. They are not registered by the current HTTP API
-plugin and therefore are not RPC endpoints.
+v0.9.2 registers the first three diagnostics under both prefixes. They return
+suggestions/status and do not perform optimization. `trigger_auto_optimize`
+is still not registered.
 
 ## Get account actions
 
@@ -298,6 +304,34 @@ through the mainnet node at `https://m.flonscan.io`. That node reported an older
 `/v1/transaction_history/*` alias or `get_transaction_count`. Applications
 must feature-detect rather than equating source availability with deployment.
 
+
+## Diagnostic examples
+
+```bash
+for method in get_optimization_suggestions get_cache_analysis get_maintenance_needs; do
+  curl --fail --silent --show-error --max-time 15 \
+    -X POST "$rpc/v1/history/$method" \
+    -H 'Content-Type: application/json' --data '{}' | jq
+done
+```
+
+## v0.9.2 index completeness and recovery
+
+`get_transaction`, `get_actions`, and `get_transaction_count` may return `history_status`:
+
+| Field | Meaning |
+| --- | --- |
+| `indexed_through_block` | Locally indexed height, not necessarily chain head |
+| `recording_healthy` | Current history recording health |
+| `filtered` | Recording filters are active; results are not a full-chain dataset |
+| `account_index_gap_block` | Earliest known account-index truncation; absence does not prove there were never gaps |
+
+`account_index_complete` may be absent on legacy transaction records; absence means unknown, not true. Filtering marks the transaction envelope filtered, omits the signed transaction body, and disables block-hint fallback that could bypass filters.
+
+Queries share an execution budget capped by 20 ms and HTTP response time. Synchronous storage calls cannot be preempted mid-call; checks occur around them. Response-size limits cover the complete envelope. Preserve partial results and inspect status/time limits rather than assuming a short page is complete.
+
+A persisted recording gap does not automatically delete/rebuild history on restart. Preserve evidence and rebuild a separate index from retained chain data. `transaction-history-force-clean` is destructive and does not itself reconstruct older history.
+
 ## Operational notes
 
 - `404 Unknown Endpoint`: plugin, alias, category, or method is unavailable on
@@ -314,11 +348,14 @@ must feature-detect rather than equating source availability with deployment.
 
 This guide was checked against:
 
-- FullOn Core transaction-history route registration and reflected request
-  structures at source revision `72cde15a3fb1`;
+- v0.9.2 transaction-history route registration, reflected structures, and query budgets
+  at `2188e4f94a1e9fe564a31c33e497b464556f3650`;
 - HTTP history admission-control implementation;
 - Flonscan source as a consumer of native History RPC;
-- live mainnet responses on 2026-09-03.
+- historical live responses on 2026-09-03, retained as separate evidence and
+  not a current deployment check.
+
+[Source hashes and registered paths](../contributing/v0.9.2-audit.json).
 
 ## Related pages
 

@@ -8,6 +8,8 @@ source: source review
 
 # FullOn blockchain specifications｜技术规格
 
+节点源码规格以 **v0.9.2**（`2188e4f94a1e9fe564a31c33e497b464556f3650`）为目标，审阅日期为 2026-11-02。见[版本说明](../09_Release_Notes/v0.9.2.md)。
+
 本页区分源码规格和运行网络参数。源码值不等于当前主网配置；性能指标需要测试环境、版本和测量方法支持。
 
 | 项目 | 已确认内容 | 适用范围 |
@@ -40,4 +42,4 @@ source: source review
 
 ## 来源
 
-[源码常量](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/libraries/chain/include/eosio/chain/config.hpp)、[Core README](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/README.md)、[节点角色与打包](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/docs/node-build-profiles.md)。审阅日期：2026-11-02。
+[源码常量](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/libraries/chain/include/eosio/chain/config.hpp)、[Core README](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/README.md)、[节点角色与打包](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/docs/node-build-profiles.md)。审阅日期：2026-11-02。

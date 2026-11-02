@@ -8,6 +8,8 @@ source: source review
 
 # P2P：连接和同步节点
 
+本文的节点、CLI 与 RPC 目标版本为 **FullOn Core v0.9.2**。合约、CDT 和钱包各有独立版本；其已注明的核验范围不因 Core 升级自动改变。详见[版本基线与升级说明](../09_Release_Notes/v0.9.2.md)。
+
 P2P 用于节点间区块、交易及共识相关消息传播；RPC 用于应用请求。HTTP RPC 地址不能直接当 P2P peer，State History WebSocket 也不是 P2P。
 
 ## 配置含义 {#net-plugin-configuration}
@@ -42,4 +44,4 @@ p2p-peer-address = seed-b.example.org:9876
 
 ## 源码参考
 
-[源码参考：Net Plugin 配置定义](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/plugins/net_plugin/net_plugin.cpp)，供开发者核对实现。
+[源码参考：Net Plugin 配置定义](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/plugins/net_plugin/net_plugin.cpp)，供开发者核对实现。

@@ -9,6 +9,8 @@ translation_of: 10_Developer_Guides/quickstart.md
 
 # RPC quickstart: read on-chain data
 
+Node, CLI, and RPC examples target **FullOn Core v0.9.2**. Contracts, CDT, and wallets have independent versions; their stated verification scope does not automatically change with Core. See [version baseline and migration](../09_Release_Notes/v0.9.2.md).
+
 Goal: verify network, accounts, assets, and contract state with read-only requests.
 
 ## Prerequisites

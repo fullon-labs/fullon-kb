@@ -9,6 +9,8 @@ translation_of: 10_Developer_Guides/deploy-contract.md
 
 # Deploy and upgrade a smart contract
 
+Node, CLI, and RPC examples target **FullOn Core v0.9.2**. Contracts, CDT, and wallets have independent versions; their stated verification scope does not automatically change with Core. See [version baseline and migration](../09_Release_Notes/v0.9.2.md).
+
 ## Prerequisites
 
 You need compiled WASM/ABI, a contract account on the target network, sufficient resources, and a signing wallet satisfying its deployment authority. The example modifies on-chain code. Run it on an isolated chain or testnet first and replace `contractacct`.
@@ -36,4 +38,4 @@ Configure `eosio.code` only when inline authorization actually requires it, usin
 
 ## Sources and scope
 
-[Source 1](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/programs/client/main.cpp). Source review: 2026-11-02. This does not verify the version deployed on every network.
+[Source 1](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/programs/client/main.cpp). Source review: 2026-11-02. This does not verify the version deployed on every network.

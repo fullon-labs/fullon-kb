@@ -8,6 +8,8 @@ source: repository synthesis
 
 # 交易开发：签名、广播与确认
 
+本文的节点、CLI 与 RPC 目标版本为 **FullOn Core v0.9.2**。合约、CDT 和钱包各有独立版本；其已注明的核验范围不因 Core 升级自动改变。详见[版本基线与升级说明](../09_Release_Notes/v0.9.2.md)。
+
 目标：使应用能可靠显示交易状态，并避免重复执行业务操作。
 
 ## 推荐流程

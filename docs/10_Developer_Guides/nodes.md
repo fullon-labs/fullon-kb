@@ -8,6 +8,8 @@ source: source review
 
 # How to launch a node｜普通节点与 BP 节点
 
+本文的节点、CLI 与 RPC 目标版本为 **FullOn Core v0.9.2**。合约、CDT 和钱包各有独立版本；其已注明的核验范围不因 Core 升级自动改变。详见[版本基线与升级说明](../09_Release_Notes/v0.9.2.md)。
+
 使用官方 Docker 模板部署请直接阅读[Docker Compose 部署教程](docker-compose.md)，覆盖 `docker-compose.yaml`、网络隔离、角色选择与健康检查。
 
 ## 先选择角色
@@ -23,7 +25,7 @@ source: source review
 
 ## 安装与网络准备
 
-1. 从 [Core releases](https://github.com/fullon-labs/flon-core/releases)选择与目标网络兼容的版本和平台；不要把开发分支直接当生产版本。
+1. 从 [Core releases](https://github.com/fullon-labs/flon-core/releases/tag/v0.9.2)选择与目标网络兼容的版本和平台；不要把开发分支直接当生产版本。
 2. 验证发布包校验和，解压对应 node 包；CLI/钱包工具另取 `flon-tools`。
 3. 从网络运营方取得可信 genesis 或兼容快照、预期 chain ID、P2P peers、升级要求。
 4. 为每个进程使用独立配置和数据目录，规划磁盘、日志和监控。快照格式与版本必须兼容，快照不保证包含历史索引。
@@ -45,7 +47,7 @@ cp ./config/seed.ini ./node-config/config.ini
 
 ## RPC 节点
 
-开启需要的 `eosio::chain_api_plugin`，对外只暴露必要的 chain read/write。若启用管理 API，须使用分类监听器将管理类别限制在回环或受保护的 Unix socket。不要原样将包含管理插件的通用 preset 放到公网。
+v0.9.2 的 `config/rpc.ini` 虽是起点，但启用 `net_api_plugin` 且普通 HTTP 绑定 `0.0.0.0`；该组合会被默认管理 API 校验拒绝。不要照搬后仅关闭保护。应先禁用不需要的管理插件，或使用 `http-category-address` 将 `chain_ro`/`chain_rw` 与 `net_rw`、监控类别分离，管理绑定回环或 Unix socket。完整示例见[RPC 参考](../03_Operators/funod-rpc.md)。
 
 ## BP 节点额外步骤
 
@@ -65,4 +67,4 @@ BP 应将 HTTP 绑定本地，公开查询交给独立 RPC/History 节点。不�
 
 ## 来源
 
-[打包与节点角色](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/docs/node-build-profiles.md)、[Core 安装说明](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/README.md)。配置与命令基于源码审阅，未在生产网络启动新节点。
+[打包与节点角色](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/docs/node-build-profiles.md)、[Core 安装说明](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/README.md)。配置与命令基于源码审阅，未在生产网络启动新节点。

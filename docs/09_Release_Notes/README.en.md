@@ -16,3 +16,5 @@ Track changes to the knowledge base and ecosystem notes over time.
 - FAQ updates
 - glossary expansions
 - source corrections
+
+- [v0.9.2 target release and migration](v0.9.2.md)

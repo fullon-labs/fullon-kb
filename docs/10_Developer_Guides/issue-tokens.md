@@ -8,6 +8,8 @@ source: source review
 
 # How to issue new tokens｜发行代币
 
+本文的节点、CLI 与 RPC 目标版本为 **FullOn Core v0.9.2**。合约、CDT 和钱包各有独立版本；其已注明的核验范围不因 Core 升级自动改变。详见[版本基线与升级说明](../09_Release_Notes/v0.9.2.md)。
+
 目标：在你控制的合约账户部署标准代币逻辑，创建符号、发行到 issuer，再分发给用户。
 
 ## 先区分三个账户
