@@ -8,4 +8,6 @@ source: internal
 
 # VM
 
+> 本页为历史草稿，内容与入口尚需核验，不代表当前网络或产品承诺。
+
 A virtual machine is the execution environment used to run smart contracts.

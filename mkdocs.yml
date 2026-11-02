@@ -1,0 +1,109 @@
+site_name: FullOn 文档中心
+site_description: FullOn 用户、开发者与节点运维指南
+site_url: https://fullon-labs.github.io/fullon-kb/
+repo_url: https://github.com/fullon-labs/fullon-kb
+repo_name: fullon-labs/fullon-kb
+edit_uri: edit/main/docs/
+docs_dir: docs
+site_dir: site
+exclude_docs: |
+  06_User_Guides/guide-template.md
+  07_DApps/dapp-template.md
+theme:
+  name: material
+  language: zh
+  font: false
+  palette:
+    - scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: 切换深色模式
+    - scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: 切换浅色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+plugins:
+  - search:
+      lang: [en, zh]
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+extra_css:
+  - assets/stylesheets/extra.css
+nav:
+  - 首页: index.md
+  - 通用概念:
+      - 概览: 01_Core_Chain/chain-overview.md
+      - FullOn 账户: 01_Core_Chain/accounts.md
+      - RWID 账户: 01_Core_Chain/rwid-accounts.md
+      - 区块链规格: 01_Core_Chain/specifications.md
+      - 网络与入口: 01_Core_Chain/network.md
+      - FAQ: 04_FAQ/README.md
+      - FullOn 是什么: 04_FAQ/what-is-fullon.md
+      - 账户类型: 04_FAQ/account-types.md
+      - 资源模型: 04_FAQ/resource-model.md
+      - 代币经济: 04_FAQ/tokenomics.md
+      - 虚拟机: 04_FAQ/vm.md
+      - 互操作性: 04_FAQ/interoperability.md
+      - 官方 FAQ 合并说明: 04_FAQ/official-faq.md
+  - 用户指南:
+      - 阅读路线: 06_User_Guides/README.md
+      - 新手入门: 06_User_Guides/getting-started.md
+      - 开通账户: 06_User_Guides/create-account.md
+      - 手机钱包与 HuFu: 06_User_Guides/hufu-mobile.md
+      - 收发资产: 06_User_Guides/transfer-token.md
+      - 参与 DApp: 06_User_Guides/use-dapps.md
+      - FullSwap 兑换: 06_User_Guides/fullswap.md
+      - 交易查询: 06_User_Guides/transaction-status.md
+      - 排错与求助: 06_User_Guides/troubleshooting.md
+  - 开发者指南:
+      - 阅读路线: 10_Developer_Guides/README.md
+      - RPC 快速开始: 10_Developer_Guides/quickstart.md
+      - 获取 ABI 与 code: 10_Developer_Guides/get-abi-code.md
+      - 创建与激活账户: 10_Developer_Guides/accounts.md
+      - 签名与交易确认: 10_Developer_Guides/transactions.md
+      - 普通节点与 BP: 10_Developer_Guides/nodes.md
+      - P2P: 10_Developer_Guides/p2p.md
+      - 合约开发路线: 10_Developer_Guides/contracts.md
+      - 编写与编译合约: 10_Developer_Guides/build-contract.md
+      - 部署合约: 10_Developer_Guides/deploy-contract.md
+      - 调用动作: 10_Developer_Guides/call-actions.md
+      - 发行代币: 10_Developer_Guides/issue-tokens.md
+      - 接入排错: 10_Developer_Guides/troubleshooting.md
+  - RPC 参考:
+      - 导航: 03_Operators/README.md
+      - 完整 RPC: 03_Operators/funod-rpc.md
+      - 交易历史: 03_Operators/transaction-history-rpc.md
+  - 生态:
+      - 生态概览: 02_Ecosystems/README.md
+      - Web3: 02_Ecosystems/web3.md
+      - AI: 02_Ecosystems/ai.md
+      - Social: 02_Ecosystems/social.md
+      - HuFu Wallet: 02_Ecosystems/hufu-wallet.md
+      - FullSwap: 07_DApps/fullswap.md
+      - FullBridge: 07_DApps/fullbridge.md
+      - FullVest: 07_DApps/fullvest.md
+      - RWAVerse: 07_DApps/rwaverse.md
+  - 维护:
+      - 来源与核验: contributing/sources.md
+      - 文档维护与发布: contributing/publishing.md

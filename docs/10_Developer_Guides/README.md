@@ -1,24 +1,39 @@
 ---
-title: 开发者帮助
+title: 开发者指南
 type: index
 status: active
 updated: 2026-11-02
-source: repository synthesis
+source: source review
 ---
 
-# 开发者帮助
+# 开发者指南
 
-按从读取数据到提交交易的顺序接入：
+## 接入基础
 
-1. [RPC 快速开始](quickstart.md)：确认网络与节点能力，读取账户和表数据。
-2. [签名、广播与确认](transactions.md)：交易生命周期、幂等与不可逆状态。
-3. [智能合约开发路径](contracts.md)：工具链、权限、测试和部署准备。
-4. [接入排错](troubleshooting.md)：接口不存在、历史缺失、限流和签名失败。
+- [RPC 快速开始](quickstart.md)
+- [获取 ABI 与 code](get-abi-code.md)
+- [创建 / 激活账户](accounts.md)
+- [签名、广播与确认](transactions.md)
+- [接入排错](troubleshooting.md)
 
-## 深入参考
+## 节点与网络
 
-- [完整 funod RPC 参考](../03_Operators/funod-rpc.md)
+- [启动普通节点与 BP 节点](nodes.md)
+- [P2P 配置与同步](p2p.md)
+- [完整 RPC 参考](../03_Operators/funod-rpc.md)
 - [交易历史与分页](../03_Operators/transaction-history-rpc.md)
-- [节点与插件](../03_Operators/README.md)
 
-现有 RPC 参考核验基线为 `72cde15a3fb1`（2026-09-03），不是对所有当前部署节点的保证。接入时记录 chain ID、节点版本和能力清单；本文不把历史公共节点地址当作当前服务承诺。
+## 合约与代币
+
+- [编写与编译合约](build-contract.md)
+- [部署与升级合约](deploy-contract.md)
+- [调用合约动作](call-actions.md)
+- [发行新代币](issue-tokens.md)
+
+## 手机钱包
+
+[下载 HuFu 与管理账户](../06_User_Guides/hufu-mobile.md)。手机端操作与钱包 SDK 集成是不同任务；SDK 需使用官方确认的协议。
+
+## 核验范围
+
+新增教程对照 2026-11-02 本地 Core、CDT、系统合约与 RWID 源码；现有 RPC 长篇参考保留 `72cde15a3fb1`（2026-09-03）基线。节点能力需现场发现，源码支持不代表目标网络已经部署。

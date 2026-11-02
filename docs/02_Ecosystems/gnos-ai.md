@@ -8,6 +8,8 @@ source: internal
 
 # Gnos AI
 
+> 本页为历史草稿，内容与入口尚需核验，不代表当前网络或产品承诺。
+
 Gnos AI is a music and music video creation and sharing platform.
 
 ## Summary
@@ -24,4 +26,4 @@ Gnos AI is a music and music video creation and sharing platform.
 - Working description provided by the team; official site fetch was timing out at the time of capture
 
 ## Related pages
-- [[../README|Ecosystems Index]]
+- [Ecosystems Index](README.md)

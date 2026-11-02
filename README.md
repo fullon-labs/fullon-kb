@@ -10,6 +10,10 @@ source: repository synthesis
 
 从你要完成的任务开始，选择对应入口。
 
+**文档站配置目标：** [GitHub Pages](https://fullon-labs.github.io/fullon-kb/) · [发布说明](docs/contributing/publishing.md)
+
+**通用概念：** [FullOn 账户](docs/01_Core_Chain/accounts.md) · [RWID 账户](docs/01_Core_Chain/rwid-accounts.md) · [区块链规格](docs/01_Core_Chain/specifications.md)
+
 | 我是谁 | 从哪里开始 | 可以解决什么问题 |
 | --- | --- | --- |
 | 普通用户 | [用户帮助](docs/06_User_Guides/README.md) | 钱包与账户、收发资产、使用 DApp、交易查询与排错 |
