@@ -24,6 +24,10 @@ Four original FAQ pages contain only headings. That does not mean the wider offi
 
 Resource, reward, inflation and deflation wording is aligned in both whitepaper languages in the same proposed revision.
 
+## Governance power terminology
+
+Governance power is recorded in the internal account ledger, not issued, transferred or burned as a separate governance token. Changes in locked principal update available power; activated proposals retain their frozen snapshots.
+
 ## Remaining source differences and verification boundaries
 
 | Topic | Different source statements | Treatment |
@@ -44,4 +48,4 @@ No funds, permissions or nodes are changed by this documentation update. Upstrea
 
 ## Sources
 
-[English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md) · [Chinese whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.cn.md) · [Scope and source conflicts](whitepaper.md). Pinned revision `61913ffb2184314597a2091145c30bfe7d7c818e`; retrieved 2026-11-02. The clarification awaits upstream merge and is not a deployment certification.
+[English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.md) · [Chinese whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.cn.md) · [Scope and source conflicts](whitepaper.md). Pinned revision `d695da53f4e453dd0e372e9dc5a605a0c56d455e`; retrieved 2026-11-02. The clarification awaits upstream merge and is not a deployment certification.

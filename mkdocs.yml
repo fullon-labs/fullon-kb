@@ -61,7 +61,7 @@ plugins:
         网络与入口: Networks and entry points
         白皮书核验与差异: Whitepaper verification and differences
         扩展路线图: Scalability roadmap
-        GLON 与 BP 治理: GLON and BP governance
+        治理权与 BP 治理: Governance power and BP governance
         代理账户与跨链: Proxy accounts and interoperability
         FLON 代币经济: FLON tokenomics
         GAS 与 ELON: GAS and ELON
@@ -159,7 +159,7 @@ nav:
   - GAS 与 ELON: 01_Core_Chain/resource-model.md
   - FLON 代币经济: 01_Core_Chain/tokenomics.md
   - 代理账户与跨链: 01_Core_Chain/interoperability.md
-  - GLON 与 BP 治理: 01_Core_Chain/governance.md
+  - 治理权与 BP 治理: 01_Core_Chain/governance.md
   - 扩展路线图: 01_Core_Chain/roadmap.md
   - 白皮书核验与差异: 01_Core_Chain/whitepaper.md
   - FAQ: 04_FAQ/README.md

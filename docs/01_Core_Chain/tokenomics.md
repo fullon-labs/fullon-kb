@@ -43,9 +43,9 @@ Active GAS 池按实际合格出块分配；Standby 需满足在线 proof 与备
 
 BP 可按允许范围分享奖励给投票人，计算依据历史 epoch 快照和 BP 表现；延后领取不改变已结算奖励归属。奖励可能为零，不是固定收益。
 
-## FLON、ELON 与 GLON
+## FLON、ELON 与治理权
 
-FLON 是原生资产；ELON 是 GAS/储备记账最小单位；GLON 是锁定 FLON 参与 BP 投票获得的不可转让治理票权。GLON 不是可交易资产或固定分红凭证。
+FLON 是原生资产；ELON 是 GAS/储备记账最小单位；治理权是合约根据锁定的 BP 投票本金在账户内部账本记录的数值，不是另行发行的治理代币。治理权不可转让、支付或交易，不代表固定分红。
 
 核对当前资产时使用 `get_currency_stats` 查询 supply、max_supply 和 issuer；解锁进度还需查对应锁仓合约。总量计划、最大供应量、已发行量、流通量与协议锁定量不能混用。
 
@@ -53,4 +53,4 @@ FLON 是原生资产；ELON 是 GAS/储备记账最小单位；GLON 是锁定 FL
 
 ## 来源
 
-[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `61913ffb2184314597a2091145c30bfe7d7c818e`；读取日期 2026-11-02。本次澄清稿尚待上游合并，不能标作已部署规则。
+[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `d695da53f4e453dd0e372e9dc5a605a0c56d455e`；读取日期 2026-11-02。本次澄清稿尚待上游合并，不能标作已部署规则。

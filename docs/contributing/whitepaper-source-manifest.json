@@ -1,36 +1,36 @@
 {
   "repository": "https://github.com/fullon-labs/flon.whitepaper",
-  "revision": "61913ffb2184314597a2091145c30bfe7d7c818e",
+  "revision": "d695da53f4e453dd0e372e9dc5a605a0c56d455e",
   "document_version": "v2.5.0",
   "document_date": "2026-11-02",
   "retrieved": "2026-11-02",
   "files": [
     {
       "path": "README.md",
-      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/README.md",
-      "sha256": "69fc52ca96daee5a301bbbe6c62dd7c772ea1ef0f7030fb07eedcafa5dbf41ce"
+      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/README.md",
+      "sha256": "847445a8e35893519f3a2774c07a2214df33eba650d340f8815964033ca9f7d1"
     },
     {
       "path": "fullon.whitepaper.cn.md",
-      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.cn.md",
-      "sha256": "5aa9c82a55720488232de2feda1e501afda89ca0cfff2f897e1446e981f6c326"
+      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.cn.md",
+      "sha256": "e01dbcbd34a41f4d62fe8d5d1fd99cc9c983f90b39eef544f9959402f5d476d4"
     },
     {
       "path": "fullon.whitepaper.md",
-      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md",
-      "sha256": "1500cabb4fa641ce56703f5f5950f88030fdc674ca9ed4c95a96fe477aa3348f"
+      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.md",
+      "sha256": "6d71b6c90dac9c8e69d09a38c7fb8b5a4ef3af7e37d78911a466d737bcb2480b"
     },
     {
       "path": "rwid-design.md",
-      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/rwid-design.md",
+      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/rwid-design.md",
       "sha256": "8f18a64cd6ae159d86be7448b88ee8bdc1a84b70ba87bfd099654dd3cf645bd0"
     },
     {
       "path": "LICENSE",
-      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/LICENSE",
+      "url": "https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/LICENSE",
       "sha256": "318c94205c52c2e197921c973957bf0f9dacb605b6dc33a932c840f627c3f667"
     }
   ],
-  "baseline_revision": "f49e5f0f821162a997260535be30767e3f147d8e",
+  "baseline_revision": "116c6f6bda429037a446f002cf5c815c5dab5aeb",
   "document_status": "clarification proposed; upstream merge pending"
 }

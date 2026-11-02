@@ -20,4 +20,4 @@ For wallet and application tasks, use the [user guides](../06_User_Guides/README
 
 ## Whitepaper topics
 
-See [GAS and ELON](resource-model.md), [FLON allocation and rewards](tokenomics.md), [proxy interoperability](interoperability.md), [GLON and BP governance](governance.md), [scalability roadmap](roadmap.md), and [source verification and differences](whitepaper.md). These pages distinguish protocol design, reviewed implementation, and deployment evidence.
+See [GAS and ELON](resource-model.md), [FLON allocation and rewards](tokenomics.md), [proxy interoperability](interoperability.md), [Governance power and BP governance](governance.md), [scalability roadmap](roadmap.md), and [source verification and differences](whitepaper.md). These pages distinguish protocol design, reviewed implementation, and deployment evidence.

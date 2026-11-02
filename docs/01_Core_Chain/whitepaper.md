@@ -21,6 +21,8 @@ source: whitepaper v2.5.0 clarification draft
 
 ## 已明确的治理口径
 
+治理权是合约内部账户账本中的数值，不是另行发行、转让或销毁的治理代币。锁定本金变化影响可用治理权，已激活提案按其冻结快照处理。
+
 - 当前 5 亿 FLON 挖矿预算耗尽后不自动继续发行；未来是否发行及其规则由 FullOn DAO Gov 另行决定，需要时配套实施升级。
 - GAS 对应金额的一部分奖励符合资格的 Active 与 Standby BP；其余默认锁定，未来是否销毁由 DAO Gov 决定，不能动用仍支持 ELON 兑回的储备。
 
@@ -46,4 +48,4 @@ source: whitepaper v2.5.0 clarification draft
 
 ## 来源
 
-[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/61913ffb2184314597a2091145c30bfe7d7c818e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `61913ffb2184314597a2091145c30bfe7d7c818e`；读取日期 2026-11-02。本次澄清稿尚待上游合并，不能标作已部署规则。
+[中文白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.cn.md) · [English whitepaper](https://github.com/fullon-labs/flon.whitepaper/blob/d695da53f4e453dd0e372e9dc5a605a0c56d455e/fullon.whitepaper.md) · [核验范围与资料冲突](whitepaper.md)。固定提交 `d695da53f4e453dd0e372e9dc5a605a0c56d455e`；读取日期 2026-11-02。本次澄清稿尚待上游合并，不能标作已部署规则。
