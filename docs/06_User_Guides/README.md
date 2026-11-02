@@ -20,3 +20,7 @@ source: source review
 8. [常见问题与求助](troubleshooting.md)。
 
 先了解概念：[FullOn 账户](../01_Core_Chain/accounts.md)、[RWID 账户](../01_Core_Chain/rwid-accounts.md)。编写程序请进入[开发者指南](../10_Developer_Guides/README.md)。
+
+## DAO 治理
+
+[DAO Gov 帮助](../11_DAO_Governance/README.md)：治理权、提案、附议、投票、BP 分配、奖励与预算。

@@ -22,3 +22,5 @@ source: official FAQ synthesis
 项目页仍可能为草稿，支持网络、开放状态和收益规则应向当前产品核实。
 
 来源：[官方生态 FAQ](https://docs.flon.network/fullon-faq/what_are_fullon_ecosystems)，读取日期 2026-11-02。
+
+[DAO Gov 治理应用](../07_DApps/dao-gov.md) · [治理帮助中心](../11_DAO_Governance/README.md)

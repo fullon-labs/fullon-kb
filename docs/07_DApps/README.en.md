@@ -30,3 +30,5 @@ Store one page per DApp in the FullOn ecosystem.
 - common issues
 - official links
 - related guides
+
+[FullOn DAO Gov](dao-gov.md) · [Governance help](../11_DAO_Governance/README.md)

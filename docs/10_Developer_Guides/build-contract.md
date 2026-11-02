@@ -21,11 +21,11 @@ source: source review
 ```cpp
 #include <eosio/eosio.hpp>
 
-class [eosio::contract("hello")](eosio::contract("hello").md) hello : public eosio::contract {
+class [[eosio::contract("hello")]] hello : public eosio::contract {
 public:
     using eosio::contract::contract;
 
-    [eosio::action](eosio::action.md)
+    [[eosio::action]]
     void hi(eosio::name user) {
         eosio::require_auth(user);
         eosio::print("Hello, ", user);

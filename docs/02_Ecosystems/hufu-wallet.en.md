@@ -24,3 +24,5 @@ HuFu Wallet is a multi-chain self-custody crypto wallet with FullOn Network supp
 
 ## Related pages
 - [Ecosystems Index](README.md)
+
+[Install and use the HuFu Chrome extension](../06_User_Guides/hufu-extension.md)

@@ -38,3 +38,7 @@ source: source review
 ## 核验范围
 
 节点、CLI 与 RPC 教程统一以 **FullOn Core v0.9.2**（`2188e4f94a1e9fe564a31c33e497b464556f3650`，2026-11-02）为目标；RPC 长篇参考已经重新核对注册路径、响应结构、构建与监听限制。[版本基线与升级说明](../09_Release_Notes/v0.9.2.md)记录变化及审阅证据。CDT、系统合约、RWID 和钱包保持各自版本与核验范围，不把 Core 版本当作这些组件的版本。源码支持不等于当前网络已部署。
+
+## 治理接入
+
+[DAO 合约、表与动作](../11_DAO_Governance/developer-reference.md) · [Keeper 与 Standby 运维](../11_DAO_Governance/operations.md)。

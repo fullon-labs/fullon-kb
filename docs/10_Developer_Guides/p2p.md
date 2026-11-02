@@ -12,7 +12,7 @@ source: source review
 
 P2P 用于节点间区块、交易及共识相关消息传播；RPC 用于应用请求。HTTP RPC 地址不能直接当 P2P peer，State History WebSocket 也不是 P2P。
 
-## 配置含义
+## 配置含义 {#net-plugin-configuration}
 
 ```ini
 # 以下主机名是示例，启动前替换为可信网络配置。
@@ -37,6 +37,11 @@ p2p-peer-address = seed-b.example.org:9876
 
 无法同步时依次检查网络选择、DNS/防火墙/NAT、版本、快照兼容性、磁盘和 peer 状态。不要通过删除数据目录来试错，先保存日志并确定恢复方案。
 
-## 来源
+## 相关说明
 
-[Net Plugin 配置定义](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/plugins/net_plugin/net_plugin.cpp)、[Net RPC 参考](../03_Operators/funod-rpc.md)。
+- [Net Plugin 配置说明](#net-plugin-configuration)：本页的 P2P 配置示例与参数含义。
+- [Net RPC 接口说明](../03_Operators/funod-rpc.md#net-api)：连接查询、建立连接和断开连接的请求格式。
+
+## 源码参考
+
+[源码参考：Net Plugin 配置定义](https://github.com/fullon-labs/flon-core/blob/2188e4f94a1e9fe564a31c33e497b464556f3650/plugins/net_plugin/net_plugin.cpp)，供开发者核对实现。

@@ -49,6 +49,8 @@ From understanding accounts to your first transfer, application integration, and
 | Issue a token | [Create, issue, and distribute](10_Developer_Guides/issue-tokens.md) |
 | Run a node | [Common nodes and BPs](10_Developer_Guides/nodes.md) · [P2P](10_Developer_Guides/p2p.md) |
 
+| Participate in DAO, vote for BPs, or request funding | [Governance](11_DAO_Governance/README.md) · [Proposals and votes](11_DAO_Governance/proposals.md) · [Treasury](11_DAO_Governance/treasury.md) |
+
 ## Before you begin
 
 Mainnet and testnet are separate. Source versions describe the review baseline, not the version deployed by every node. Replace example accounts, public-key placeholders, amounts, and paths. Validate write operations in a test environment first.
