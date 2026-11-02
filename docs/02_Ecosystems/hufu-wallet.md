@@ -8,6 +8,8 @@ source: official
 
 # HuFu Wallet
 
+> 本页为历史草稿，内容与入口尚需核验，不代表当前网络或产品承诺。
+
 HuFu Wallet is a multi-chain self-custody crypto wallet with FullOn Network support by default.
 
 ## Summary
@@ -21,4 +23,4 @@ HuFu Wallet is a multi-chain self-custody crypto wallet with FullOn Network supp
 - Tagline: HuFu - Hügging Füture of Web3 & AI
 
 ## Related pages
-- [[../README|Ecosystems Index]]
+- [Ecosystems Index](README.md)

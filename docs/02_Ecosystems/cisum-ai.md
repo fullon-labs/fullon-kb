@@ -8,6 +8,8 @@ source: official
 
 # Cisum AI
 
+> 本页为历史草稿，内容与入口尚需核验，不代表当前网络或产品承诺。
+
 Cisum AI is a Web3 artists incubation platform that connects creators with fans.
 
 ## Summary
@@ -20,4 +22,4 @@ Cisum AI is a Web3 artists incubation platform that connects creators with fans.
 - Site title: CISUMVERSE
 
 ## Related pages
-- [[../README|Ecosystems Index]]
+- [Ecosystems Index](README.md)

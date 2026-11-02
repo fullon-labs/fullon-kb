@@ -8,6 +8,8 @@ source: official
 
 # RWAVerse
 
+> 本页为历史草稿，内容与入口尚需核验，不代表当前网络或产品承诺。
+
 RWAVerse is an RWA invest tool.
 
 ## Summary
@@ -19,4 +21,4 @@ RWAVerse is an RWA invest tool.
 - Page title: Rwaverse
 
 ## Related guides
-- [[../06_User_Guides/query-account]]
+- [DApp 使用与授权](../06_User_Guides/use-dapps.md)

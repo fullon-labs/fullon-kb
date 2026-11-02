@@ -8,6 +8,8 @@ source: official
 
 # FullVest
 
+> 本页为历史草稿，内容与入口尚需核验，不代表当前网络或产品承诺。
+
 FullVest is a token lock-up and linear release tool.
 
 ## Summary
@@ -20,4 +22,4 @@ FullVest is a token lock-up and linear release tool.
 - Page title: FullVest
 
 ## Related guides
-- [[../06_User_Guides/deploy-contract]]
+- [锁定与释放操作检查](../06_User_Guides/use-dapps.md)

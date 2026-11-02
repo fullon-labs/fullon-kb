@@ -1,0 +1,8 @@
+.md-grid { max-width: 76rem; }
+.md-typeset h1 { font-weight: 700; letter-spacing: -.025em; }
+.md-typeset .grid.cards > ul > li { border-radius: .6rem; }
+.md-typeset code { border-radius: .2rem; }
+
+@media (min-width: 700px) {
+  .md-typeset .grid.cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

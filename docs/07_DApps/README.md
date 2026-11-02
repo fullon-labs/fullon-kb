@@ -17,10 +17,10 @@ Store one page per DApp in the FullOn ecosystem.
 - RWAVerse
 
 ## Pages
-- [[fullswap]]
-- [[fullbridge]]
-- [[fullvest]]
-- [[rwaverse]]
+- [fullswap](fullswap.md)
+- [fullbridge](fullbridge.md)
+- [fullvest](fullvest.md)
+- [rwaverse](rwaverse.md)
 
 ## Standard page shape
 - summary
