@@ -1,16 +1,14 @@
 ---
-title: What is FullOn’s tokenomics?｜代币经济
+title: FullOn 的代币经济是什么
 status: active
 updated: 2026-11-02
-source: official FAQ synthesis
+source: whitepaper v2.4.0 synthesis
 ---
 
-# What is FullOn’s tokenomics?｜代币经济
+# FullOn 的代币经济是什么
 
-官方 FAQ 对应页面目前仅有标题，没有总供应、分配、通胀、解锁或收益规则正文。本站不将历史猜测或源码默认值写成现行经济模型。
+白皮书计划总量 100 亿 FLON，并给出分配、固定 5 亿挖矿预算、GAS 奖励与 GLON 治理票权说明。
 
-若需查询某一具体代币，先确认网络、合约、符号和精度，用 `get_currency_stats` 读取 supply、max_supply 和 issuer。链上余额/供应量本身不能完整解释分配、锁仓或治理政策。
+完整解释见[专题指南](../01_Core_Chain/tokenomics.md)。原 FAQ 对应页只有标题；本次依据[固定版本白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/f49e5f0f821162a997260535be30767e3f147d8e/fullon.whitepaper.cn.md)补充设计内容，并在专题中区分设计、已审阅实现和待验证部署。
 
-[发行与查询代币](../10_Developer_Guides/issue-tokens.md)是开发教程，不是 FullOn 原生币经济模型。
-
-来源：[官方 tokenomics 页面](https://docs.flon.network/fullon-faq/what_is_fullon_tokenomics)，读取日期 2026-11-02。
+白皮书内的冲突与未确认内容见[来源核验](../01_Core_Chain/whitepaper.md)。

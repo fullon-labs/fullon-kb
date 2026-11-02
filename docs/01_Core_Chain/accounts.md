@@ -24,7 +24,11 @@ FullOn 账户是链上身份：账户名用于定位身份，权限用于决定�
 
 ## 官方账户分类
 
-官方 FAQ 还列出 native & sovereign、proxy、social-recoverable 与 simple address 等分类；后者区分 WASM/EVM 管理。详见[分类及信息边界](../04_FAQ/account-types.md)。这些名称本身不能证明当前网络的开户和恢复能力。
+白皮书将 canonical/主权账户、EVM 地址账户与代理账户分开：主权账户使用命名身份与单签/多签权限；EVM 地址在 EVM 环境内有意义；代理账户绑定外部链身份，通过代理签名提交参与 FullOn 应用。
+
+原 FAQ 另列 social-recoverable 和 simple address 分类。两份资料的分类范围不完全相同；不能把 RWID、代理账户和 EVM 地址互相等同，也不能从“12 字元英数字”文字推断所有拉丁字母/数字均可作为账户名。实际命名规则仍看目标链系统合约。
+
+[互操作性及账户区别](interoperability.md) · [分类与来源](../04_FAQ/account-types.md)。
 
 ## 创建与使用
 

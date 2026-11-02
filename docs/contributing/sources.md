@@ -18,3 +18,9 @@
 ## 发布边界
 
 站点只构建 `docs/`，不构建仓库根目录 Agent 配置或 `docs_CisuMusiC_App/` 内部材料。未填充的历史模板不放在主导航。所有公开页面都应适合直接对外阅读。
+
+## 白皮书补充来源
+
+官方白皮书 v2.4.0（2026-10-22），固定提交 `f49e5f0f821162a997260535be30767e3f147d8e`。本次补充以主 Markdown 文件为准，不假设仓库 PDF 与 Markdown 必然同步。新专题提供中英文文本；[来源与冲突记录](../01_Core_Chain/whitepaper.md)明确区分协议设计、源码核验与网络部署，文件哈希见[清单](whitepaper-source-manifest.json)。
+
+改编内容的上游许可保留于 [白皮书 MIT 许可](whitepaper-license.txt)。

@@ -29,3 +29,9 @@ source: official FAQ synthesis
 - 生态页中的未来方向与合作愿景不等于每项产品均已上线。
 
 源文件的 URL、内容 SHA-256 和读取状态保存在[核验记录](../contributing/faq-source-manifest.json)，便于后续判断来源是否变化。
+
+## 白皮书补充（2026-11-02）
+
+原表保留对 FAQ 本身的读取记录；相关设计已从官方白皮书 v2.4.0 补入：[规格](../01_Core_Chain/specifications.md)、[资源](../01_Core_Chain/resource-model.md)、[代币经济](../01_Core_Chain/tokenomics.md)、[互操作性](../01_Core_Chain/interoperability.md)。另增加[治理](../01_Core_Chain/governance.md)与[路线图](../01_Core_Chain/roadmap.md)。
+
+因此“FAQ 无正文”不再代表本站没有该主题说明。白皮书内的挖矿上限、通膨与储备销毁措辞冲突保留在[核验记录](../01_Core_Chain/whitepaper.md)，不擅自改写为已确认的运行规则。

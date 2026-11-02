@@ -59,6 +59,12 @@ nav:
       - RWID 账户: 01_Core_Chain/rwid-accounts.md
       - 区块链规格: 01_Core_Chain/specifications.md
       - 网络与入口: 01_Core_Chain/network.md
+      - GAS 与 ELON: 01_Core_Chain/resource-model.md
+      - FLON 代币经济: 01_Core_Chain/tokenomics.md
+      - 代理账户与跨链: 01_Core_Chain/interoperability.md
+      - GLON 与 BP 治理: 01_Core_Chain/governance.md
+      - 扩展路线图: 01_Core_Chain/roadmap.md
+      - 白皮书核验与差异: 01_Core_Chain/whitepaper.md
       - FAQ: 04_FAQ/README.md
       - FullOn 是什么: 04_FAQ/what-is-fullon.md
       - 账户类型: 04_FAQ/account-types.md

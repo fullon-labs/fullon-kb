@@ -1,16 +1,14 @@
 ---
-title: What is FullOn’s resource model?｜资源模型
+title: FullOn 的资源模型是什么
 status: active
 updated: 2026-11-02
-source: official FAQ synthesis
+source: whitepaper v2.4.0 synthesis
 ---
 
-# What is FullOn’s resource model?｜资源模型
+# FullOn 的资源模型是什么
 
-官方 FAQ 对应页面目前仅有标题，没有资源规则正文。不能从该页得出固定转账费、免费额度或资源单价。
+白皮书说明了 CPU、NET、RAM 的 GAS 支付、ELON 最小记账单位与 flon.gas 储备规则。
 
-当前 Core 源码包含 CPU、NET、RAM 对应的 gas 转换参数；应用应读取目标网络实际返回的账户资源和节点信息。源码默认值与运行网络费率要分开。
+完整解释见[专题指南](../01_Core_Chain/resource-model.md)。原 FAQ 对应页只有标题；本次依据[固定版本白皮书](https://github.com/fullon-labs/flon.whitepaper/blob/f49e5f0f821162a997260535be30767e3f147d8e/fullon.whitepaper.cn.md)补充设计内容，并在专题中区分设计、已审阅实现和待验证部署。
 
-用户按钱包当前显示处理资源不足；开发者见[创建账户与 gas](../10_Developer_Guides/accounts.md)、[技术规格](../01_Core_Chain/specifications.md)和[RPC 参考](../03_Operators/funod-rpc.md)。
-
-来源：[官方资源模型页面](https://docs.flon.network/fullon-faq/what_is_fullon_resource_model)，读取日期 2026-11-02；源码核验见技术规格页。
+白皮书内的冲突与未确认内容见[来源核验](../01_Core_Chain/whitepaper.md)。
