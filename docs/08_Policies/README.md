@@ -1,14 +1,12 @@
 ---
-title: Policies Index
+title: 规则索引
 type: index
 status: active
 updated: 2026-04-01
+translation_of: 08_Policies/README.md
+translated: '2026-11-02'
 ---
 
-# Policies Index
+# 规则索引
 
-Store support and content rules here:
-- response boundaries
-- safety disclaimers
-- content ownership
-- update workflow
+此目录存放支持与内容规则：回复边界、风险说明、内容权属与更新流程。

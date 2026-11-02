@@ -1,0 +1,44 @@
+---
+title: FullOn blockchain specifications
+type: core_chain
+status: active
+updated: 2026-11-02
+source: source review
+translation_of: 01_Core_Chain/specifications.md
+---
+
+# FullOn blockchain specifications
+
+Source specifications and running-network parameters are different. A source value is not necessarily a current mainnet setting. Performance claims require a test environment, version, and measurement method.
+
+| Item | Confirmed information | Scope |
+| --- | --- | --- |
+| Implementation | C++ node `funod`, tools `fucli` and `fuwal` | Core source and packaging documentation |
+| Contracts | C/C++ compiled to WASM; ABI describes actions and tables | Native development path |
+| Consensus | Core supports Savanna | Activation and policy depend on the target chain |
+| Block interval | `block_interval_ms = 500`, or 0.5 seconds | Reviewed source constant; not a finality-latency promise |
+| Consecutive production slots | `producer_repetitions = 12` | Scheduling constant, not the current BP count |
+| Finality | Check LIB and finality policy | Wait for the successful transaction's block to become irreversible |
+| Account permissions | owner, active, and authority | Query current permissions with `get_account` |
+| Resource accounting | Source includes CPU, NET, and RAM gas-conversion parameters | Read current rates and resource state from the target chain |
+| HTTP RPC | JSON requests under `/v1/*` | Depends on plugins, categories, and version |
+| P2P | Node synchronization and propagation, separate from HTTP RPC | Ports and peers depend on configuration |
+| History | History, Trace, and State History have distinct roles | Depends on the history build, plugins, and retention |
+
+## Read the target network's parameters
+
+- `get_info`: chain ID, node version, head, LIB, and resource fields exposed by that version.
+- `get_consensus_parameters`: chain configuration and available WASM parameters.
+- `get_producer_schedule`: active, pending, and proposed producer schedules.
+- `get_finalizer_info`: available finalizer policy and information.
+- `get_supported_apis`: discover which of these endpoints the node actually exposes.
+
+See the [RPC quickstart](../10_Developer_Guides/quickstart.md). Nodes on the same chain may use different versions and indexing configurations.
+
+## Not confirmed as current network specifications
+
+Mainnet/testnet chain IDs, current BP count, live gas rates, measured finality latency, TPS, minimum production hardware, and public P2P seeds need network-level verification. Source capacity limits and estimates in comments are not performance measurements.
+
+## Sources and scope
+
+[Source 1](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/libraries/chain/include/eosio/chain/config.hpp), [Source 2](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/README.md), [Source 3](https://github.com/fullon-labs/flon-core/blob/49256d6bdb989b935e114de2b00b748f3f8b4911/docs/node-build-profiles.md). Source review: 2026-11-02. This does not verify the version deployed on every network.

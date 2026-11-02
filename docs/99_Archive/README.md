@@ -1,14 +1,12 @@
 ---
-title: Archive Index
+title: 归档索引
 type: index
 status: active
 updated: 2026-04-01
+translation_of: 99_Archive/README.md
+translated: '2026-11-02'
 ---
 
-# Archive Index
+# 归档索引
 
-## Purpose
-Store deprecated or superseded pages here instead of deleting them.
-
-## Rule
-Move stale content here when it is no longer current but still worth keeping for reference.
+已过时或被替代但仍有历史参考价值的页面应移入此处，避免直接删除。
