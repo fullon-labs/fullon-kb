@@ -64,6 +64,7 @@ plugins:
         治理权与 BP 治理: Governance power and BP governance
         代理账户与跨链: Proxy accounts and interoperability
         FLON 代币经济: FLON tokenomics
+        出块奖励测算: Block reward calculations
         GAS 与 ELON: GAS and ELON
         FullOn 是什么: What is FullOn?
         账户类型: Account types
@@ -160,6 +161,7 @@ nav:
   - 网络与入口: 01_Core_Chain/network.md
   - GAS 与 ELON: 01_Core_Chain/resource-model.md
   - FLON 代币经济: 01_Core_Chain/tokenomics.md
+  - 出块奖励测算: 01_Core_Chain/bp-reward-calculations.md
   - 代理账户与跨链: 01_Core_Chain/interoperability.md
   - 治理权与 BP 治理: 01_Core_Chain/governance.md
   - 扩展路线图: 01_Core_Chain/roadmap.md

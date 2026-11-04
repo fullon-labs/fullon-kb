@@ -28,6 +28,9 @@ The foundation row lists “10%” at TGE and “10%” later, without clearly i
 
 ## Fixed mining budget
 
+[Mainnet stake and block reward calculations](bp-reward-calculations.md): the 1-million-FLON mainnet minimum, 21-BP rotation, 12-second production, and reward-block versus calendar-year halving.
+
+
 - Budget: `500,000,000 FLON`. Only producing, performance-qualified Active BPs qualify for mining; Standby BPs have no fixed mining allocation.
 - Each period contains `315,360,000` eligible reward blocks. The first three period budgets are 250,000,000, 125,000,000 and 62,500,000 FLON.
 - The first period's theoretical average is approximately `0.7927447996 FLON` per reward block. Integer-unit remainders are distributed deterministically and constrained by the remaining budget.
