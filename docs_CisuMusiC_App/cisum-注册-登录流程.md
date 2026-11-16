@@ -1,7 +1,6 @@
 # CisuMusiC 新版 App 註冊、登入與帳號恢復
 
-適用：cisum-app-new 新版 App，cisum-hk-tc 測試環境知識版本 2026-11-06。
-核對版本：6803135ef5ee13e6aa5f24a73bb84e4a28c61a85。本文說明目前客戶端功能，不代表舊版 App 已更新。
+適用：新版 CisuMusiC App。內容核對日期：2026-11-16。
 
 ## 如何註冊或登入？
 
@@ -43,11 +42,3 @@
 ## 客服排查所需資料
 
 確認用戶使用的是 App 還是 H5、版本、手機區號、所在步驟及完整錯誤文字。請勿收集密碼、短信驗證碼或私鑰。頁面和驗證流程的實際要求優先於舊版流程圖。
-
-## 維護依據
-
-- `lib/src/features/account/presentation/login_page.dart`
-- `lib/src/features/account/presentation/reset_password_page.dart`
-- `lib/src/features/account/data/auth_password_policy.dart`
-- `lib/src/features/account/data/login_account_history.dart`
-- `lib/src/features/settings/presentation/settings_page.dart`

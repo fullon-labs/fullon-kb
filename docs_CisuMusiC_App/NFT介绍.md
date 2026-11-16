@@ -1,5 +1,7 @@
 # NFT介绍
 
+> 資料範圍：本頁僅介紹勳章名稱與寓意，不提供目前的獲取門檻、升級條件、交易方式或會員權益。具體條件請查看勳章及相應活動頁面；不可將勳章與所有票券或俱樂部會員權益視為同一事物。
+
 | 勳章級別 | 核心精神 (Tagline) | 中文描述 | English Description |
 | :--- | :--- | :--- | :--- |
 | **🥉 銅質勳章**<br>The Bronze Medal | 勇氣的起點<br>The Courage to Begin | 銅質勳章代表著你在音樂旅程中邁出第一步的勇氣。這不僅是你在 CisuMusiC 的初始榮譽，更是你熱情與參與的證明。無論是透過聆聽、互動還是支持藝人，這枚勳章都記錄了 your 起點與熱忱。 | The Bronze Medal represents the courage to take the very first step on your musical journey. It is not only your initial honor on CisuMusiC but also a testament to your passion and participation. Whether through listening, engaging, or supporting artists, this medal marks your beginning and enthusiasm. |

@@ -1,5 +1,7 @@
 # 2Z CLUB Fan CLUB
 
+> Reference scope: this is a previously collected 2Z club benefits description. Its effective date and current applicability have not been verified in this audit. Do not use its spending thresholds, discounts, points rates, admission benefits or termination rules as current App-wide promises. Check the current club rules for those details. It is not an artist biography or upcoming event calendar.
+
 ## ✨ Witness the Growth, Share the Glory ✨
 
 ![logo-blend](logo-blend)
