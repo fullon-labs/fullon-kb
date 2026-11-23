@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "scope": "local document checks only; no live retrieval regression",
+  "checks": [
+    "cisum-注册-登录流程.md: date and internal-detail scan passed",
+    "新版App页面操作指南.md: date and internal-detail scan passed",
+    "CisuMusiC常見問題FAQ.md: date and internal-detail scan passed",
+    "隐私政策CN.md: byte-for-byte unchanged",
+    "隐私协议EN.md: byte-for-byte unchanged",
+    "2Z Club粉丝圈.md: original content retained; scope annotations only",
+    "NFT介绍.md: original content retained; scope annotations only",
+    "SING_介绍.md: original content retained; scope annotations only",
+    "上线公告.md: original content retained; scope annotations only",
+    "H3F Club粉丝圈.md: original content retained; scope annotations only",
+    "Buffy-Club 粉丝圈.md: original content retained; scope annotations only",
+    "cisum-whitepaper-cn.md: original content retained; scope annotations only",
+    "Cisum.md: original content retained; scope annotations only",
+    "CisuMusiC積分系統設計方案1010.md: original content retained; scope annotations only",
+    "Six standalone FAQ entries present"
+  ]
+}
