@@ -1,0 +1,210 @@
+{
+  "cisum-hk-tc": [
+    {
+      "record_type": "project",
+      "source_file": null,
+      "content_hash": null,
+      "updated_at": "2026-11-16T12:00:10.214Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "隐私协议EN.md",
+      "content_hash": "b8d37f6570d8a2bc13a1d9cf62f969454782319c36b6bbaec3b60a16f353321e",
+      "updated_at": "2026-06-05T01:37:24.208Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "CisuMusiC常見問題FAQ.md",
+      "content_hash": "0f7ea5b034d9b261407cb4e736e5a08e591acf3eb0c1759d662b7c8ada7e40be",
+      "updated_at": "2026-11-16T12:08:44.628Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "NFT介绍.md",
+      "content_hash": "eac144a15757b310a8e078015407ea2100efa677d1dd613f17cd5a580fb3f705",
+      "updated_at": "2026-11-16T12:13:06.551Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "cisum-whitepaper-cn.md",
+      "content_hash": "ad037b3f8c9fd3146aca658fcfd88cfd4c515f6217fcec8dc9f353c065717fd5",
+      "updated_at": "2026-11-16T12:03:40.925Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "Cisum.md",
+      "content_hash": "6d0838108682282cedbed95dde97a0305d5a1a2293f76e475bb24719f35c9627",
+      "updated_at": "2026-11-16T12:06:08.379Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "隐私政策CN.md",
+      "content_hash": "ef86fa442b4b94d9430313f563070a280aa76f609598944e02dd1b0b77925663",
+      "updated_at": "2026-06-04T11:17:07.928Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "上线公告.md",
+      "content_hash": "837afec18f5402462c37f327ef5361dce1ea99b73dd8734804792e312dc5b1c3",
+      "updated_at": "2026-11-16T12:16:32.537Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "CisuMusiC積分系統設計方案1010.md",
+      "content_hash": "6bf9f5cdd5d2c2b0c7902f07a774179404e3fb01b2b1faaebf8de8591ed5d9e8",
+      "updated_at": "2026-11-16T12:10:53.908Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "Buffy-Club 粉丝圈.md",
+      "content_hash": "580797fe332ddfbf5e6099c82005ae8014d11f1a39652c56ed11077d0f62e3a7",
+      "updated_at": "2026-11-16T12:01:13.489Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "cisum-注册-登录流程.md",
+      "content_hash": "e7ef9f20a3c3e9280e8447b8595a2565a2b83fedaec94e0931cdfa10bdb9969d",
+      "updated_at": "2026-11-06T05:59:05.593Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "SING_介绍.md",
+      "content_hash": "92d95e87a3bcdf63bad214bc5f80aa02e6bdb475c4d1e562da597702d1cc46fe",
+      "updated_at": "2026-11-16T12:15:30.942Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "2Z Club粉丝圈.md",
+      "content_hash": "44252d3886578377493b12e97de8745937f990d62f4c91b5c023199ef74a67b7",
+      "updated_at": "2026-11-16T12:00:11.488Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "新版App页面操作指南.md",
+      "content_hash": "fd5293c565df75574e90eb93ad6def311bab871b5ffe66b1107d613f39a90ec1",
+      "updated_at": "2026-11-16T12:17:29.691Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "H3F Club粉丝圈.md",
+      "content_hash": "c785eeff172f10a5e95b9734f9ca1adea4052d4a5f649dac0b31931993b2925d",
+      "updated_at": "2026-06-04T12:04:12.556Z"
+    }
+  ],
+  "prod-ai": [
+    {
+      "record_type": "document",
+      "source_file": "CisuMusiC_项目介绍_完整版.md",
+      "content_hash": "cb9ef6ffa87354655ecf44a0790ad8e36540242c8bc457f5242b689c107853e3",
+      "updated_at": "2026-06-09T08:30:56.243Z"
+    },
+    {
+      "record_type": "project",
+      "source_file": null,
+      "content_hash": null,
+      "updated_at": "2026-11-10T09:43:24.545Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "三大加密法案.md",
+      "content_hash": "93115eda69c5e1b02fb244adf93fffab6a7907b21de83f76333a517463e557be",
+      "updated_at": "2026-06-09T08:54:29.535Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "隐私协议EN.md",
+      "content_hash": "b8d37f6570d8a2bc13a1d9cf62f969454782319c36b6bbaec3b60a16f353321e",
+      "updated_at": "2026-06-09T09:05:51.836Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "CisuMusiC常見問題FAQ.md",
+      "content_hash": "23a177177dcd747a218f69587b4424ef2fa698b9a5b7486914aee653c8c8af2d",
+      "updated_at": "2026-06-09T11:04:04.478Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "NFT介绍.md",
+      "content_hash": "2707fcd7ee0d726f7ade50cf0b0c1e74cc4a722858d85d8d500d3f8583a32ab8",
+      "updated_at": "2026-06-09T08:41:34.486Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "cisum-whitepaper-cn.md",
+      "content_hash": "396a638669c9448220a004913ac1876bd46fc9ed37c00c3fb39cdafbc8059ed7",
+      "updated_at": "2026-06-09T08:22:09.638Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "Cisum.md",
+      "content_hash": "0c6fef5212b1a71afc305da6fdf5f7d66dae8aa3a2b28c60a9ba19a4ebbf0887",
+      "updated_at": "2026-06-09T08:25:35.898Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "隐私政策CN.md",
+      "content_hash": "ef86fa442b4b94d9430313f563070a280aa76f609598944e02dd1b0b77925663",
+      "updated_at": "2026-06-09T09:08:01.083Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "上线公告.md",
+      "content_hash": "bfca3a8b632821ac8df8db4396d74842bf2e2b08f9b1e25fd6fa42430d42bfcd",
+      "updated_at": "2026-06-09T08:56:15.979Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "CisuMusiC積分系統設計方案1010.md",
+      "content_hash": "61d0e45f608707a035eec5565903881fcabc6ed31154be79a7348566ec386317",
+      "updated_at": "2026-06-09T08:42:09.119Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "Buffy-Club 粉丝圈.md",
+      "content_hash": "df89f159e71d6e517d8a4857d29625177b0f00e8e4718abc3dc5cb67389c66e4",
+      "updated_at": "2026-06-09T08:14:48.469Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "cisum-注册-登录流程.md",
+      "content_hash": "0c17a47a83aa539facf4b305e201f8ac9eab3ee7bec1b634849563259f94cfdf",
+      "updated_at": "2026-06-09T08:21:12.016Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "SING_介绍.md",
+      "content_hash": "472416a06faee37dc2292d475b6626164f307b03b351b242579d0b2d9d38de29",
+      "updated_at": "2026-06-09T08:47:00.081Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "web3音乐平台分析081-2.md",
+      "content_hash": "2449e29d0c5f3eb95f25109f9759db5d388a50baaa8e9013aaba73f862e4eafa",
+      "updated_at": "2026-06-09T08:52:59.214Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "2Z Club粉丝圈.md",
+      "content_hash": "02cafb9c85eb3e98ee57678906173d6421bb025fde688c7390daa900d086974f",
+      "updated_at": "2026-06-09T08:13:33.421Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "CisuMusiC-app中H5-UTM-GA4之間的生態關係.md",
+      "content_hash": "3bca6873a011faa2eae077877eba32504ed510d6472202585bace5b3c648dc67",
+      "updated_at": "2026-06-09T08:31:30.584Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "H3F Club粉丝圈.md",
+      "content_hash": "c785eeff172f10a5e95b9734f9ca1adea4052d4a5f649dac0b31931993b2925d",
+      "updated_at": "2026-06-09T08:44:34.064Z"
+    },
+    {
+      "record_type": "document",
+      "source_file": "内部讨论稿.md",
+      "content_hash": "0ea2d0e0fa4fd61be73d12a7a57d7fe59226a90e6a3a8aad72461d5b38265df5",
+      "updated_at": "2026-06-09T09:02:25.269Z"
+    }
+  ]
+}

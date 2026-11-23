@@ -5,6 +5,8 @@
 Vu Thanh Van粉丝俱乐部Buffy Club粉丝圈
 
 ## 入会申请
+
+> Historical reference — current validity unverified. Confirm current club rules before quoting any benefit, amount, discount or termination condition. 歷史參考：本節權益、金額及條件尚未核實目前是否有效，請先確認該俱樂部現行規則。
 1.1 登陆 https://cisumusic.com 后完成 APP 下载和安装;
 1.2 详细阅读本章程;
 1.3 填写会员申请表;
@@ -12,6 +14,8 @@ Vu Thanh Van粉丝俱乐部Buffy Club粉丝圈
 1.5 获得带有唯一编号的会员NFT勋章。
 
 ## 会员福利
+
+> Historical reference — current validity unverified. Confirm current club rules before quoting any benefit, amount, discount or termination condition. 歷史參考：本節權益、金額及條件尚未核實目前是否有效，請先確認該俱樂部現行規則。
 2.1 第一次购票观看Vu Thanh Van专场演出, 可在演出现场凭会员NFT勋章和门票领取会员徽章一枚和会员专属T恤一件;
 2.2 在CisuMusiC App享受与Vu Thanh Van相关的专属消费九折优惠,并且每消费一美元获100个Cisum积分奖励。
 2.3 会员以 CISUM 积分换取 Buffy Club 会员专属权益, 包括但不限于:
@@ -22,6 +26,8 @@ Vu Thanh Van粉丝俱乐部Buffy Club粉丝圈
   5) 独家内容抢先试听
      
 ## 会员升级
+
+> Historical reference — current validity unverified. Confirm current club rules before quoting any benefit, amount, discount or termination condition. 歷史參考：本節權益、金額及條件尚未核實目前是否有效，請先確認該俱樂部現行規則。
 3.1 会员累计专属消费达到100美元,即升级为白银会员。福利如下:
 3.1.1 获取白银会员NFT勋章和白银会员徽章;
 3.1.2 在CisuMusiC App享受与Vu ThanhVan相关的专属消费8折优惠, 每消费一美元获200个Cisum积分奖励。
@@ -56,6 +62,8 @@ Vu Thanh Van粉丝俱乐部Buffy Club粉丝圈
 3.4.5每年应邀参加一次 Vu Thanh Van 晚宴。
 
 ## 资格终止
+
+> Historical reference — current validity unverified. Confirm current club rules before quoting any benefit, amount, discount or termination condition. 歷史參考：本節權益、金額及條件尚未核實目前是否有效，請先確認該俱樂部現行規則。
 发生以下情形之一, CisuMusiC 有权取消会员资格及会员福利:
 
 4.1 会员的言行有损CisuMusiC公司或Vu Thanh Van的形象和利益;
